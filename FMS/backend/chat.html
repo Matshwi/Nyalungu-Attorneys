@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>POS Dash | Responsive Bootstrap 4 Admin Dashboard Template</title>
+    <title>POS Dash | Responsive Bootstrap 4 Admin Dashboard</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="../assets/images/favicon.ico" />
@@ -207,7 +207,7 @@
                   data-parent="#iq-sidebar-toggle"
                 >
                   <li class="">
-                    <a href="../backend/list-Department.html">
+                    <a href="../backend/list-Department1.html">
                       <i class="las la-minus"></i><span>List Department</span>
                     </a>
                   </li>
@@ -4643,6 +4643,152 @@
         </div>
       </div>
     </footer>
+
+<script type="text/javascript">
+      
+      Wholesaler = {identitydoc:"John", proofofres:31, permit:"New York", businessdocs:"John", trustdocs:31, complianceaffidavit:"John", compliancewithNPL};
+
+    </script>
+
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"; 
+
+  //https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js
+  //https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+
+  import { getDatabase, ref, push ,onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+//import { database } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  //import { firebase } from 'https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js';
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCwMAE5I9frXiRjGTLB7kZOS1yYaBSmf_M",
+    authDomain: "omsl-61c79.firebaseapp.com",
+    projectId: "omsl-61c79",
+    storageBucket: "omsl-61c79.firebasestorage.app",
+    messagingSenderId: "406069597322",
+    appId: "1:406069597322:web:6ab82f14010e6f3f004973",
+    measurementId: "G-4CJ3M03JE1"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  //console.log(defaultProject.name);
+  const analytics = getAnalytics(app);
+//import { getDatabase } from "fhttps://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  // Get a reference to the database service
+var database = getDatabase(app);
+
+// Reference to the root of your database
+
+const urlParams = new URLSearchParams(document.location.search);
+var paramValue = urlParams.get('id');
+
+var rootRef = ref(database, 'users/' + paramValue);
+
+//Menu links start
+
+document.write(new Date().getFullYear());
+
+                    function getval() {
+                      // body...
+                      var someval = document.getElementById("getval");
+
+                      console.log(someval.value);
+
+                      setTimeout(function(){ window.location.href = `Projects-list.html?id=${someval.value}`}, 3000);
+                    }
+                    //Dashboard
+
+                    const dashboardmenu = document.getElementById('dashboardmenu');
+
+                    dashboardmenu.onclick = function(){
+
+                       window.location.href = `index.html?id=${paramValue}`;
+      
+                                                }
+                    //Files
+                      var filelist = document.getElementById("list_files");
+
+                      filelist.onclick = function(){
+
+                       window.location.href = `Projects-list.html?id=${paramValue}`;
+      
+                                                }
+
+                      var addfile = document.getElementById("opennewfile");
+                      addfile.onclick = function(){
+
+                       window.location.href = `add-Projects.html?id=${paramValue}`;
+      
+                                                }
+
+                    //Lock Screen
+
+                      var addfile = document.getElementById("auth_lock_screen");
+                      addfile.onclick = function(){
+
+                       window.location.href = `auth-lock-screen.html?id=${paramValue}`;
+      
+                                                }
+
+
+
+                    //Employees
+                    //File activity life span
+                    //Todo
+                    //Chat
+                    
+
+                   
+
+//Menu links end
+
+
+
+
+
+// Fetch data from the 'users' node once
+onValue(rootRef, (snapshot) => {
+   console.log(snapshot.val());
+   const childDataval = snapshot.val();
+   console.log(`the value of one: ${childDataval.email}`);
+
+
+   //greetings start
+
+                    const currentHour = new Date().getHours();
+
+                    let timeOfDay;
+
+    if (currentHour < 12) {
+        timeOfDay = "Good Morning";
+    } else if (currentHour < 18) { // Between 12 and 17 (inclusive)
+        timeOfDay = "Good Afternoon";
+    } else { // 18 or later
+        timeOfDay = "Good Evening";
+    }
+
+
+    document.getElementById("greetings").innerHTML = `${timeOfDay} ${childDataval.username}`;
+    
+
+                    //greetings end
+    
+  }, {
+    onlyOnce: true // This option ensures the callback is executed only once
+  });
+
+
+
+</script>
+
+
     <!-- Backend Bundle JavaScript -->
     <script src="../assets/js/backend-bundle.min.js"></script>
 

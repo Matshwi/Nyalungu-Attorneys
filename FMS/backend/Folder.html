@@ -42,305 +42,6 @@
   padding: 2px 16px;
   border-radius: 15px;
 }
-
-
-
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  overflow: hidden;
-}
-
-body {
-  position: relative;
-  font-family: "Open Sans", sans-serif;
-  /*background: rgba(49, 49, 49, 0.4);*/
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /*background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#76d7c4),
-    to(#bb8fce)
-  );
-  background: -o-linear-gradient(#76d7c4, #bb8fce);
-  background: linear-gradient(#76d7c4, #bb8fce);*/
-  z-index: -1;
-}
-
-body small {
-  position: absolute;
-  bottom: 20px;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-body small a {
-  color: rgba(255, 255, 255, 0.4);
-}
-
-#container {
-  width: 500px;
-  height: 50px;
-  background-color: #fff;
-  padding: 10px;
-  margin: 0 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-#container .text {
-  border: none;
-  background: none;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-#container #menu-wrap {
-  position: relative;
-  height: 25px;
-  width: 25px;
-}
-
-#container #menu-wrap .dots {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  z-index: 1;
-}
-
-#container #menu-wrap .dots > div,
-#container #menu-wrap .dots > div:after,
-#container #menu-wrap .dots > div:before {
-  height: 6px;
-  width: 6px;
-  background-color: rgba(49, 49, 49, 0.8);
-  border-radius: 50%;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#container #menu-wrap .dots > div {
-  position: relative;
-}
-
-#container #menu-wrap .dots > div:after {
-  content: "";
-  position: absolute;
-  bottom: calc((25px / 2) - (6px / 2));
-  left: 0;
-}
-
-#container #menu-wrap .dots > div:before {
-  content: "";
-  position: absolute;
-  top: calc((25px / 2) - (6px / 2));
-  left: 0;
-}
-
-#container #menu-wrap .menu {
-  position: absolute;
-  right: -10px;
-  top: calc(-12px + 50px);
-  width: 0;
-  height: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px 15px;
-  -webkit-box-shadow: 2px 4px 6px rgba(49, 49, 49, 0.2);
-  box-shadow: 2px 4px 6px rgba(49, 49, 49, 0.2);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-}
-
-#container #menu-wrap .menu ul {
-  list-style: none;
-}
-
-#container #menu-wrap .menu ul li {
-  margin: 15px 0;
-}
-
-#container #menu-wrap .menu ul li .link {
-  text-decoration: none;
-  color: rgba(49, 49, 49, 0.85);
-  opacity: 0;
-  visibility: hidden;
-}
-
-#container #menu-wrap .toggler {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  z-index: 2;
-}
-
-#container #menu-wrap .toggler:hover + .dots > div,
-#container #menu-wrap .toggler:hover + .dots > div:after,
-#container #menu-wrap .toggler:hover + .dots > div:before {
-  background-color: rgba(49, 49, 49, 0.6);
-}
-
-#container #menu-wrap .toggler:checked + .dots > div {
-  -webkit-transform: translateX(calc(((25px / 2) - (6px / 2)) * -0.7071067812))
-    translateY(calc(((25px / 2) - (6px / 2)) * -0.7071067812));
-  -ms-transform: translateX(calc(((25px / 2) - (6px / 2)) * -0.7071067812))
-    translateY(calc(((25px / 2) - (6px / 2)) * -0.7071067812));
-  transform: translateX(calc(((25px / 2) - (6px / 2)) * -0.7071067812))
-    translateY(calc(((25px / 2) - (6px / 2)) * -0.7071067812));
-}
-
-#container #menu-wrap .toggler:checked + .dots > div:after {
-  -webkit-transform: translateX(calc(((25px / 2) - (6px / 2)) * 0.7071067812))
-    translateY(calc((2 * (25px / 2) - (6px / 2)) * 0.7071067812));
-  -ms-transform: translateX(calc(((25px / 2) - (6px / 2)) * 0.7071067812))
-    translateY(calc((2 * (25px / 2) - (6px / 2)) * 0.7071067812));
-  transform: translateX(calc(((25px / 2) - (6px / 2)) * 0.7071067812))
-    translateY(calc((2 * (25px / 2) - (6px / 2)) * 0.7071067812));
-}
-
-#container #menu-wrap .toggler:checked + .dots > div:before {
-  -webkit-transform: translateX(
-      calc(2 * (((25px / 2) - (6px / 2)) * 0.7071067812))
-    )
-    translateY(
-      calc(((25px / 2) - (6px / 2)) - (((25px / 2) - (6px / 2)) * 0.7071067812))
-    );
-  -ms-transform: translateX(calc(2 * (((25px / 2) - (6px / 2)) * 0.7071067812)))
-    translateY(
-      calc(((25px / 2) - (6px / 2)) - (((25px / 2) - (6px / 2)) * 0.7071067812))
-    );
-  transform: translateX(calc(2 * (((25px / 2) - (6px / 2)) * 0.7071067812)))
-    translateY(
-      calc(((25px / 2) - (6px / 2)) - (((25px / 2) - (6px / 2)) * 0.7071067812))
-    );
-}
-
-#container #menu-wrap .toggler:checked:hover + .dots > div,
-#container #menu-wrap .toggler:checked:hover + .dots > div:after,
-#container #menu-wrap .toggler:checked:hover + .dots > div:before {
-  background-color: rgba(49, 49, 49, 0.6);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#container #menu-wrap .toggler:checked ~ .menu {
-  opacity: 1;
-  visibility: visible;
-  width: 150px;
-  height: 130px;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#container #menu-wrap .toggler:checked ~ .menu ul .link {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition: 0.5s ease 0.3s;
-  -o-transition: 0.5s ease 0.3s;
-  transition: 0.5s ease 0.3s;
-}
-
-#container #menu-wrap .toggler:checked ~ .menu ul .link:hover {
-  color: #2980b9;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-}
-
-#container #menu-wrap .toggler:not(:checked) ~ .menu {
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#container #menu-wrap .toggler:not(:checked) ~ .menu ul .link {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
-  transition: 0.1s;
-}
-
-@media (max-width: 600px) {
-  #container {
-    position: absolute;
-    top: 50px;
-    width: calc(100% - 40px);
-    margin: 0;
-  }
-}
 </style>
   </head>
   <body class="  ">
@@ -786,32 +487,20 @@ body small a {
                 <h5 class="logo-title ml-3">Downtown</h5>
               </a>
             </div>
-            
             <div class="d-flex align-items-center">
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-label="Toggle navigation"
-              >
-                <i class="ri-menu-3-line"></i>
-              </button>
+             
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto navbar-list align-items-center">
                       <!-- class="btn border add-btn shadow-none mx-2 d-none d-md-block"-->
-                 
-                  <li>
+                    <li>
                     <a
                       href="#"
                       class="btn border add-btn shadow-none mx-2 d-none d-md-block"
                       data-toggle="modal"
                       data-target="#new-order"
-                      ><i class="las la-plus mr-2"></i>New File</a
-                    >
-                  </li>
-                  
+                      >
+                      <i class="las la-plus mr-2"></i>New Folder</a>
+                    </li>
                   <li class="nav-item nav-icon dropdown">
                     <a
                       href="#"
@@ -937,11 +626,15 @@ body small a {
           <div class="modal-content">
             <div class="modal-body">
               <div class="popup text-left">
-                <h4 class="mb-3">Add Document</h4>
+                <h4 class="mb-3">New Folder</h4>
                 <div class="content create-workform bg-body">
                   <div class="pb-3">
-                    <label class="mb-2">Document name</label>
-                    <input type="file" id="fileInput" class="form-control" placeholder="Enter File Name or number"
+                    <label class="mb-2">Folder name</label>
+                    <input
+                      type="text"
+                      id="foldername"
+                      class="form-control"
+                      placeholder="Enter Folder Name or number"
                     />
                   </div>
                   <div class="col-lg-12 mt-4">
@@ -951,7 +644,7 @@ body small a {
                       <div class="btn btn-primary mr-4" data-dismiss="modal">
                         Cancel
                       </div>
-                      <div class="btn btn-outline-primary" id="Add_Document" data-dismiss="modal">
+                      <div class="btn btn-outline-primary" onclick="getval()" id="openfile" data-dismiss="modal">
                         Create
                       </div>
                     </div>
@@ -979,9 +672,55 @@ body small a {
             </div>
         
               </div>
-<div class="row" id="files">
+<div class="row" id="folders">
+ <!-- <div class="carditems" id="pleadings" style="cursor: pointer;">
+  <img src="../assets/images/Folder.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Pleadings</b></h4> 
+  </div>
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="carditems" id="notices" style="cursor: pointer;">
+  <img src="../assets/images/Folder.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Notices</b></h4> 
+  </div>
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="carditems" id="processes" style="cursor: pointer;">
+  <img src="../assets/images/Folder.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Processes</b></h4> 
+  </div>
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="carditems" id="projects" style="cursor: pointer;" onclick="projects()">
+  <img src="../assets/images/Folder.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Expert Reports</b></h4> 
+  </div>
+</div>
 
-
+<div class="carditems" id="projects" style="cursor: pointer;margin-top: 2rem;margin-bottom: 2rem;" onclick="projects()">
+  <img src="../assets/images/Folder.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Correspondences</b></h4> 
+  </div>
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="carditems" id="projects" style="cursor: pointer;margin-top: 2rem;margin-bottom: 2rem;" onclick="projects()">
+  <img src="../assets/images/Folder.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Disbursments</b></h4> 
+  </div>
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="carditems" id="lodgementdocs" style="cursor: pointer;margin-top: 2rem;margin-bottom: 2rem;" onclick="projects()">
+  <img src="../assets/images/Folder.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Lodgement Documents</b></h4> 
+  </div>
+</div>-->
 </div>
             </div>
           </div>
@@ -1016,8 +755,7 @@ body small a {
   //https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-  import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
-  import { getStorage, ref as sRef, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
+  import { getDatabase, ref, push ,onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 //import { database } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
@@ -1039,36 +777,69 @@ import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailA
   const app = initializeApp(firebaseConfig);
   //console.log(defaultProject.name);
   const analytics = getAnalytics(app);
-
 //import { getDatabase } from "fhttps://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
-
-// Get a reference to the database and storage services
+  // Get a reference to the database service
 var database = getDatabase(app);
-const storage = getStorage(app);
 const auth = getAuth(app);
 // Reference to the root of your database
+
 const urlParams = new URLSearchParams(document.location.search);
 var paramValue = urlParams.get('id');
-const projectiden = urlParams.get('fileref');
-const folder = urlParams.get('foldername');
+var projectiden = urlParams.get('projectiden');
+var folder = urlParams.get('folder');
+
+useremail, occupation
+
+
+
 var notificationRef = ref(database, 'Notification/');
-var rootRef = ref(database, 'uploads/');
+var folderref = ref(database, 'Projectfolder/');
+//Menu links start
+
+document.write(new Date().getFullYear());
+
+var openfolder = document.getElementById("openfile");
+openfolder.onclick = function(){
+
+
+  // body...
+var someval = document.getElementById("foldername").value;
+
+   var folderdata = {
+  foldername: someval,
+  fileid: projectiden
+};
+
+push(folderref, folderdata)
+    .then(() => {
+      console.log('Data has been written successfully!');
+      alert("we are in");
+      //window.location.href = 'list-employ.html';
+    })
+    .catch((error) => {
+      alert("we are not in");
+      console.error('Error writing data: ', error);
+      alert("we are not in");
+    });
+
+  }
 
 
 
-
-    onAuthStateChanged(auth, (user) => {
+onAuthStateChanged(auth, (user) => {
       if (user) {
-        
-        // User is signed in
-        console.log("User is signed in:", user.uid);
-        var userRef = ref(database, 'users/' + user.uid);
 
+        var rootRef = ref(database, 'users/' + user.uid);
 // Fetch data from the 'users' node once
-onValue(userRef, (snapshot) => {
-   console.log(snapshot.val());
-   const childDataval = snapshot.val();
+onValue(rootRef, (usersnapshot) => {
+   console.log(usersnapshot.val());
+   const childDataval = usersnapshot.val();
    
+
+
+document.getElementById("useremail").innerHTML = `${childDataval.uname}`;
+document.getElementById("occupation").innerHTML = `${childDataval.occupation}`;
+
 
 document.getElementById("dropdownMenuButton4").innerHTML = `<img
                         src="${childDataval.imagelink}"
@@ -1082,9 +853,8 @@ document.getElementById("userimage").innerHTML = `<img
                         alt="user"
                       />`;
 
-                      document.getElementById("useremail").innerHTML = `${childDataval.uname}`;
-
-                        document.getElementById("occupation").innerHTML = `${childDataval.occupation}`;
+document.getElementById("occupation").innerHTML = `${childDataval.occupation}`;
+document.getElementById("useremail").innerHTML = `${childDataval.email}`;
 
                 //greetings end
     
@@ -1093,9 +863,7 @@ document.getElementById("userimage").innerHTML = `<img
   });
 
 
-
-
-        // Fetch data from the 'task' node once
+// Fetch data from the 'task' node once
 onValue(notificationRef, (notificationsnapshot) => {
   if (notificationsnapshot.exists()) {
     let filteredCount = 0; // ✅ count after condition
@@ -1145,122 +913,64 @@ onValue(notificationRef, (notificationsnapshot) => {
 }, { onlyOnce: true }); 
 
 
-      } else {
-        // User is signed out
-        console.log("User is signed out.");
-        window.location.href = `auth-sign-in.html`;
-      }
-    });
 
+        //add task
+                    var addtask = document.getElementById("addtask");
+                      addtask.onclick = function(){
 
-const adddocument = document.getElementById("Add_Document");
-adddocument.onclick = async function(){
-
-                      
+                       window.location.href = `add-task.html?id=${user.uid}`;
       
+                                                }
 
+//todo
+                     var todo = document.getElementById("todo");
+                      todo.onclick = function(){
+           console.log("clickeds");
+                       window.location.href = `todo.html?id=${user.uid}`;
+      
+                                                }
+                    //timeline
+                    var filesheet = document.getElementById("filesheet");
+                      filesheet.onclick = function(){
 
-    //file upload
-    const fileInput = document.getElementById("fileInput");
-  const file = fileInput.files[0];
-
-  if (!file) {
-    alert("Please select a file first.");
-    return;
-  }
-
-  // Create a storage reference
-  const storageRef = sRef(storage, `uploads/${file.name}`);
-
-    try {
-    // Upload the file
-    const snapshot = await uploadBytes(storageRef, file);
-    console.log("Uploaded a file!", snapshot);
-
-    // Get and display download URL
-    const downloadURL = await getDownloadURL(storageRef);
-    const urlParams = new URLSearchParams(document.location.search);
-    const paramValue = urlParams.get('id');
-    const projectiden = urlParams.get('fileref');
-    const folder = urlParams.get('foldername');
-
-
-console.log(projectiden);
-console.log(folder);
-
-const filedata = {
-  fileref: projectiden,
-  folder: folder,
-  doclink: downloadURL,
-  filename: file.name,
-};
-
-
-push(rootRef, filedata)
-    .then(() => {
-      console.log('Data has been written successfully!');
-      location.reload()
-    })
-    .catch((error) => {
-      console.error('Error writing data: ', error);
-    });
-    console.log("File available at", downloadURL);
-    //alert("File uploaded successfully!\n" + downloadURL);
-  } catch (error) {
-    console.error("Upload failed", error);
-    alert("Upload failed. See console for details.");
-  }
-
-   }
-
-//Menu links start
-
-document.write(new Date().getFullYear());
-
-                    function getval() {
-                      // body...
-                      var someval = document.getElementById("getval");
-
-                      console.log(someval.value);
-
-                      setTimeout(function(){ window.location.href = `Projects-list.html?id=${someval.value}`}, 3000);
-                    }
+                       window.location.href = `timeline-3.html?id=${user.uid}&projectiden=${projectiden}`;
+      
+                                                }
                     //Dashboard
 
                     const dashboardmenu = document.getElementById('dashboardmenu');
 
                     dashboardmenu.onclick = function(){
 
-                       window.location.href = `index.html?id=${paramValue}`;
+                       window.location.href = `index.html?id=${user.uid}`;
       
                                                 }
-            const dashboardmenu1 = document.getElementById('dashboardmenu1');
+const dashboardmenu1 = document.getElementById('dashboardmenu1');
+ dashboardmenu1.onclick = function(){
 
-                    dashboardmenu1.onclick = function(){
-
-                       window.location.href = `index.html?id=${paramValue}`;
+   window.location.href = `index.html?id=${user.uid}`;
       
-                                                }
-    const dashboardmenu2 = document.getElementById('dashboardmenu2');
+  }
 
-                    dashboardmenu2.onclick = function(){
+  const dashboardmenu2 = document.getElementById('dashboardmenu2');
+ dashboardmenu2.onclick = function(){
 
-                       window.location.href = `index.html?id=${paramValue}`;
+   window.location.href = `index.html?id=${user.uid}`;
       
-                                                }
+  }
                     //Files
                       var filelist = document.getElementById("list_files");
 
                       filelist.onclick = function(){
 
-                       window.location.href = `Projects-list.html?id=${paramValue}`;
+                       window.location.href = `Projects-list.html?id=${user.uid}`;
       
                                                 }
 
                       var addfile = document.getElementById("opennewfile");
                       addfile.onclick = function(){
 
-                       window.location.href = `add-Projects.html?id=${paramValue}`;
+                       window.location.href = `add-Projects.html?id=${user.uid}`;
       
                                                 }
 
@@ -1269,48 +979,24 @@ document.write(new Date().getFullYear());
                       var addfile = document.getElementById("auth_lock_screen");
                       addfile.onclick = function(){
 
-                       window.location.href = `auth-lock-screen.html?id=${paramValue}`;
-      
-                                                }
-
-       var lock_screen = document.getElementById("auth_lock_screen2");
-                      lock_screen.onclick = function(){
-
-                       window.location.href = `auth-lock-screen.html?id=${paramValue}`;
-      
-                                                }
-
-            //timeline
-                    var filesheet = document.getElementById("filesheet");
-                      filesheet.onclick = function(){
-
-                       window.location.href = `timeline-3.html?id=${paramValue}`;
-      
-                                                }
-
-     //todo
-                     var todo = document.getElementById("todo");
-                      todo.onclick = function(){
-           console.log("clickeds");
-                       window.location.href = `todo.html?id=${paramValue}`;
-      
-                                                }
-                    var todo1 = document.getElementById("todo1");
-                      todo1.onclick = function(){
-           console.log("clickeds");
-                       window.location.href = `todo.html?id=${paramValue}`;
-      
-                                                }
-                      //add task
-                    var addtask = document.getElementById("addtask");
-                      addtask.onclick = function(){
-
-                       window.location.href = `add-task.html?id=${paramValue}`;
+                       window.location.href = `auth-lock-screen.html?id=${user.uid}`;
       
                                                 }
 
 
-        var adddpt = document.getElementById("adddpt");
+
+                    
+
+
+    var lockscreen2 = document.getElementById("auth_lock_screen2");
+                      lockscreen2.onclick = function(){
+
+                       window.location.href = `auth-lock-screen.html`;
+      
+                                                }
+
+
+    var adddpt = document.getElementById("adddpt");
           adddpt.onclick = function(){
 
   window.location.href = `add-Department.html?id=${paramValue}`;
@@ -1346,75 +1032,12 @@ document.write(new Date().getFullYear());
       
                                                 }
 
-
-
-                    //Employees
-                    //File activity life span
-                    //Todo
-                    //Chat
-                    
-
-                   
-
-//Menu links end
-
-
-
-
-
-// Fetch data from the 'uploads' node once
-onValue(rootRef, async (snapshot) => {
-  console.log(snapshot.val());
-  const childDataval = snapshot.val();
-
-  snapshot.forEach((childSnapshot) => {
-    const taskKey = childSnapshot.key;
-    const taskdata = childSnapshot.val();
-    console.log(`the value of one: ${taskdata.filename}`);
-
-    if (folder == taskdata.folder && projectiden == taskdata.fileref) {
-      document.getElementById("files").innerHTML += `
-        <div id="container_${taskKey}">
-          <img src="../assets/images/pdf.png" height="50px">
-          <p>${taskdata.filename}</p>
-          <div id="menu-wrap">
-            <input type="checkbox" class="toggler" />
-            <div class="dots"><div></div></div>
-            <div class="menu">
-              <div>
-                <ul>
-                  <li><a id="delete_${taskKey}" class="link">Delete</a></li>
-                  <li><a href="#" class="link">Share</a></li>
-                  <li><a id="printing_${taskKey}" class="link">Print</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>`;
-
-      // ✅ Attach handlers immediately after adding the element
-      document.getElementById(`printing_${taskKey}`).onclick = function() {
-        window.open(taskdata.doclink);
-      };
-
-      document.getElementById(`delete_${taskKey}`).onclick = function() {
-        remove(ref(database, 'uploads/' + taskKey))
-          .then(() => {
-            location.reload();
-            console.log('Data has been deleted successfully!');
-          })
-          .catch((error) => {
-            console.error('Error deleting data:', error);
-          });
-      };
-    }
-  });
-}, {
-  onlyOnce: true // ensures callback is executed only once
-});
-
-
-
+      } else {
+        // User is signed out
+        console.log("User is signed out.");
+        window.location.href = `auth-sign-in.html`;
+      }
+    });
 
 //Logout
                     var logout = document.getElementById("logout");
@@ -1432,6 +1055,68 @@ onValue(rootRef, async (snapshot) => {
 
       
                                                 }
+
+logout.onclick = function() {
+  signOut(auth)
+    .then(() => {
+      console.log("User signed out.");
+      window.location.href = `auth-sign-in.html`;
+    })
+    .catch((error) => {
+      console.error("Sign out error:", error);
+    });
+}
+
+
+
+
+                    //timeline
+                     
+
+                   
+
+//Menu links end
+
+
+
+// Fetch data from the 'task' node once
+onValue(folderref, (snapshot) => {
+ const folderksnapKey = snapshot.key;
+
+ const foldersnapdata = snapshot.val() || {};
+const count = Object.keys(foldersnapdata).length; // ✅ Count top-level nodes
+    console.log(`Number of top-level nodes: ${count}`);
+
+    document.getElementById("num1").innerHTML = count;
+    document.getElementById("num2").innerHTML = count;
+
+  snapshot.forEach((childSnapshot) => {
+      const folderkKey = childSnapshot.key;
+      const folderdata = childSnapshot.val();
+
+console.log("we are in the notification");
+if (folderdata.fileid == projectiden) {
+  document.getElementById("folders").innerHTML +=`
+<div class="carditems" id="projectfiles_${folderkKey}" style="cursor: pointer;">
+  <img src="../assets/images/Folder.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b><a href='Project.html?fileref=${folderdata.fileid}&foldername=${folderdata.foldername}'>${folderdata.foldername}</a></b></h4> 
+  </div>
+</div>
+`;
+}
+
+
+
+  }) 
+    // This option ensures the callback is executed only once
+  }, { onlyOnce: true });
+
+
+
+
+
+
 
 </script>
                   ©</span

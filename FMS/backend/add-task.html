@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>Downtown Dashboard</title>
+    <title>Downtown Admin</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="../assets/images/favicon.ico" />
@@ -24,324 +24,6 @@
       rel="stylesheet"
       href="../assets/vendor/remixicon/fonts/remixicon.css"
     />
-
-    <style> 
-.carditems {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 20%;
-  border-radius: 15px;
-  list-style: none;
-}
-
-.carditems:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.container {
-  padding: 2px 16px;
-  border-radius: 15px;
-}
-
-
-
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  overflow: hidden;
-}
-
-body {
-  position: relative;
-  font-family: "Open Sans", sans-serif;
-  /*background: rgba(49, 49, 49, 0.4);*/
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /*background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#76d7c4),
-    to(#bb8fce)
-  );
-  background: -o-linear-gradient(#76d7c4, #bb8fce);
-  background: linear-gradient(#76d7c4, #bb8fce);*/
-  z-index: -1;
-}
-
-body small {
-  position: absolute;
-  bottom: 20px;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-body small a {
-  color: rgba(255, 255, 255, 0.4);
-}
-
-#container {
-  width: 500px;
-  height: 50px;
-  background-color: #fff;
-  padding: 10px;
-  margin: 0 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-#container .text {
-  border: none;
-  background: none;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-#container #menu-wrap {
-  position: relative;
-  height: 25px;
-  width: 25px;
-}
-
-#container #menu-wrap .dots {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  z-index: 1;
-}
-
-#container #menu-wrap .dots > div,
-#container #menu-wrap .dots > div:after,
-#container #menu-wrap .dots > div:before {
-  height: 6px;
-  width: 6px;
-  background-color: rgba(49, 49, 49, 0.8);
-  border-radius: 50%;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#container #menu-wrap .dots > div {
-  position: relative;
-}
-
-#container #menu-wrap .dots > div:after {
-  content: "";
-  position: absolute;
-  bottom: calc((25px / 2) - (6px / 2));
-  left: 0;
-}
-
-#container #menu-wrap .dots > div:before {
-  content: "";
-  position: absolute;
-  top: calc((25px / 2) - (6px / 2));
-  left: 0;
-}
-
-#container #menu-wrap .menu {
-  position: absolute;
-  right: -10px;
-  top: calc(-12px + 50px);
-  width: 0;
-  height: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px 15px;
-  -webkit-box-shadow: 2px 4px 6px rgba(49, 49, 49, 0.2);
-  box-shadow: 2px 4px 6px rgba(49, 49, 49, 0.2);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-}
-
-#container #menu-wrap .menu ul {
-  list-style: none;
-}
-
-#container #menu-wrap .menu ul li {
-  margin: 15px 0;
-}
-
-#container #menu-wrap .menu ul li .link {
-  text-decoration: none;
-  color: rgba(49, 49, 49, 0.85);
-  opacity: 0;
-  visibility: hidden;
-}
-
-#container #menu-wrap .toggler {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  z-index: 2;
-}
-
-#container #menu-wrap .toggler:hover + .dots > div,
-#container #menu-wrap .toggler:hover + .dots > div:after,
-#container #menu-wrap .toggler:hover + .dots > div:before {
-  background-color: rgba(49, 49, 49, 0.6);
-}
-
-#container #menu-wrap .toggler:checked + .dots > div {
-  -webkit-transform: translateX(calc(((25px / 2) - (6px / 2)) * -0.7071067812))
-    translateY(calc(((25px / 2) - (6px / 2)) * -0.7071067812));
-  -ms-transform: translateX(calc(((25px / 2) - (6px / 2)) * -0.7071067812))
-    translateY(calc(((25px / 2) - (6px / 2)) * -0.7071067812));
-  transform: translateX(calc(((25px / 2) - (6px / 2)) * -0.7071067812))
-    translateY(calc(((25px / 2) - (6px / 2)) * -0.7071067812));
-}
-
-#container #menu-wrap .toggler:checked + .dots > div:after {
-  -webkit-transform: translateX(calc(((25px / 2) - (6px / 2)) * 0.7071067812))
-    translateY(calc((2 * (25px / 2) - (6px / 2)) * 0.7071067812));
-  -ms-transform: translateX(calc(((25px / 2) - (6px / 2)) * 0.7071067812))
-    translateY(calc((2 * (25px / 2) - (6px / 2)) * 0.7071067812));
-  transform: translateX(calc(((25px / 2) - (6px / 2)) * 0.7071067812))
-    translateY(calc((2 * (25px / 2) - (6px / 2)) * 0.7071067812));
-}
-
-#container #menu-wrap .toggler:checked + .dots > div:before {
-  -webkit-transform: translateX(
-      calc(2 * (((25px / 2) - (6px / 2)) * 0.7071067812))
-    )
-    translateY(
-      calc(((25px / 2) - (6px / 2)) - (((25px / 2) - (6px / 2)) * 0.7071067812))
-    );
-  -ms-transform: translateX(calc(2 * (((25px / 2) - (6px / 2)) * 0.7071067812)))
-    translateY(
-      calc(((25px / 2) - (6px / 2)) - (((25px / 2) - (6px / 2)) * 0.7071067812))
-    );
-  transform: translateX(calc(2 * (((25px / 2) - (6px / 2)) * 0.7071067812)))
-    translateY(
-      calc(((25px / 2) - (6px / 2)) - (((25px / 2) - (6px / 2)) * 0.7071067812))
-    );
-}
-
-#container #menu-wrap .toggler:checked:hover + .dots > div,
-#container #menu-wrap .toggler:checked:hover + .dots > div:after,
-#container #menu-wrap .toggler:checked:hover + .dots > div:before {
-  background-color: rgba(49, 49, 49, 0.6);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#container #menu-wrap .toggler:checked ~ .menu {
-  opacity: 1;
-  visibility: visible;
-  width: 150px;
-  height: 130px;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#container #menu-wrap .toggler:checked ~ .menu ul .link {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition: 0.5s ease 0.3s;
-  -o-transition: 0.5s ease 0.3s;
-  transition: 0.5s ease 0.3s;
-}
-
-#container #menu-wrap .toggler:checked ~ .menu ul .link:hover {
-  color: #2980b9;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-}
-
-#container #menu-wrap .toggler:not(:checked) ~ .menu {
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#container #menu-wrap .toggler:not(:checked) ~ .menu ul .link {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
-  transition: 0.1s;
-}
-
-@media (max-width: 600px) {
-  #container {
-    position: absolute;
-    top: 50px;
-    width: calc(100% - 40px);
-    margin: 0;
-  }
-}
-</style>
   </head>
   <body class="  ">
     <!-- loader Start -->
@@ -778,15 +460,12 @@ body small a {
             >
               <i class="ri-menu-line wrapper-menu"></i>
               <a style="cursor: pointer;" id="dashboardmenu2" class="header-logo">
-                <img
-                  src="../assets/images/logo.png"
-                  class="img-fluid rounded-normal"
-                  alt="logo"
+                <img src="../assets/images/logo.png" class="img-fluid rounded-normal" alt="logo"
                 />
                 <h5 class="logo-title ml-3">Downtown</h5>
               </a>
             </div>
-            
+
             <div class="d-flex align-items-center">
               <button
                 class="navbar-toggler"
@@ -800,18 +479,7 @@ body small a {
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto navbar-list align-items-center">
-                      <!-- class="btn border add-btn shadow-none mx-2 d-none d-md-block"-->
-                 
-                  <li>
-                    <a
-                      href="#"
-                      class="btn border add-btn shadow-none mx-2 d-none d-md-block"
-                      data-toggle="modal"
-                      data-target="#new-order"
-                      ><i class="las la-plus mr-2"></i>New File</a
-                    >
-                  </li>
-                  
+  
                   <li class="nav-item nav-icon dropdown">
                     <a
                       href="#"
@@ -851,21 +519,13 @@ body small a {
                               class="d-flex align-items-center justify-content-between"
                             >
                               <h5 class="mb-0">Notifications</h5>
-                              <a class="badge badge-primary badge-card" id="num2" 
-                                >0</a
-                              >
+                              <a class="badge badge-primary badge-card" id="num2">0</a>
                             </div>
                           </div>
                           <div class="px-3 pt-0 pb-0 sub-card" id="notifications">
                             
                           </div>
-                          <!--<a
-                            class="right-ic btn btn-primary btn-block position-relative p-2"
-                            href="#"
-                            role="button"
-                          >
-                            View All
-                          </a>-->
+                          
                         </div>
                       </div>
                     </div>
@@ -879,11 +539,7 @@ body small a {
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <img
-                        src="../assets/images/user/1.png"
-                        class="img-fluid rounded"
-                        alt="user"
-                      />
+                      
                     </a>
                     <div
                       class="iq-sub-dropdown dropdown-menu"
@@ -912,7 +568,7 @@ body small a {
                               <a
                                 style="cursor: pointer;" id="auth_lock_screen2" class="btn border mr-2">Lock screen</a
                               >
-                              <a href="auth-sign-in.html" class="btn border" id="logout">Sign Out</a
+                              <a style="cursor: pointer;" class="btn border" id="logout">Sign Out</a
                               >
                             </div>
                           </div>
@@ -937,11 +593,14 @@ body small a {
           <div class="modal-content">
             <div class="modal-body">
               <div class="popup text-left">
-                <h4 class="mb-3">Add Document</h4>
+                <h4 class="mb-3">New Order</h4>
                 <div class="content create-workform bg-body">
                   <div class="pb-3">
-                    <label class="mb-2">Document name</label>
-                    <input type="file" id="fileInput" class="form-control" placeholder="Enter File Name or number"
+                    <label class="mb-2">Email</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Name or Email"
                     />
                   </div>
                   <div class="col-lg-12 mt-4">
@@ -951,7 +610,7 @@ body small a {
                       <div class="btn btn-primary mr-4" data-dismiss="modal">
                         Cancel
                       </div>
-                      <div class="btn btn-outline-primary" id="Add_Document" data-dismiss="modal">
+                      <div class="btn btn-outline-primary" data-dismiss="modal">
                         Create
                       </div>
                     </div>
@@ -963,26 +622,165 @@ body small a {
         </div>
       </div>
       <div class="content-page">
-        <div class="container-fluid">
+        <div class="container-fluid add-form-list">
           <div class="row">
-            <div class="col-lg-12">
-              <div
-                class="card card-transparent card-block card-stretch card-height border-none"
-              >
-                <div class="card-body p-0 mt-lg-2 mt-0">
-                  <h3 class="mb-3" id="filename"></h3>
+            <div class="col-sm-12">
+              <div class="card">
+                <div class="card-header d-flex justify-content-between">
+                  <div class="header-title">
+                    <h4 class="card-title">Add Task</h4>
+                  </div>
+                </div>
+                <div class="card-body">
+                  
+                    <div class="row">
+                      <!--<div class="col-md-12">
+                        <div class="form-group">
+                          <label>Projects Priority *</label>
+                          <select
+                            name="Priority" id="period"
+                            class="selectpicker form-control"
+                            data-style="py-0"
+                          >
+                            <option>Period</option>
+                            <option value="8hours">8 Months</option>
+                            <option value="2days">2 Months</option>
+                            <option value="3days">3 Months</option>
+                          </select>
+                        </div>
+                      </div>-->
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>File Task *</label>
+                          <input
+                            type="text" id="task"
+                            class="form-control"
+                            placeholder="Enter Task"
+                            data-errors="Please Enter Task."
+                            required
+                          />
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Due Date</label>
+                          <input
+                            type="date"
+                            id="dateofcompletion"
+                            class="form-control"
+                            placeholder="Enter Due Date"
+                            data-errors="Please Enter Due Date."
+                            required
+                          />
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Author</label>
+                          <select
+                            name="type" id="author"
+                            class="selectpicker form-control"
+                            data-style="py-0"
+                          >
+                            <option value="Edgar Nyalungu">Edgar Nyalungu</option>
+                            <option value="Mandisi Magula">Mandisi Magula</option>
+                            <option value="Zamaswazi Mohele">Zamaswazi Mohele</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Task To *</label>
+                          <select
+                            name="type" id="allocatedto"
+                            class="selectpicker form-control"
+                            data-style="py-0"
+                          >
+                            <option value="-OUX9kRSa7Xvb4MmXB4-">Mandisi Magula</option>
+                            <option value="-OUXC1w2-VvhARJWTC49">Zamaswazi Molehe</option>
+                            <option value="-OUXD6pETozTzboG9eWp">Tabudi Sekuba</option>
+                          </select>
+                        </div>
+                      </div>
+                      <!--<div class="col-md-6">
+                        <div class="form-group">
+                          <label>Start Date*</label>
+                          <input
+                            type="date"
+                            id="startdate"
+                            class="form-control"
+                            placeholder="Enter project Start Date"
+                            data-errors="Enter project Start Date."
+                            required
+                          />
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>-->
+                      <!--<div class="col-md-6">
+                        <div class="form-group">
+                          <label>End Date*</label>
+                          <input
+                            type="date"
+                            id="enddate"
+                            class="form-control"
+                            placeholder="Enter project End Date"
+                            data-errors="Please project End Date."
+                            required
+                          />
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>-->
+                      <!-- <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Select Pro Manager *</label>
+                                        <select name="type" class="selectpicker form-control" data-style="py-0">
+                                            <option>Exclusive</option>
+                                            <option>Inclusive</option>
+                                        </select>
+                                    </div>
+                                </div> -->
+                      <!--<div class="col-md-12">
+                        <div class="form-group">
+                          <label>Select Employ *</label>
+                          <select
+                            name="type" id="employmandate"
+                            class="selectpicker form-control"
+                            data-style="py-0"
+                          >
+                            <option value="MY">Mulungisi Yoli</option>
+                            <option value="XM">Xoliswa Mbuyane</option>
+                            <option value="PM">Primrose Mbanjwa</option>
+                            <option value="KM">Katlego Matshwi</option>
+                          </select>
+                        </div>
+                      </div>-->
+                      <!--<div class="col-md-12">
+                        <div class="form-group">
+                          <label>Files</label>
+                          <input
+                            type="file" id="attachment"
+                            class="form-control image-file"
+                            name="pic"
+                            accept="image/*"
+                          />
+                        </div>
+                      </div>-->
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label>Description / Projects Details</label>
+                          <textarea class="form-control" rows="4" id="taskdesc"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2" id="addprojects">
+                      Add Task
+                    </button>
+                    <button type="reset" class="btn btn-danger">Reset</button>
                   
                 </div>
-<br>
-
               </div>
-            </div>
-        
-              </div>
-<div class="row" id="files">
-
-
-</div>
             </div>
           </div>
           <!-- Page end  -->
@@ -1007,21 +805,27 @@ body small a {
               </div>
               <div class="col-lg-6 text-right">
                 <span class="mr-1"
-                  >
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"; 
+                  ><script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  ©</span
+                >
+                <a href="#" class="">Downtown</a>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-  //https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js
-  //https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-  import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
-  import { getStorage, ref as sRef, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
+  import { getDatabase, ref, push ,onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
-//import { database } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
-  //import { firebase } from 'https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js';
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -1037,65 +841,159 @@ import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailA
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  //console.log(defaultProject.name);
   const analytics = getAnalytics(app);
 
-//import { getDatabase } from "fhttps://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
-
-// Get a reference to the database and storage services
+  // Get a reference to the database service
 var database = getDatabase(app);
-const storage = getStorage(app);
 const auth = getAuth(app);
 // Reference to the root of your database
-const urlParams = new URLSearchParams(document.location.search);
-var paramValue = urlParams.get('id');
-const projectiden = urlParams.get('fileref');
-const folder = urlParams.get('foldername');
+var rootRef = ref(database, 'Tasks/');
 var notificationRef = ref(database, 'Notification/');
-var rootRef = ref(database, 'uploads/');
 
 
-
-
-    onAuthStateChanged(auth, (user) => {
+onAuthStateChanged(auth, (user) => {
       if (user) {
+
+        //Dashboard
+
+const dashboardmenu = document.getElementById('dashboardmenu');
+
+dashboardmenu.onclick = function(){
+
+ window.location.href = `index.html?id=${user.uid}`;
+      
+  }
+
+  const dashboardmenu1 = document.getElementById('dashboardmenu1');
+
+dashboardmenu1.onclick = function(){
+
+ window.location.href = `index.html?id=${user.uid}`;
+      
+  }
+  const dashboardmenu2 = document.getElementById('dashboardmenu2');
+
+dashboardmenu2.onclick = function(){
+
+ window.location.href = `index.html?id=${user.uid}`;
+      
+  }
+
+
+
+//Files
+var filelist = document.getElementById("list_files");
+filelist.onclick = function(){
+
+window.location.href = `Projects-list.html?id=${user.uid}`;
+      
+ }
+
+
+ var addfile = document.getElementById("opennewfile");
+   addfile.onclick = function(){
+
+      window.location.href = `add-Projects.html?id=${user.uid}`;
+       }
+
+ //Lock Screen
+var addfile = document.getElementById("auth_lock_screen");
+addfile.onclick = function(){
+window.location.href = `auth-lock-screen.html?id=${user.uid}`;
+      }
+
+//add task
+ var addtask = document.getElementById("addtask");
+  addtask.onclick = function(){
+
+ window.location.href = `add-task.html?id=${user.uid}`;
+  }
+
+  var adddpt = document.getElementById("adddpt");
+          adddpt.onclick = function(){
+
+  window.location.href = `add-Department.html?id=${paramValue}`;
+      
+                                                }
+
+
+    var addemploy = document.getElementById("addemploy");
+          addemploy.onclick = function(){
+
+  window.location.href = `add-employ.html?id=${paramValue}`;
+      
+                                                }
+
+  var list_dpt = document.getElementById("list_dpt");
+          list_dpt.onclick = function(){
+
+  window.location.href = `list-Department1.html?id=${paramValue}`;
+      
+                                                }
+
+   var list_employ = document.getElementById("list_employ");
+          list_employ.onclick = function(){
+
+  window.location.href = `list-employ.html?id=${paramValue}`;
+      
+                                                }
+
+   var Projects_dpt = document.getElementById("Projects-dpt");
+          Projects_dpt.onclick = function(){
+
+  window.location.href = `Projects-dpt.html?id=${paramValue}`;
+      
+                                                }
         
-        // User is signed in
-        console.log("User is signed in:", user.uid);
-        var userRef = ref(database, 'users/' + user.uid);
 
-// Fetch data from the 'users' node once
-onValue(userRef, (snapshot) => {
-   console.log(snapshot.val());
-   const childDataval = snapshot.val();
-   
+      } else {
+        // User is signed out
+        console.log("User is signed out.");
+        window.location.href = `auth-sign-in.html`;
+      }
 
-document.getElementById("dropdownMenuButton4").innerHTML = `<img
-                        src="${childDataval.imagelink}"
-                        class="img-fluid rounded"
-                        alt="user"
-                      />`;
-
-document.getElementById("userimage").innerHTML = `<img
-                        src="${childDataval.imagelink}"
-                        class="rounded profile-img img-fluid avatar-70"
-                        alt="user"
-                      />`;
-
-                      document.getElementById("useremail").innerHTML = `${childDataval.uname}`;
-
-                        document.getElementById("occupation").innerHTML = `${childDataval.occupation}`;
-
-                //greetings end
-    
-  }, {
-    onlyOnce: true // This option ensures the callback is executed only once
-  });
+ //Lock Screen
+var filesheet = document.getElementById("filesheet");
+filesheet.onclick = function(){
+window.location.href = `timeline-3.html?id=${user.uid}`;
+      }
 
 
+      //Lock Screen
+var todo = document.getElementById("todo");
+todo.onclick = function(){
+window.location.href = `todo.html?id=${user.uid}`;
+      }
 
+            //Lock Screen
+var auth_lock_screen2 = document.getElementById("auth_lock_screen2");
+auth_lock_screen2.onclick = function(){
+window.location.href = `auth-lock-screen.html?id=${user.uid}`;
+      }
 
-        // Fetch data from the 'task' node once
+            //Lock Screen
+var todo1 = document.getElementById("todo1");
+todo1.onclick = function(){
+window.location.href = `todo.html?id=${user.uid}`;
+      }
+
+       //Logout
+                    var logout = document.getElementById("logout");
+                      logout.onclick = function(){
+
+                        signOut(auth)
+      .then(() => {
+        console.log("User signed out.");
+      })
+      .catch((error) => {
+        console.error("Sign out error:", error);
+      })
+
+                       window.location.href = `auth-sign-in.html`;
+      
+                                                }
+
+      // Fetch data from the 'task' node once
 onValue(notificationRef, (notificationsnapshot) => {
   if (notificationsnapshot.exists()) {
     let filteredCount = 0; // ✅ count after condition
@@ -1142,307 +1040,121 @@ onValue(notificationRef, (notificationsnapshot) => {
 
     console.log(`Filtered notifications: ${filteredCount}`);
   }
-}, { onlyOnce: true }); 
+}, { onlyOnce: true });
 
 
-      } else {
-        // User is signed out
-        console.log("User is signed out.");
-        window.location.href = `auth-sign-in.html`;
-      }
+var userref = ref(database, 'users/' + user.uid);
+// Fetch data from the 'users' node once
+onValue(userref, (snapshot) => {
+   const childDataval = snapshot.val();
+
+document.getElementById("dropdownMenuButton4").innerHTML = `<img
+                        src="${childDataval.imagelink}"
+                        class="img-fluid rounded"
+                        alt="user"
+                      />`;
+ document.getElementById("userimage").innerHTML = `<img
+                        src="${childDataval.imagelink}"
+                        class="rounded profile-img img-fluid avatar-70"
+                        alt="user"
+                      />`;
+
+document.getElementById("occupation").innerHTML = `${childDataval.occupation}`;
+document.getElementById("useremail").innerHTML = `${childDataval.email}`;
+
+
+             //greetings end
+    
+  }, {
+    onlyOnce: true // This option ensures the callback is executed only once
+  });
+
     });
 
 
-const adddocument = document.getElementById("Add_Document");
-adddocument.onclick = async function(){
+/*
+// Fetch data from the 'users' node once
+onValue(rootRef, (snapshot) => {
+    snapshot.forEach((childSnapshot) => {
+      const childKey = childSnapshot.key;
+      const childData = childSnapshot.val();
+      console.log("Key: " + childKey + ", Data: ", childData.email);
+      console.log(childSnapshot.val());
 
-                      
+const button = document.getElementById('btnsubmit');
+
+// Add an onclick event handler to the button
+button.onclick = function(){
+
+
+
+
+      var email = document.getElementById('period').value;
+      var password = document.getElementById('password').value;
+
+
+
+      if (childData.email == email && childData.password == password) {
+
+         window.location.href = 'index.html';
+      }
+
+      }
+
       
+    });
+  }, {
+    onlyOnce: true // This option ensures the callback is executed only once
+  });
+*/
+
+const urlParams = new URLSearchParams(document.location.search);
+const paramValue = urlParams.get('id');
 
 
-    //file upload
-    const fileInput = document.getElementById("fileInput");
-  const file = fileInput.files[0];
-
-  if (!file) {
-    alert("Please select a file first.");
-    return;
-  }
-
-  // Create a storage reference
-  const storageRef = sRef(storage, `uploads/${file.name}`);
-
-    try {
-    // Upload the file
-    const snapshot = await uploadBytes(storageRef, file);
-    console.log("Uploaded a file!", snapshot);
-
-    // Get and display download URL
-    const downloadURL = await getDownloadURL(storageRef);
-    const urlParams = new URLSearchParams(document.location.search);
-    const paramValue = urlParams.get('id');
-    const projectiden = urlParams.get('fileref');
-    const folder = urlParams.get('foldername');
 
 
-console.log(projectiden);
-console.log(folder);
 
-const filedata = {
-  fileref: projectiden,
-  folder: folder,
-  doclink: downloadURL,
-  filename: file.name,
+ //Pushing data to the specified path
+var addprojects = document.getElementById('addprojects');
+addprojects.onclick = function(){
+
+  //var period = document.getElementById('period').value;
+var task = document.getElementById('task').value;
+//var status = document.getElementById('projectid').value; //Pending | Complete
+var author = document.getElementById('author').value;
+var dateofcompletion = document.getElementById('dateofcompletion').value;
+var allocatedto = document.getElementById('allocatedto').value;
+var taskdesc = document.getElementById('taskdesc').value;
+
+
+console.log("start");
+//console.log(projectName);
+console.log("start");
+
+
+
+  var userData = {
+  task: task,
+  status : "Pending",
+  author: author,
+  dateofcompletion : dateofcompletion,
+  Allocated: allocatedto,
+  taskdesc: taskdesc
 };
 
 
-push(rootRef, filedata)
+push(rootRef, userData)
     .then(() => {
       console.log('Data has been written successfully!');
-      location.reload()
+      window.location.href = `todo.html?id=${paramValue}`;
     })
     .catch((error) => {
       console.error('Error writing data: ', error);
     });
-    console.log("File available at", downloadURL);
-    //alert("File uploaded successfully!\n" + downloadURL);
-  } catch (error) {
-    console.error("Upload failed", error);
-    alert("Upload failed. See console for details.");
   }
 
-   }
-
-//Menu links start
-
-document.write(new Date().getFullYear());
-
-                    function getval() {
-                      // body...
-                      var someval = document.getElementById("getval");
-
-                      console.log(someval.value);
-
-                      setTimeout(function(){ window.location.href = `Projects-list.html?id=${someval.value}`}, 3000);
-                    }
-                    //Dashboard
-
-                    const dashboardmenu = document.getElementById('dashboardmenu');
-
-                    dashboardmenu.onclick = function(){
-
-                       window.location.href = `index.html?id=${paramValue}`;
-      
-                                                }
-            const dashboardmenu1 = document.getElementById('dashboardmenu1');
-
-                    dashboardmenu1.onclick = function(){
-
-                       window.location.href = `index.html?id=${paramValue}`;
-      
-                                                }
-    const dashboardmenu2 = document.getElementById('dashboardmenu2');
-
-                    dashboardmenu2.onclick = function(){
-
-                       window.location.href = `index.html?id=${paramValue}`;
-      
-                                                }
-                    //Files
-                      var filelist = document.getElementById("list_files");
-
-                      filelist.onclick = function(){
-
-                       window.location.href = `Projects-list.html?id=${paramValue}`;
-      
-                                                }
-
-                      var addfile = document.getElementById("opennewfile");
-                      addfile.onclick = function(){
-
-                       window.location.href = `add-Projects.html?id=${paramValue}`;
-      
-                                                }
-
-                    //Lock Screen
-
-                      var addfile = document.getElementById("auth_lock_screen");
-                      addfile.onclick = function(){
-
-                       window.location.href = `auth-lock-screen.html?id=${paramValue}`;
-      
-                                                }
-
-       var lock_screen = document.getElementById("auth_lock_screen2");
-                      lock_screen.onclick = function(){
-
-                       window.location.href = `auth-lock-screen.html?id=${paramValue}`;
-      
-                                                }
-
-            //timeline
-                    var filesheet = document.getElementById("filesheet");
-                      filesheet.onclick = function(){
-
-                       window.location.href = `timeline-3.html?id=${paramValue}`;
-      
-                                                }
-
-     //todo
-                     var todo = document.getElementById("todo");
-                      todo.onclick = function(){
-           console.log("clickeds");
-                       window.location.href = `todo.html?id=${paramValue}`;
-      
-                                                }
-                    var todo1 = document.getElementById("todo1");
-                      todo1.onclick = function(){
-           console.log("clickeds");
-                       window.location.href = `todo.html?id=${paramValue}`;
-      
-                                                }
-                      //add task
-                    var addtask = document.getElementById("addtask");
-                      addtask.onclick = function(){
-
-                       window.location.href = `add-task.html?id=${paramValue}`;
-      
-                                                }
-
-
-        var adddpt = document.getElementById("adddpt");
-          adddpt.onclick = function(){
-
-  window.location.href = `add-Department.html?id=${paramValue}`;
-      
-                                                }
-
-
-    var addemploy = document.getElementById("addemploy");
-          addemploy.onclick = function(){
-
-  window.location.href = `add-employ.html?id=${paramValue}`;
-      
-                                                }
-
-  var list_dpt = document.getElementById("list_dpt");
-          list_dpt.onclick = function(){
-
-  window.location.href = `list-Department1.html?id=${paramValue}`;
-      
-                                                }
-
-   var list_employ = document.getElementById("list_employ");
-          list_employ.onclick = function(){
-
-  window.location.href = `list-employ.html?id=${paramValue}`;
-      
-                                                }
-
-   var Projects_dpt = document.getElementById("Projects-dpt");
-          Projects_dpt.onclick = function(){
-
-  window.location.href = `Projects-dpt.html?id=${paramValue}`;
-      
-                                                }
-
-
-
-                    //Employees
-                    //File activity life span
-                    //Todo
-                    //Chat
-                    
-
-                   
-
-//Menu links end
-
-
-
-
-
-// Fetch data from the 'uploads' node once
-onValue(rootRef, async (snapshot) => {
-  console.log(snapshot.val());
-  const childDataval = snapshot.val();
-
-  snapshot.forEach((childSnapshot) => {
-    const taskKey = childSnapshot.key;
-    const taskdata = childSnapshot.val();
-    console.log(`the value of one: ${taskdata.filename}`);
-
-    if (folder == taskdata.folder && projectiden == taskdata.fileref) {
-      document.getElementById("files").innerHTML += `
-        <div id="container_${taskKey}">
-          <img src="../assets/images/pdf.png" height="50px">
-          <p>${taskdata.filename}</p>
-          <div id="menu-wrap">
-            <input type="checkbox" class="toggler" />
-            <div class="dots"><div></div></div>
-            <div class="menu">
-              <div>
-                <ul>
-                  <li><a id="delete_${taskKey}" class="link">Delete</a></li>
-                  <li><a href="#" class="link">Share</a></li>
-                  <li><a id="printing_${taskKey}" class="link">Print</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>`;
-
-      // ✅ Attach handlers immediately after adding the element
-      document.getElementById(`printing_${taskKey}`).onclick = function() {
-        window.open(taskdata.doclink);
-      };
-
-      document.getElementById(`delete_${taskKey}`).onclick = function() {
-        remove(ref(database, 'uploads/' + taskKey))
-          .then(() => {
-            location.reload();
-            console.log('Data has been deleted successfully!');
-          })
-          .catch((error) => {
-            console.error('Error deleting data:', error);
-          });
-      };
-    }
-  });
-}, {
-  onlyOnce: true // ensures callback is executed only once
-});
-
-
-
-
-//Logout
-                    var logout = document.getElementById("logout");
-                      logout.onclick = function(){
-
-                        signOut(auth)
-      .then(() => {
-        console.log("User signed out.");
-                       window.location.href = `auth-sign-in.html`;
-
-      })
-      .catch((error) => {
-        console.error("Sign out error:", error);
-      })
-
-      
-                                                }
-
 </script>
-                  ©</span
-                >
-                <a href="#" class="">Downtown</a>.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
     <!-- Backend Bundle JavaScript -->
     <script src="../assets/js/backend-bundle.min.js"></script>
 
@@ -1457,7 +1169,5 @@ onValue(rootRef, async (snapshot) => {
 
     <!-- app JavaScript -->
     <script src="../assets/js/app.js"></script>
-
-
   </body>
 </html>

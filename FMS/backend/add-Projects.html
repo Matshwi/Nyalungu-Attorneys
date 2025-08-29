@@ -37,7 +37,7 @@
         <div
           class="iq-sidebar-logo d-flex align-items-center justify-content-between"
         >
-          <a href="../backend/index.html" class="header-logo">
+          <a style="cursor: pointer;" id="dashboardmenu" class="header-logo">
             <img
               src="../assets/images/logo.png"
               class="img-fluid rounded-normal light-logo"
@@ -52,8 +52,8 @@
         <div class="data-scrollbar" data-scroll="1">
           <nav class="iq-sidebar-menu">
             <ul id="iq-sidebar-toggle" class="iq-menu">
-              <li class="">
-                <a href="../backend/index.html" class="svg-icon">
+              <li class="active">
+                <a style="cursor: pointer;" id="dashboardmenu1" class="svg-icon">
                   <svg
                     class="svg-icon"
                     id="p-dash1"
@@ -76,32 +76,32 @@
                   <span class="ml-4 ">Dashboards</span>
                 </a>
                 <ul
-                  id="todo"
                   class="iq-submenu collapse"
                   data-parent="#iq-sidebar-toggle"
                 >
                   <li class="">
-                    <a href="./backend/todo.html">
+                    <a style="cursor: pointer;" id="todo1">
                       <i class="las la-minus"></i><span>Todo List</span>
                     </a>
                   </li>
-                  <li class="">
+                  <!--<li class="">
                     <a href="./backend/chat.html">
                       <i class="las la-minus"></i><span>Chat</span>
                     </a>
-                  </li>
+                  </li>-->
                 </ul>
               </li>
-              <li class="active">
+              <li class=" ">
                 <a
                   href="#Projects"
                   class="collapsed"
                   data-toggle="collapse"
                   aria-expanded="false"
                 >
-                  <svg
+
+                <svg
                     class="svg-icon"
-                    id="p-dash3"
+                    id="p-dash12"
                     width="20"
                     height="20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -112,19 +112,16 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   >
-                    <rect
-                      x="9"
-                      y="9"
-                      width="13"
-                      height="13"
-                      rx="2"
-                      ry="2"
-                    ></rect>
                     <path
-                      d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
                     ></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
                   </svg>
-                  <span class="ml-4">Projects</span>
+                  
+                  <span class="ml-4">File</span>
                   <svg
                     class="svg-icon iq-arrow-right arrow-active"
                     width="20"
@@ -147,18 +144,28 @@
                   data-parent="#iq-sidebar-toggle"
                 >
                   <li class="">
-                    <a href="../backend/Projects-list.html">
+                    <a style="cursor: pointer;" id="list_files">
                       <i class="las la-minus"></i><span>List Files</span>
                     </a>
                   </li>
                   <li class="">
-                    <a href="../backend/add-Projects.html">
-                      <i class="las la-minus"></i><span>Add File</span>
+                    <a style="cursor: pointer;" id="list_dpt">
+                      <i class="las la-minus"></i><span>List Department</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a style="cursor: pointer;" id="list_employ">
+                      <i class="las la-minus"></i><span>List Employees</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a style="cursor: pointer;" id="Projects-dpt">
+                      <i class="las la-minus"></i><span>file by department </span>
                     </a>
                   </li>
                 </ul>
               </li>
-              <li class=" ">
+              <!--<li class=" ">
                 <a
                   href="#Department"
                   class="collapsed"
@@ -213,7 +220,7 @@
                   data-parent="#iq-sidebar-toggle"
                 >
                   <li class="">
-                    <a href="../backend/list-Department.html">
+                    <a href="../backend/list-Department1.html">
                       <i class="las la-minus"></i><span>List Department</span>
                     </a>
                   </li>
@@ -223,10 +230,10 @@
                     </a>
                   </li>
                 </ul>
-              </li>
+              </li>-->
             
     
-              <li class=" ">
+              <!--<li class=" ">
                 <a
                   href="#people"
                   class="collapsed"
@@ -285,17 +292,18 @@
                   </li>
                   
                 </ul>
-              </li>
+              </li>-->
+              
               <li class=" ">
                 <a
-                href="#auth"
+                href="#uth-page"
                 class="collapsed"
                 data-toggle="collapse"
                 aria-expanded="false"
               >
                   <svg
                     class="svg-icon"
-                    id="p-dash12"
+                    id="p-dash3"
                     width="20"
                     height="20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -306,13 +314,104 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   >
+                    <rect
+                      x="9"
+                      y="9"
+                      width="13"
+                      height="13"
+                      rx="2"
+                      ry="2"
+                    ></rect>
                     <path
-                      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                      d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
                     ></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                  <span class="ml-4">Activities</span>
+                  <svg
+                    class="svg-icon iq-arrow-right arrow-active"
+                    width="20"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="10 15 15 20 20 15"></polyline>
+                    <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
+                  </svg>
+                </a>
+                <ul
+                  id="uth-page"
+                  class="iq-submenu collapse"
+                  data-parent="#iq-sidebar-toggle"
+                >
+                  <li class="">
+                    <a style="cursor: pointer;" id="filesheet">
+                      <i class="las la-minus"></i><span>File Time line</span>
+                    </a>
+                  </li>
+    
+       
+                  <li class="">
+                    <a style="cursor: pointer;" id="todo">
+                      <i class="las la-minus"></i><span>Todo</span>
+                    </a>
+                  </li>
+
+                  <li class="">
+                    <a style="cursor: pointer;" id="addtask">
+                      <i class="las la-minus"></i><span>Add Task</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a style="cursor: pointer;" id="adddpt">
+                      <i class="las la-minus"></i><span>Add Department</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a style="cursor: pointer;" id="addemploy">
+                      <i class="las la-minus"></i><span>Add Department</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a style="cursor: pointer;" id="opennewfile">
+                      <i class="las la-minus"></i><span>Add File</span>
+                    </a>
+                  </li>
+                  <!--<li class="">
+                    <a href="../backend/chat.html">
+                      <i class="las la-minus"></i><span>Chat</span>
+                    </a>
+                  </li>-->
+                </ul>
+              </li>
+              <li class=" ">
+                <a
+                href="#auth"
+                class="collapsed"
+                data-toggle="collapse"
+                aria-expanded="false"
+              >
+                 <svg
+                    class="svg-icon"
+                    id="p-dash8"
+                    width="20"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                   </svg>
                   <span class="ml-4">Authentication</span>
                   <svg
@@ -336,101 +435,18 @@
                   class="iq-submenu collapse"
                   data-parent="#iq-sidebar-toggle"
                 >
-                  <li class="">
+                  <!--<li class="">
                     <a href="../backend/auth-sign-in.html">
                       <i class="las la-minus"></i><span>Login</span>
                     </a>
-                  </li>
-    
-                  <li class="">
-                    <a href="../backend/auth-recoverpw.html">
-                      <i class="las la-minus"></i
-                      ><span>Recover Password</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a href="../backend/auth-confirm-mail.html">
-                      <i class="las la-minus"></i><span>Confirm Mail</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a href="../backend/auth-lock-screen.html">
+                  </li>-->
+                  <li >
+                    <a style="cursor: pointer;" id="auth_lock_screen">
                       <i class="las la-minus"></i><span>Lock Screen</span>
                     </a>
                   </li>
                 </ul>
               </li>
-              <li class=" ">
-                <a
-                href="#uth-page"
-                class="collapsed"
-                data-toggle="collapse"
-                aria-expanded="false"
-              >
-                  <svg
-                    class="svg-icon"
-                    id="p-dash12"
-                    width="20"
-                    height="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-                    ></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                    <polyline points="10 9 9 9 8 9"></polyline>
-                  </svg>
-                  <span class="ml-4">Other Pages</span>
-                  <svg
-                    class="svg-icon iq-arrow-right arrow-active"
-                    width="20"
-                    height="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="10 15 15 20 20 15"></polyline>
-                    <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
-                  </svg>
-                </a>
-                <ul
-                  id="uth-page"
-                  class="iq-submenu collapse"
-                  data-parent="#iq-sidebar-toggle"
-                >
-                  <li class="">
-                    <a href="../backend/timeline-3.html">
-                      <i class="las la-minus"></i><span>Project Time line</span>
-                    </a>
-                  </li>
-    
-       
-                  <li class="">
-                    <a href="../backend/todo.html">
-                      <i class="las la-minus"></i><span>Todo</span>
-                    </a>
-                  </li>
-        
-                  <li class="">
-                    <a href="../backend/chat.html">
-                      <i class="las la-minus"></i><span>Chat</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
             </ul>
           </nav>
           <div class="p-3"></div>
@@ -443,7 +459,7 @@
               class="iq-navbar-logo d-flex align-items-center justify-content-between"
             >
               <i class="ri-menu-line wrapper-menu"></i>
-              <a href="../backend/index.html" class="header-logo">
+              <a style="cursor: pointer;" id="dashboardmenu2" class="header-logo">
                 <img
                   src="../assets/images/logo.png"
                   class="img-fluid rounded-normal"
@@ -453,7 +469,7 @@
               </a>
             </div>
             <div class="iq-search-bar device-search">
-              <form action="#" class="searchbox">
+              <!--<form action="#" class="searchbox">
                 <a class="search-link" href="#"
                   ><i class="ri-search-line"></i
                 ></a>
@@ -462,7 +478,7 @@
                   class="text search-input"
                   placeholder="Search here..."
                 />
-              </form>
+              </form>-->
             </div>
             <div class="d-flex align-items-center">
               <button
@@ -478,16 +494,16 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto navbar-list align-items-center">
                  
-                  <li>
+                  <!--<li>
                     <a
                       href="#"
                       class="btn border add-btn shadow-none mx-2 d-none d-md-block"
                       data-toggle="modal"
                       data-target="#new-order"
-                      ><i class="las la-plus mr-2"></i>New Project</a
+                      ><i class="las la-plus mr-2"></i>New File</a
                     >
-                  </li>
-                  <li class="nav-item nav-icon search-content">
+                  </li>-->
+                  <!--<li class="nav-item nav-icon search-content">
                     <a
                       href="#"
                       class="search-toggle rounded"
@@ -515,8 +531,8 @@
                         </div>
                       </form>
                     </div>
-                  </li>
-                  <li class="nav-item nav-icon dropdown">
+                  </li>-->
+                  <!--<li class="nav-item nav-icon dropdown">
                     <a
                       href="#"
                       class="search-toggle dropdown-toggle"
@@ -650,7 +666,7 @@
                         </div>
                       </div>
                     </div>
-                  </li>
+                  </li>-->
                   <li class="nav-item nav-icon dropdown">
                     <a
                       href="#"
@@ -677,7 +693,7 @@
                         ></path>
                         <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
                       </svg>
-                      <span class="bg-primary"></span>
+                      <span class="badge badge-primary badge-card" id="num1">0</span>
                     </a>
                     <div
                       class="iq-sub-dropdown dropdown-menu"
@@ -690,98 +706,13 @@
                               class="d-flex align-items-center justify-content-between"
                             >
                               <h5 class="mb-0">Notifications</h5>
-                              <a class="badge badge-primary badge-card" href="#"
-                                >3</a
-                              >
+                              <a class="badge badge-primary badge-card" id="num2">0</a>
                             </div>
                           </div>
-                          <div class="px-3 pt-0 pb-0 sub-card">
-                            <a href="#" class="iq-sub-card">
-                              <div
-                                class="media align-items-center cust-card py-3 border-bottom"
-                              >
-                                <div class="">
-                                  <img
-                                    class="avatar-50 rounded-small"
-                                    src="../assets/images/user/01.jpg"
-                                    alt="01"
-                                  />
-                                </div>
-                                <div class="media-body ml-3">
-                                  <div
-                                    class="d-flex align-items-center justify-content-between"
-                                  >
-                                    <h6 class="mb-0">Emma Watson</h6>
-                                    <small class="text-dark"
-                                      ><b>12 : 47 pm</b></small
-                                    >
-                                  </div>
-                                  <small class="mb-0"
-                                    >Lorem ipsum dolor sit amet</small
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                            <a href="#" class="iq-sub-card">
-                              <div
-                                class="media align-items-center cust-card py-3 border-bottom"
-                              >
-                                <div class="">
-                                  <img
-                                    class="avatar-50 rounded-small"
-                                    src="../assets/images/user/02.jpg"
-                                    alt="02"
-                                  />
-                                </div>
-                                <div class="media-body ml-3">
-                                  <div
-                                    class="d-flex align-items-center justify-content-between"
-                                  >
-                                    <h6 class="mb-0">Ashlynn Franci</h6>
-                                    <small class="text-dark"
-                                      ><b>11 : 30 pm</b></small
-                                    >
-                                  </div>
-                                  <small class="mb-0"
-                                    >Lorem ipsum dolor sit amet</small
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                            <a href="#" class="iq-sub-card">
-                              <div
-                                class="media align-items-center cust-card py-3"
-                              >
-                                <div class="">
-                                  <img
-                                    class="avatar-50 rounded-small"
-                                    src="../assets/images/user/03.jpg"
-                                    alt="03"
-                                  />
-                                </div>
-                                <div class="media-body ml-3">
-                                  <div
-                                    class="d-flex align-items-center justify-content-between"
-                                  >
-                                    <h6 class="mb-0">Kianna Carder</h6>
-                                    <small class="text-dark"
-                                      ><b>11 : 21 pm</b></small
-                                    >
-                                  </div>
-                                  <small class="mb-0"
-                                    >Lorem ipsum dolor sit amet</small
-                                  >
-                                </div>
-                              </div>
-                            </a>
+                          <div class="px-3 pt-0 pb-0 sub-card" id="notifications">
+                            
                           </div>
-                          <a
-                            class="right-ic btn btn-primary btn-block position-relative p-2"
-                            href="#"
-                            role="button"
-                          >
-                            View All
-                          </a>
+                          
                         </div>
                       </div>
                     </div>
@@ -807,7 +738,7 @@
                     >
                       <div class="card shadow-none m-0">
                         <div class="card-body p-0 text-center">
-                          <div class="media-body profile-detail text-center">
+                          <div class="media-body profile-detail text-center" id="userimage">
                             <img
                               src="../assets/images/page-img/profile-bg.jpg"
                               alt="profile-bg"
@@ -820,18 +751,14 @@
                             />
                           </div>
                           <div class="p-3">
-                            <h5 class="mb-1">JoanDuo@property.com</h5>
-                            <p class="mb-0">Since 10 march, 2020</p>
+                            <h5 class="mb-1" id="useremail"></h5>
+                            <p class="mb-0" id="occupation"></p>
                             <div
                               class="d-flex align-items-center justify-content-center mt-3"
                             >
-                              <a
-                                href="../backend/auth-lock-screen.html"
-                                class="btn border mr-2"
-                                >Lock screen</a
+                              <a style="cursor: pointer;" id="auth_lock_screen2" class="btn border mr-2">Lock screen</a
                               >
-                              <a href="auth-sign-in.html" class="btn border"
-                                >Sign Out</a
+                              <a style="cursor: pointer;" class="btn border" id="logout">Sign Out</a
                               >
                             </div>
                           </div>
@@ -891,13 +818,13 @@
               <div class="card">
                 <div class="card-header d-flex justify-content-between">
                   <div class="header-title">
-                    <h4 class="card-title">Add Projects</h4>
+                    <h4 class="card-title">Add File</h4>
                   </div>
                 </div>
                 <div class="card-body">
                   
                     <div class="row">
-                      <div class="col-md-12">
+                      <!--<div class="col-md-12">
                         <div class="form-group">
                           <label>Projects Priority *</label>
                           <select
@@ -911,15 +838,15 @@
                             <option value="3days">3 Months</option>
                           </select>
                         </div>
-                      </div>
+                      </div>-->
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label>Project Name *</label>
+                          <label>File Name *</label>
                           <input
                             type="text" id="projectName"
                             class="form-control"
-                            placeholder="Enter Project Name"
-                            data-errors="Please Enter Project Name."
+                            placeholder="Enter File Name"
+                            data-errors="Please Enter File Name."
                             required
                           />
                           <div class="help-block with-errors"></div>
@@ -927,13 +854,13 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label>Project ID *</label>
+                          <label>File Ref *</label>
                           <input
                             type="text"
                             id="projectid"
                             class="form-control"
-                            placeholder="Enter ID"
-                            data-errors="Please Enter ID."
+                            placeholder="Enter File Ref"
+                            data-errors="Please Enter File Ref."
                             required
                           />
                           <div class="help-block with-errors"></div>
@@ -947,30 +874,34 @@
                             class="selectpicker form-control"
                             data-style="py-0"
                           >
-                            <option value="NTI">Divorce</option>
-                            <option value="COH">MVA </option>
-                            <option value="ST">Commercial</option>
-                            <option value="Duplicate">Property</option>
-                            <option value="AR">Annual Returns</option>
-                            <option value="NW">Costs</option>
+                            <option value="Road Accident Fund">Road Accident Fund</option>
+                            <option value="Unlawfull arrest">Unlawfull arrest</option>
+                            <option value="Divorce">Divorce</option>
+                            <option value="Diseased Estate">Diseased Estate</option>
+                            <option value="Immigration">Immigration law </option>
+                            <option value="Land Claims">Land Claims</option>
+                            <option value="General Civil Litigation">General Civil Litigation</option>
+                            <option value="Medical Negligence">Medical Negligence</option>
+                            <option value="Drafting of Contracts">Drafting of Contracts</option>
+                            <option value="Bail Applications">Bail Applications</option>
+                            <option value="Commercial Litigation">Commercial Litigation</option>
+                            <option value="Foreclosure Litigation">Foreclosure Litigation</option>
+                            <option value="Workerslife Legal Insurance">Workerslife Legal Insurance</option>
                           </select>
                         </div>
                       </div>
                       <div class="col-md-6">
-                        <div class="form-group">
-                          <label>Select Project Manager *</label>
-                          <select
-                            name="type" id="manager"
+                        <div class="form-group" id="selectoption">
+                          <label>Allocated To *</label>
+                          <select id="manager"
                             class="selectpicker form-control"
                             data-style="py-0"
                           >
-                            <option value="Candidate1">Candidate 1</option>
-                            <option value="Candidate2">Candidate 2</option>
-                            <option value="Candidate3">Candidate 3</option>
+                            <option value="">-- Select Manager --</option>
                           </select>
                         </div>
                       </div>
-                      <div class="col-md-6">
+                      <!--<div class="col-md-6">
                         <div class="form-group">
                           <label>Start Date*</label>
                           <input
@@ -983,8 +914,8 @@
                           />
                           <div class="help-block with-errors"></div>
                         </div>
-                      </div>
-                      <div class="col-md-6">
+                      </div>-->
+                      <!--<div class="col-md-6">
                         <div class="form-group">
                           <label>End Date*</label>
                           <input
@@ -997,7 +928,7 @@
                           />
                           <div class="help-block with-errors"></div>
                         </div>
-                      </div>
+                      </div>-->
                       <!-- <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Select Pro Manager *</label>
@@ -1007,7 +938,7 @@
                                         </select>
                                     </div>
                                 </div> -->
-                      <div class="col-md-12">
+                      <!--<div class="col-md-12">
                         <div class="form-group">
                           <label>Select Employ *</label>
                           <select
@@ -1021,8 +952,8 @@
                             <option value="KM">Katlego Matshwi</option>
                           </select>
                         </div>
-                      </div>
-                      <div class="col-md-12">
+                      </div>-->
+                      <!--<div class="col-md-12">
                         <div class="form-group">
                           <label>Files</label>
                           <input
@@ -1032,7 +963,7 @@
                             accept="image/*"
                           />
                         </div>
-                      </div>
+                      </div>-->
                       <div class="col-md-12">
                         <div class="form-group">
                           <label>Description / Projects Details</label>
@@ -1041,7 +972,7 @@
                       </div>
                     </div>
                     <button type="submit" class="btn btn-primary mr-2" id="addprojects">
-                      Add Projects
+                      Add File
                     </button>
                     <button type="reset" class="btn btn-danger">Reset</button>
                   
@@ -1087,23 +1018,26 @@
     <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
 
-  import { getDatabase, ref, push ,onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+ import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword, onAuthStateChanged, updatePassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+  import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+  
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
-    apiKey: "AIzaSyBm2El33uiiYIlvUm-Gf_56teLxMB7pEGE",
-    authDomain: "alaw-55bf1.firebaseapp.com",
-    databaseURL: "https://alaw-55bf1-default-rtdb.firebaseio.com",
-    projectId: "alaw-55bf1",
-    storageBucket: "alaw-55bf1.appspot.com",
-    messagingSenderId: "725111742859",
-    appId: "1:725111742859:web:52bee6ebf689643d398f8e",
-    measurementId: "G-55RYGLLND3"
+    apiKey: "AIzaSyCwMAE5I9frXiRjGTLB7kZOS1yYaBSmf_M",
+    authDomain: "omsl-61c79.firebaseapp.com",
+    projectId: "omsl-61c79",
+    storageBucket: "omsl-61c79.firebasestorage.app",
+    messagingSenderId: "406069597322",
+    appId: "1:406069597322:web:6ab82f14010e6f3f004973",
+    measurementId: "G-4CJ3M03JE1"
   };
 
   // Initialize Firebase
@@ -1112,12 +1046,289 @@
 
   // Get a reference to the database service
 var database = getDatabase(app);
-
+const auth = getAuth(app);
 // Reference to the root of your database
 var rootRef = ref(database, 'Projects/');
+var notificationRef = ref(database, 'Notification/');
+onAuthStateChanged(auth, (user) => {
+      if (user) {
+        
+      
+
+                    //Logout
+                    var logout = document.getElementById("logout");
+                      logout.onclick = function(){
+
+                        signOut(auth)
+      .then(() => {
+        console.log("User signed out.");
+      })
+      .catch((error) => {
+        console.error("Sign out error:", error);
+      })
+
+                       window.location.href = `auth-sign-in.html`;
+      
+                                                }
+
+                                                //Lock Screen
+                      var lockscreen = document.getElementById("auth_lock_screen");
+                      lockscreen.onclick = function(){
+
+                       window.location.href = `auth-lock-screen.html`;
+      
+                                                }
+
+                    var lockscreen2 = document.getElementById("auth_lock_screen2");
+                      lockscreen2.onclick = function(){
+
+                       window.location.href = `auth-lock-screen.html`;
+      
+                                                }
+
+                                                //timeline
+                    var filesheet = document.getElementById("filesheet");
+                      filesheet.onclick = function(){
+
+                       window.location.href = `timeline-3.html?id=${user.uid}`;
+      
+                                                }
+                   
+
+                     //todo
+                     var todo = document.getElementById("todo");
+                      todo.onclick = function(){
+           console.log("clickeds");
+                       window.location.href = `todo.html?id=${user.uid}`;
+      
+                                                }
+
+                                                var todo1 = document.getElementById("todo1");
+                      todo1.onclick = function(){
+           console.log("clickeds");
+                       window.location.href = `todo.html?id=${user.uid}`;
+      
+                                                }
+
+                                                //add task
+                    var addtask = document.getElementById("addtask");
+                      addtask.onclick = function(){
+
+                       window.location.href = `add-task.html?id=${user.uid}`;
+      
+                                                }
+//Dashboard
+
+                    const dashboardmenu = document.getElementById('dashboardmenu');
+
+                    dashboardmenu.onclick = function(){
+
+                       window.location.href = `index.html?id=${user.uid}`;
+      
+                                                }
+
+const dashboardmenu1 = document.getElementById('dashboardmenu1');
+
+  dashboardmenu1.onclick = function(){
+
+      window.location.href = `index.html?id=${user.uid}`;
+      
+                    }
+
+
+const dashboardmenu2 = document.getElementById('dashboardmenu2');
+
+  dashboardmenu2.onclick = function(){
+
+    window.location.href = `index.html?id=${user.uid}`;
+      
+    }
+
+
+                    //Files
+                      var filelist = document.getElementById("list_files");
+
+                      filelist.onclick = function(){
+
+                       window.location.href = `Projects-list.html?id=${user.uid}`;
+      
+                                                }
+
+                      var addfile = document.getElementById("opennewfile");
+                      addfile.onclick = function(){
+
+                       window.location.href = `add-Projects.html?id=${user.uid}`;
+      
+                                                }
+
+                  //Lock Screen
+
+                      var addfile = document.getElementById("auth_lock_screen");
+                      addfile.onclick = function(){
+
+                       window.location.href = `auth-lock-screen.html?id=${user.uid}`;
+      
+                                                }
+
+      var adddpt = document.getElementById("adddpt");
+          adddpt.onclick = function(){
+
+  window.location.href = `add-Department.html?id=${paramValue}`;
+      
+                                                }
+
+
+    var addemploy = document.getElementById("addemploy");
+          addemploy.onclick = function(){
+
+  window.location.href = `add-employ.html?id=${paramValue}`;
+      
+                                                }
+
+  var list_dpt = document.getElementById("list_dpt");
+          list_dpt.onclick = function(){
+
+  window.location.href = `list-Department1.html?id=${paramValue}`;
+      
+                                                }
+
+   var list_employ = document.getElementById("list_employ");
+          list_employ.onclick = function(){
+
+  window.location.href = `list-employ.html?id=${paramValue}`;
+      
+                                                }
+
+   var Projects_dpt = document.getElementById("Projects-dpt");
+          Projects_dpt.onclick = function(){
+
+  window.location.href = `Projects-dpt.html?id=${paramValue}`;
+      
+                                                }
+
+                                                // Fetch data from the 'task' node once
+onValue(notificationRef, (notificationsnapshot) => {
+  if (notificationsnapshot.exists()) {
+    let filteredCount = 0; // ✅ count after condition
+    
+    // Clear previous list before appending
+    document.getElementById("notifications").innerHTML = "";
+
+    notificationsnapshot.forEach((notificationchildSnapshot) => {
+      const notificationkKey = notificationchildSnapshot.key;
+      const notificationdata = notificationchildSnapshot.val();
+
+      console.log("Checking notification:", notificationkKey);
+
+      // ✅ check if status exists
+      const statusExists = notificationchildSnapshot.child("status").exists();
+
+      // ✅ condition: must be for this user AND have no status
+      if (notificationdata.to === user.uid && !statusExists) {
+        filteredCount++;
+
+        // render the item
+        document.getElementById("notifications").innerHTML += `
+          <a href="notification.html?id=${user.uid}&taskid=${notificationkKey}" class="iq-sub-card">
+            <div class="media align-items-center cust-card py-3 border-bottom">
+              <div>
+                <img class="avatar-50 rounded-small" src="../assets/images/user/01.jpg" alt="01" />
+              </div>
+              <div class="media-body ml-3">
+                <div class="d-flex align-items-center justify-content-between">
+                  <h6 class="mb-0">${notificationdata.title}</h6>
+                  <small class="text-dark"><b>${notificationdata.time}</b></small>
+                </div>
+                <small class="mb-0">${notificationdata.desc}</small>
+              </div>
+            </div>
+          </a>
+        `;
+      }
+    });
+
+    // ✅ update counts only for filtered data
+    document.getElementById("num1").innerHTML = filteredCount;
+    document.getElementById("num2").innerHTML = filteredCount;
+
+    console.log(`Filtered notifications: ${filteredCount}`);
+  }
+}, { onlyOnce: true });
+
+var userref = ref(database, 'users/' + user.uid);
+// Fetch data from the 'users' node once
+onValue(userref, (snapshot) => {
+   console.log(snapshot.val());
+   const childDataval = snapshot.val();
+   
+document.getElementById("dropdownMenuButton4").innerHTML = `<img
+                        src="${childDataval.imagelink}"
+                        class="img-fluid rounded"
+                        alt="user"
+                      />`;
+
+document.getElementById("userimage").innerHTML = `<img
+                        src="${childDataval.imagelink}"
+                        class="rounded profile-img img-fluid avatar-70"
+                        alt="user"
+                      />`;
+
+document.getElementById("occupation").innerHTML = `${childDataval.occupation}`;
+document.getElementById("useremail").innerHTML = `${childDataval.email}`;
+
+
+                 //greetings end
+    
+  }, {
+    onlyOnce: true // This option ensures the callback is executed only once
+  });
 
 
 
+      } else {
+        // User is signed out
+        console.log("User is signed out.");
+        window.location.href = `auth-sign-in.html`;
+      }
+    });
+const userref = ref(database, 'users/');
+    onValue(userref, (snapshot) => {
+
+      /*<select id="manager"
+                            class="selectpicker form-control"
+                            data-style="py-0"
+                          >
+                            <option value="">-- Select Manager --</option>
+                          </select>*/
+
+
+      
+      //select.innerHTML = '<option value="">-- Select Manager --</option>';  
+
+      if (!snapshot.exists()) {
+        console.log("⚠ No data found at 'users/'");
+        return;
+      }
+
+      snapshot.forEach((childSnapshot) => {
+        const childKey = childSnapshot.key;
+        const childData = childSnapshot.val();
+
+        console.log("Adding option:", childData);
+const selectElement = document.getElementById('manager');
+
+        selectElement.add(new Option(`${childData.username} ${childData.surname}`, childKey));
+
+            document.body.appendChild(selectElement);
+if (window.$) {
+      $('#manager').selectpicker('refresh');
+    }
+
+      });
+    });
+
+
+   
 
 
 /*
@@ -1156,6 +1367,8 @@ button.onclick = function(){
   });
 */
 
+const urlParams = new URLSearchParams(document.location.search);
+const paramValue = urlParams.get('id');
 
 
 
@@ -1166,41 +1379,44 @@ button.onclick = function(){
 var addprojects = document.getElementById('addprojects');
 addprojects.onclick = function(){
 
-  var period = document.getElementById('period').value;
+  //var period = document.getElementById('period').value;
 var projectName = document.getElementById('projectName').value;
 var projectid = document.getElementById('projectid').value;
 var Dept = document.getElementById('Dept').value;
 var manager = document.getElementById('manager').value;
-var startdate = document.getElementById('startdate').value;
-var enddate = document.getElementById('enddate').value;
-var employmandate = document.getElementById('employmandate').value;
-var attachment = document.getElementById('attachment').value;
+//var startdate = document.getElementById('startdate').value;
+//var enddate = document.getElementById('enddate').value;
+//var employmandate = document.getElementById('employmandate').value;
+//var attachment = document.getElementById('attachment').value;
 var projectdesc = document.getElementById('projectdesc').value;
 
 console.log("start");
 console.log(projectName);
 console.log("start");
 
+
+
   var userData = {
-  period: period,
   project_name: projectName,
   projectid: projectid,
   Dept : Dept,
   manager: manager,
-  startdate: startdate,
-  enddate : enddate,
-  employmandate: employmandate,
-  attachmentimg: attachment,
   projectdesc : projectdesc,
 };
+
+
 push(rootRef, userData)
     .then(() => {
       console.log('Data has been written successfully!');
+      window.location.href = `Projects-list.html?id=${paramValue}`;
     })
     .catch((error) => {
       console.error('Error writing data: ', error);
     });
   }
+
+
+  
 
 </script>
     <!-- Backend Bundle JavaScript -->

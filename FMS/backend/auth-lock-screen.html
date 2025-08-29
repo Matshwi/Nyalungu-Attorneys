@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>POS Dash | Responsive Bootstrap 4 Admin Dashboard Template</title>
+      <title>POS Dash | Responsive Bootstrap 4 Admin Dashboard</title>
       
       <!-- Favicon -->
       <link rel="shortcut icon" href="../assets/images/favicon.ico" />
@@ -34,9 +34,9 @@
                            <div class="col-lg-7 align-self-center">
                               <div class="p-3">
                                  <img src="../assets/images/user/1.png" class="rounded avatar-80 mb-3" alt="">
-                                 <h2 class="mb-2">Hi ! Mandisi Tsoako</h2>
-                                 <p>Enter your password to access the admin.</p>
-                                 <form>
+                                 <h2 class="mb-2" id="greetings"></h2>
+                                 <p>Press the below button to access the admin.</p>
+                                 <!--<form>
                                     <div class="row">
                                        <div class="col-lg-12">
                                           <div class="floating-label form-group">
@@ -45,8 +45,9 @@
                                           </div>
                                        </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Login</button>
-                                 </form>
+                                    <button type="submit" class="btn btn-primary">get back</button>
+                                 </form>-->
+                                 <button type="submit" class="btn btn-primary" id="btnsubmit">get back</button>
                               </div>
                            </div>
                            <div class="col-lg-5 content-right">
@@ -60,6 +61,158 @@
          </div>
       </section>
       </div>
+      <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"; 
+
+  //https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js
+  //https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+
+  import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+  import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword, setPersistence, browserLocalPersistence, browserSessionPersistence, createUserWithEmailAndPassword, onAuthStateChanged  } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+//import { database } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  //import { firebase } from 'https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js';
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCwMAE5I9frXiRjGTLB7kZOS1yYaBSmf_M",
+    authDomain: "omsl-61c79.firebaseapp.com",
+    projectId: "omsl-61c79",
+    storageBucket: "omsl-61c79.firebasestorage.app",
+    messagingSenderId: "406069597322",
+    appId: "1:406069597322:web:6ab82f14010e6f3f004973",
+    measurementId: "G-4CJ3M03JE1"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  //console.log(defaultProject.name);
+  const analytics = getAnalytics(app);
+//import { getDatabase } from "fhttps://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  // Get a reference to the database service
+var database = getDatabase(app);
+const auth = getAuth(app);
+
+/*
+// Reference to the root of your database
+history.pushState(null, null, "no-back-button");
+window.addEventListener('popstate', function(event){
+   history.pushState(null, null, "no-back-button");
+});
+*/
+const urlParams = new URLSearchParams(document.location.search);
+var paramValue = urlParams.get('id');
+
+var rootRef = ref(database, 'users/' + paramValue);
+
+onAuthStateChanged(auth, (user) => {
+      if (user) {
+        
+        // User is signed in
+        console.log("User is signed in:", user);
+        //var rootRef = ref(database, 'users/' + paramValue);
+
+
+
+      } else {
+        // User is signed out
+        console.log("User is signed out.");
+        window.location.href = `auth-sign-in.html`;
+      }
+    });
+
+const button = document.getElementById('btnsubmit');
+
+// Add an onclick event handler to the button
+button.onclick = function(e){
+e.preventDefault();
+
+onAuthStateChanged(auth, (user) => {
+      if (user) {
+        
+        // User is signed in
+        console.log("User is signed in:", user);
+        //var rootRef = ref(database, 'users/' + paramValue);
+window.location.href = `index.html?id=${user.id}`
+
+
+      } else {
+        // User is signed out
+        console.log("User is signed out.");
+        window.location.href = `auth-sign-in.html`;
+      }
+    });
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Menu links start
+
+document.write(new Date().getFullYear());
+
+                    function getval() {
+                      // body...
+                      var someval = document.getElementById("getval");
+
+                      console.log(someval.value);
+
+                      setTimeout(function(){ window.location.href = `Projects-list.html?id=${someval.value}`}, 3000);
+                    }
+                    
+
+                   
+
+//Menu links end
+
+
+
+
+
+// Fetch data from the 'users' node once
+onValue(rootRef, (snapshot) => {
+   console.log(snapshot.val());
+   const childDataval = snapshot.val();
+   console.log(`the value of one: ${childDataval.email}`);
+
+
+   //greetings start
+
+         
+    document.getElementById("greetings").innerHTML = `Hi! ${childDataval.username}`;
+    
+
+                    //greetings end
+    
+  }, {
+    onlyOnce: true // This option ensures the callback is executed only once
+  });
+
+
+
+</script>
     
     <!-- Backend Bundle JavaScript -->
     <script src="../assets/js/backend-bundle.min.js"></script>

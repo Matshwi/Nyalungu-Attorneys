@@ -56,7 +56,7 @@
         <div
           class="iq-sidebar-logo d-flex align-items-center justify-content-between"
         >
-          <a href="../backend/index.html" class="header-logo">
+          <a style="cursor: pointer;" id="dashboardmenu" class="header-logo">
             <img
               src="../assets/images/logo.png"
               class="img-fluid rounded-normal light-logo"
@@ -72,7 +72,7 @@
           <nav class="iq-sidebar-menu">
             <ul id="iq-sidebar-toggle" class="iq-menu">
               <li class="active">
-                <a href="../backend/index.html" class="svg-icon">
+                <a style="cursor: pointer;" id="dashboardmenu1" class="svg-icon">
                   <svg
                     class="svg-icon"
                     id="p-dash1"
@@ -95,20 +95,19 @@
                   <span class="ml-4 ">Dashboards</span>
                 </a>
                 <ul
-                  id="todo"
                   class="iq-submenu collapse"
                   data-parent="#iq-sidebar-toggle"
                 >
                   <li class="">
-                    <a href="./backend/todo.html">
+                    <a style="cursor: pointer;" id="todo1">
                       <i class="las la-minus"></i><span>Todo List</span>
                     </a>
                   </li>
-                  <li class="">
+                  <!--<li class="">
                     <a href="./backend/chat.html">
                       <i class="las la-minus"></i><span>Chat</span>
                     </a>
-                  </li>
+                  </li>-->
                 </ul>
               </li>
               <li class=" ">
@@ -118,9 +117,10 @@
                   data-toggle="collapse"
                   aria-expanded="false"
                 >
-                  <svg
+
+                <svg
                     class="svg-icon"
-                    id="p-dash3"
+                    id="p-dash12"
                     width="20"
                     height="20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -131,18 +131,15 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   >
-                    <rect
-                      x="9"
-                      y="9"
-                      width="13"
-                      height="13"
-                      rx="2"
-                      ry="2"
-                    ></rect>
                     <path
-                      d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
                     ></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
                   </svg>
+                  
                   <span class="ml-4">File</span>
                   <svg
                     class="svg-icon iq-arrow-right arrow-active"
@@ -166,18 +163,28 @@
                   data-parent="#iq-sidebar-toggle"
                 >
                   <li class="">
-                    <a href="../backend/Projects-list.html">
+                    <a style="cursor: pointer;" id="list_files">
                       <i class="las la-minus"></i><span>List Files</span>
                     </a>
                   </li>
                   <li class="">
-                    <a href="../backend/add-Projects.html">
-                      <i class="las la-minus"></i><span>Add File</span>
+                    <a style="cursor: pointer;" id="list_dpt">
+                      <i class="las la-minus"></i><span>List Department</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a style="cursor: pointer;" id="list_employ">
+                      <i class="las la-minus"></i><span>List Employees</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a style="cursor: pointer;" id="Projects-dpt">
+                      <i class="las la-minus"></i><span>file by department </span>
                     </a>
                   </li>
                 </ul>
               </li>
-              <li class=" ">
+              <!--<li class=" ">
                 <a
                   href="#Department"
                   class="collapsed"
@@ -232,7 +239,7 @@
                   data-parent="#iq-sidebar-toggle"
                 >
                   <li class="">
-                    <a href="../backend/list-Department.html">
+                    <a href="../backend/list-Department1.html">
                       <i class="las la-minus"></i><span>List Department</span>
                     </a>
                   </li>
@@ -242,10 +249,10 @@
                     </a>
                   </li>
                 </ul>
-              </li>
+              </li>-->
             
     
-              <li class=" ">
+              <!--<li class=" ">
                 <a
                   href="#people"
                   class="collapsed"
@@ -304,17 +311,18 @@
                   </li>
                   
                 </ul>
-              </li>
+              </li>-->
+              
               <li class=" ">
                 <a
-                href="#auth"
+                href="#uth-page"
                 class="collapsed"
                 data-toggle="collapse"
                 aria-expanded="false"
               >
                   <svg
                     class="svg-icon"
-                    id="p-dash12"
+                    id="p-dash3"
                     width="20"
                     height="20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -325,13 +333,104 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   >
+                    <rect
+                      x="9"
+                      y="9"
+                      width="13"
+                      height="13"
+                      rx="2"
+                      ry="2"
+                    ></rect>
                     <path
-                      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                      d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
                     ></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                  <span class="ml-4">Activities</span>
+                  <svg
+                    class="svg-icon iq-arrow-right arrow-active"
+                    width="20"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="10 15 15 20 20 15"></polyline>
+                    <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
+                  </svg>
+                </a>
+                <ul
+                  id="uth-page"
+                  class="iq-submenu collapse"
+                  data-parent="#iq-sidebar-toggle"
+                >
+                  <li class="">
+                    <a style="cursor: pointer;" id="filesheet">
+                      <i class="las la-minus"></i><span>File Time line</span>
+                    </a>
+                  </li>
+    
+       
+                  <li class="">
+                    <a style="cursor: pointer;" id="todo">
+                      <i class="las la-minus"></i><span>Todo</span>
+                    </a>
+                  </li>
+
+                  <li class="">
+                    <a style="cursor: pointer;" id="addtask">
+                      <i class="las la-minus"></i><span>Add Task</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a style="cursor: pointer;" id="adddpt">
+                      <i class="las la-minus"></i><span>Add Department</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a style="cursor: pointer;" id="addemploy">
+                      <i class="las la-minus"></i><span>Add Department</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a style="cursor: pointer;" id="opennewfile">
+                      <i class="las la-minus"></i><span>Add File</span>
+                    </a>
+                  </li>
+                  <!--<li class="">
+                    <a href="../backend/chat.html">
+                      <i class="las la-minus"></i><span>Chat</span>
+                    </a>
+                  </li>-->
+                </ul>
+              </li>
+              <li class=" ">
+                <a
+                href="#auth"
+                class="collapsed"
+                data-toggle="collapse"
+                aria-expanded="false"
+              >
+                 <svg
+                    class="svg-icon"
+                    id="p-dash8"
+                    width="20"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                   </svg>
                   <span class="ml-4">Authentication</span>
                   <svg
@@ -355,101 +454,18 @@
                   class="iq-submenu collapse"
                   data-parent="#iq-sidebar-toggle"
                 >
-                  <li class="">
+                  <!--<li class="">
                     <a href="../backend/auth-sign-in.html">
                       <i class="las la-minus"></i><span>Login</span>
                     </a>
-                  </li>
-    
-                  <li class="">
-                    <a href="../backend/auth-recoverpw.html">
-                      <i class="las la-minus"></i
-                      ><span>Recover Password</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a href="../backend/auth-confirm-mail.html">
-                      <i class="las la-minus"></i><span>Confirm Mail</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a href="../backend/auth-lock-screen.html">
+                  </li>-->
+                  <li >
+                    <a style="cursor: pointer;" id="auth_lock_screen">
                       <i class="las la-minus"></i><span>Lock Screen</span>
                     </a>
                   </li>
                 </ul>
               </li>
-              <li class=" ">
-                <a
-                href="#uth-page"
-                class="collapsed"
-                data-toggle="collapse"
-                aria-expanded="false"
-              >
-                  <svg
-                    class="svg-icon"
-                    id="p-dash12"
-                    width="20"
-                    height="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-                    ></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                    <polyline points="10 9 9 9 8 9"></polyline>
-                  </svg>
-                  <span class="ml-4">Other Pages</span>
-                  <svg
-                    class="svg-icon iq-arrow-right arrow-active"
-                    width="20"
-                    height="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="10 15 15 20 20 15"></polyline>
-                    <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
-                  </svg>
-                </a>
-                <ul
-                  id="uth-page"
-                  class="iq-submenu collapse"
-                  data-parent="#iq-sidebar-toggle"
-                >
-                  <li class="">
-                    <a href="../backend/timeline-3.html">
-                      <i class="las la-minus"></i><span>File Time line</span>
-                    </a>
-                  </li>
-    
-       
-                  <li class="">
-                    <a href="../backend/todo.html">
-                      <i class="las la-minus"></i><span>Todo</span>
-                    </a>
-                  </li>
-        
-                  <li class="">
-                    <a href="../backend/chat.html">
-                      <i class="las la-minus"></i><span>Chat</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
             </ul>
           </nav>
           <div class="p-3"></div>
@@ -462,7 +478,7 @@
               class="iq-navbar-logo d-flex align-items-center justify-content-between"
             >
               <i class="ri-menu-line wrapper-menu"></i>
-              <a href="../backend/index.html" class="header-logo">
+              <a id="dashboardmenu" class="header-logo">
                 <img
                   src="../assets/images/logo.png"
                   class="img-fluid rounded-normal"
@@ -471,7 +487,7 @@
                 <h5 class="logo-title ml-3">Downtown</h5>
               </a>
             </div>
-            <div class="iq-search-bar device-search">
+            <!--<div class="iq-search-bar device-search">
               <form action="#" class="searchbox">
                 <a class="search-link" href="#"
                   ><i class="ri-search-line"></i
@@ -482,7 +498,7 @@
                   placeholder="Search here..."
                 />
               </form>
-            </div>
+            </div>-->
             <div class="d-flex align-items-center">
               <button
                 class="navbar-toggler"
@@ -497,14 +513,14 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto navbar-list align-items-center">
                       <!-- class="btn border add-btn shadow-none mx-2 d-none d-md-block"-->
-                 
-                  <li>
+
+                      <li>
                     <a
-                      href="add-Projects.html"
-                      
-                      ><i class="las la-plus mr-2"></i>New Case/File</a
-                    >
-                  </li>
+                      style="cursor: pointer;" id="opennewfile2"
+                      class="btn border add-btn shadow-none mx-2 d-none d-md-block"
+                      >
+                      <i class="las la-plus mr-2"></i>New File</a>
+                    </li>
                   <li class="nav-item nav-icon search-content">
                     <a
                       href="#"
@@ -534,141 +550,7 @@
                       </form>
                     </div>
                   </li>
-                  <li class="nav-item nav-icon dropdown">
-                    <a
-                      href="#"
-                      class="search-toggle dropdown-toggle"
-                      id="dropdownMenuButton2"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="feather feather-mail"
-                      >
-                        <path
-                          d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                        ></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                      </svg>
-                      <span class="bg-primary"></span>
-                    </a>
-                    <div
-                      class="iq-sub-dropdown dropdown-menu"
-                      aria-labelledby="dropdownMenuButton2"
-                    >
-                      <div class="card shadow-none m-0">
-                        <div class="card-body p-0">
-                          <div class="cust-title p-3">
-                            <div
-                              class="d-flex align-items-center justify-content-between"
-                            >
-                              <h5 class="mb-0">All Messages</h5>
-                              <a class="badge badge-primary badge-card" href="#"
-                                >3</a
-                              >
-                            </div>
-                          </div>
-                          <div class="px-3 pt-0 pb-0 sub-card">
-                            <a href="#" class="iq-sub-card">
-                              <div
-                                class="media align-items-center cust-card py-3 border-bottom"
-                              >
-                                <div class="">
-                                  <img
-                                    class="avatar-50 rounded-small"
-                                    src="../assets/images/user/01.jpg"
-                                    alt="01"
-                                  />
-                                </div>
-                                <div class="media-body ml-3">
-                                  <div
-                                    class="d-flex align-items-center justify-content-between"
-                                  >
-                                    <h6 class="mb-0">Emma Watson</h6>
-                                    <small class="text-dark"
-                                      ><b>12 : 47 pm</b></small
-                                    >
-                                  </div>
-                                  <small class="mb-0"
-                                    >Lorem ipsum dolor sit amet</small
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                            <a href="#" class="iq-sub-card">
-                              <div
-                                class="media align-items-center cust-card py-3 border-bottom"
-                              >
-                                <div class="">
-                                  <img
-                                    class="avatar-50 rounded-small"
-                                    src="../assets/images/user/02.jpg"
-                                    alt="02"
-                                  />
-                                </div>
-                                <div class="media-body ml-3">
-                                  <div
-                                    class="d-flex align-items-center justify-content-between"
-                                  >
-                                    <h6 class="mb-0">Ashlynn Franci</h6>
-                                    <small class="text-dark"
-                                      ><b>11 : 30 pm</b></small
-                                    >
-                                  </div>
-                                  <small class="mb-0"
-                                    >Lorem ipsum dolor sit amet</small
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                            <a href="#" class="iq-sub-card">
-                              <div
-                                class="media align-items-center cust-card py-3"
-                              >
-                                <div class="">
-                                  <img
-                                    class="avatar-50 rounded-small"
-                                    src="../assets/images/user/03.jpg"
-                                    alt="03"
-                                  />
-                                </div>
-                                <div class="media-body ml-3">
-                                  <div
-                                    class="d-flex align-items-center justify-content-between"
-                                  >
-                                    <h6 class="mb-0">Kianna Carder</h6>
-                                    <small class="text-dark"
-                                      ><b>11 : 21 pm</b></small
-                                    >
-                                  </div>
-                                  <small class="mb-0"
-                                    >Lorem ipsum dolor sit amet</small
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                          </div>
-                          <a
-                            class="right-ic btn btn-primary btn-block position-relative p-2"
-                            href="#"
-                            role="button"
-                          >
-                            View All
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
+                  
                   <li class="nav-item nav-icon dropdown">
                     <a
                       href="#"
@@ -695,7 +577,7 @@
                         ></path>
                         <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
                       </svg>
-                      <span class="bg-primary"></span>
+                      <span class="badge badge-primary badge-card" id="num1">0</span>
                     </a>
                     <div
                       class="iq-sub-dropdown dropdown-menu"
@@ -708,98 +590,21 @@
                               class="d-flex align-items-center justify-content-between"
                             >
                               <h5 class="mb-0">Notifications</h5>
-                              <a class="badge badge-primary badge-card" href="#"
-                                >3</a
+                              <a class="badge badge-primary badge-card" id="num2" 
+                                >0</a
                               >
                             </div>
                           </div>
-                          <div class="px-3 pt-0 pb-0 sub-card">
-                            <a href="#" class="iq-sub-card">
-                              <div
-                                class="media align-items-center cust-card py-3 border-bottom"
-                              >
-                                <div class="">
-                                  <img
-                                    class="avatar-50 rounded-small"
-                                    src="../assets/images/user/01.jpg"
-                                    alt="01"
-                                  />
-                                </div>
-                                <div class="media-body ml-3">
-                                  <div
-                                    class="d-flex align-items-center justify-content-between"
-                                  >
-                                    <h6 class="mb-0">Emma Watson</h6>
-                                    <small class="text-dark"
-                                      ><b>12 : 47 pm</b></small
-                                    >
-                                  </div>
-                                  <small class="mb-0"
-                                    >Lorem ipsum dolor sit amet</small
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                            <a href="#" class="iq-sub-card">
-                              <div
-                                class="media align-items-center cust-card py-3 border-bottom"
-                              >
-                                <div class="">
-                                  <img
-                                    class="avatar-50 rounded-small"
-                                    src="../assets/images/user/02.jpg"
-                                    alt="02"
-                                  />
-                                </div>
-                                <div class="media-body ml-3">
-                                  <div
-                                    class="d-flex align-items-center justify-content-between"
-                                  >
-                                    <h6 class="mb-0">Ashlynn Franci</h6>
-                                    <small class="text-dark"
-                                      ><b>11 : 30 pm</b></small
-                                    >
-                                  </div>
-                                  <small class="mb-0"
-                                    >Lorem ipsum dolor sit amet</small
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                            <a href="#" class="iq-sub-card">
-                              <div
-                                class="media align-items-center cust-card py-3"
-                              >
-                                <div class="">
-                                  <img
-                                    class="avatar-50 rounded-small"
-                                    src="../assets/images/user/03.jpg"
-                                    alt="03"
-                                  />
-                                </div>
-                                <div class="media-body ml-3">
-                                  <div
-                                    class="d-flex align-items-center justify-content-between"
-                                  >
-                                    <h6 class="mb-0">Kianna Carder</h6>
-                                    <small class="text-dark"
-                                      ><b>11 : 21 pm</b></small
-                                    >
-                                  </div>
-                                  <small class="mb-0"
-                                    >Lorem ipsum dolor sit amet</small
-                                  >
-                                </div>
-                              </div>
-                            </a>
+                          <div class="px-3 pt-0 pb-0 sub-card" id="notifications">
+                            
                           </div>
-                          <a
+                          <!--<a
                             class="right-ic btn btn-primary btn-block position-relative p-2"
                             href="#"
                             role="button"
                           >
                             View All
-                          </a>
+                          </a>-->
                         </div>
                       </div>
                     </div>
@@ -825,7 +630,7 @@
                     >
                       <div class="card shadow-none m-0">
                         <div class="card-body p-0 text-center">
-                          <div class="media-body profile-detail text-center">
+                          <div class="media-body profile-detail text-center" id="userimage">
                             <img
                               src="../assets/images/page-img/profile-bg.jpg"
                               alt="profile-bg"
@@ -838,18 +643,15 @@
                             />
                           </div>
                           <div class="p-3">
-                            <h5 class="mb-1">JoanDuo@property.com</h5>
-                            <p class="mb-0">Since 10 march, 2020</p>
+                            <h5 class="mb-1" id="useremail"></h5>
+                            <p class="mb-0" id="occupation"></p>
                             <div
                               class="d-flex align-items-center justify-content-center mt-3"
                             >
                               <a
-                                href="../backend/auth-lock-screen.html"
-                                class="btn border mr-2"
-                                >Lock screen</a
+                                style="cursor: pointer;" id="auth_lock_screen2" class="btn border mr-2">Lock screen</a
                               >
-                              <a href="auth-sign-in.html" class="btn border"
-                                >Sign Out</a
+                              <a href="auth-sign-in.html" class="btn border" id="logout">Sign Out</a
                               >
                             </div>
                           </div>
@@ -907,11 +709,64 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-12">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div class="todo-date d-flex mr-3">
+                          
+                          <span><h3 class="mb-3" id="greetings"></h3></span>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-body p-0">
+                      <ul class="todo-task-lists m-0 p-0" id="taskstodo">
+                        
+                      </ul>
+                      <a
+                            style="cursor: pointer;" id="todo2"
+                            class="btn btn-primary d-block"
+                            ><i class="ri-Subtract-line"></i> see all</a
+                          >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="iq-todo-right">
+                        <div class="iq-todo-friendlist mt-3">
+                          <ul class="suggestions-lists m-0 p-0" id="services">
+                            
+                          </ul>
+                          <!--<a
+                            href="javascript:void(0);"
+                            class="btn btn-primary d-block"
+                            ><i class="ri-add-line"></i> Load More</a
+                          >-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--<div class="row">
+            <div class="col-lg-12">
               <div
                 class="card card-transparent card-block card-stretch card-height border-none"
               >
                 <div class="card-body p-0 mt-lg-2 mt-0">
-                  <h3 class="mb-3">Hi Admin, Good Morning</h3>
+                  <h3 class="mb-3" id="greetings"></h3>
                   <p class="mb-0 mr-4">
                     Your dashboard gives you views of key performance or
                     business process.
@@ -922,8 +777,10 @@
               </div>
             </div>
         
-              </div>
-<div class="row" >
+              </div>-->
+
+
+<!--<div class="row" >
               <div class="carditems" id="task" style="cursor: pointer;">
   <img src="../assets/images/task.jpg" alt="Avatar" style="width:100%">
   <div class="container">
@@ -937,7 +794,7 @@
     <h4><b>100 - Matters</b></h4> 
   </div>
 </div>
-</div>
+</div>-->
             </div>
           </div>
           <!-- Page end  -->
@@ -962,8 +819,160 @@
               </div>
               <div class="col-lg-6 text-right">
                 <span class="mr-1"
-                  ><script>
-                    document.write(new Date().getFullYear());
+                  >
+                  
+                  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"; 
+
+  //https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js
+  //https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+  import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+//import { database } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  //import { firebase } from 'https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js';
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCwMAE5I9frXiRjGTLB7kZOS1yYaBSmf_M",
+    authDomain: "omsl-61c79.firebaseapp.com",
+    projectId: "omsl-61c79",
+    storageBucket: "omsl-61c79.firebasestorage.app",
+    messagingSenderId: "406069597322",
+    appId: "1:406069597322:web:6ab82f14010e6f3f004973",
+    measurementId: "G-4CJ3M03JE1"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  //console.log(defaultProject.name);
+  const analytics = getAnalytics(app);
+  const auth = getAuth(app);
+//import { getDatabase } from "fhttps://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  // Get a reference to the database service
+var database = getDatabase(app);
+
+// Reference to the root of your database
+
+const urlParams = new URLSearchParams(document.location.search);
+var paramValue = urlParams.get('id');
+
+
+
+var taskRef = ref(database, 'Tasks/');
+
+var serviceRef = ref(database, 'services/');
+
+var notificationRef = ref(database, 'Notification/');
+
+//Menu links start
+
+
+//Authentication State Observer: Use onAuthStateChanged to listen for changes in the user's sign-in state, allowing you to update your UI accordingly.
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        
+        // User is signed in
+        console.log("User is signed in:", user.uid);
+        var rootRef = ref(database, 'users/' + user.uid);
+
+// Fetch data from the 'users' node once
+onValue(rootRef, (usersnapshot) => {
+   console.log(usersnapshot.val());
+   const childDataval = usersnapshot.val();
+   
+   
+
+
+document.getElementById("useremail").innerHTML = `${childDataval.uname}`;
+document.getElementById("occupation").innerHTML = `${childDataval.occupation}`;
+
+
+document.getElementById("dropdownMenuButton4").innerHTML = `<img
+                        src="${childDataval.imagelink}"
+                        class="img-fluid rounded"
+                        alt="user"
+                      />`;
+
+document.getElementById("userimage").innerHTML = `<img
+                        src="${childDataval.imagelink}"
+                        class="rounded profile-img img-fluid avatar-70"
+                        alt="user"
+                      />`;
+
+document.getElementById("occupation").innerHTML = `${childDataval.occupation}`;
+document.getElementById("useremail").innerHTML = `${childDataval.email}`;
+//greetings end
+    
+  }, {
+    onlyOnce: true // This option ensures the callback is executed only once
+  });
+
+
+
+
+onValue(notificationRef, (notificationsnapshot) => {
+  if (notificationsnapshot.exists()) {
+    let filteredCount = 0; // ✅ count after condition
+    
+    // Clear previous list before appending
+    document.getElementById("notifications").innerHTML = "";
+
+    notificationsnapshot.forEach((notificationchildSnapshot) => {
+      const notificationkKey = notificationchildSnapshot.key;
+      const notificationdata = notificationchildSnapshot.val();
+
+      console.log("Checking notification:", notificationkKey);
+
+      // ✅ check if status exists
+      const statusExists = notificationchildSnapshot.child("status").exists();
+
+      // ✅ condition: must be for this user AND have no status
+      if (notificationdata.to === user.uid && !statusExists) {
+        filteredCount++;
+
+        // render the item
+        document.getElementById("notifications").innerHTML += `
+          <a href="notification.html?id=${user.uid}&taskid=${notificationkKey}" class="iq-sub-card">
+            <div class="media align-items-center cust-card py-3 border-bottom">
+              <div>
+                <img class="avatar-50 rounded-small" src="../assets/images/user/01.jpg" alt="01" />
+              </div>
+              <div class="media-body ml-3">
+                <div class="d-flex align-items-center justify-content-between">
+                  <h6 class="mb-0">${notificationdata.title}</h6>
+                  <small class="text-dark"><b>${notificationdata.time}</b></small>
+                </div>
+                <small class="mb-0">${notificationdata.desc}</small>
+              </div>
+            </div>
+          </a>
+        `;
+      }
+    });
+
+    // ✅ update counts only for filtered data
+    document.getElementById("num1").innerHTML = filteredCount;
+    document.getElementById("num2").innerHTML = filteredCount;
+
+    console.log(`Filtered notifications: ${filteredCount}`);
+  }
+}, { onlyOnce: true });  // ✅ make sure this option is passed correctly
+
+
+
+      } else {
+        // User is signed out
+        console.log("User is signed out.");
+        window.location.href = `auth-sign-in.html`;
+      }
+    });
+//document.write(new Date().getFullYear());
 
                     function getval() {
                       // body...
@@ -971,27 +980,289 @@
 
                       console.log(someval.value);
 
-                      setTimeout(function(){ window.location.href = `Projects-list.html?${someval.value}`}, 3000);
+                      setTimeout(function(){ window.location.href = `Projects-list.html?id=${someval.value}`}, 3000);
                     }
 
-                    const button = document.getElementById('task');
-                    const project = document.getElementById('projects');
-                    // Add an onclick event handler to the button
-                    button.onclick = function(){
+                    //Dashboard
+                    const dashboardmenu = document.getElementById('dashboardmenu');
 
-                       window.location.href = 'todo.html';
+                    dashboardmenu.onclick = function(){
+
+                       window.location.href = `index.html?id=${paramValue}`;
+      
+                                                }
+                    const dashboardmenu1 = document.getElementById('dashboardmenu1');
+
+                    dashboardmenu1.onclick = function(){
+
+                       window.location.href = `index.html?id=${paramValue}`;
+      
+                                                }
+                    //Files
+                      var filelist = document.getElementById("list_files");
+
+                      filelist.onclick = function(){
+
+                       window.location.href = `Projects-list.html?id=${paramValue}`;
       
                                                 }
 
-                    project.onclick = function(){
+                      var addfile = document.getElementById("opennewfile");
+                      addfile.onclick = function(){
 
-                       window.location.href = 'Projects-list.html';
+                       window.location.href = `add-Projects.html?id=${paramValue}`;
       
                                                 }
-                  </script>
+
+                      var opennewfile = document.getElementById("opennewfile2");
+                      opennewfile.onclick = function(){
+
+                       window.location.href = `add-Projects.html?id=${paramValue}`;
+      
+                                                }
+
+                    //Lock Screen
+                      var lockscreen = document.getElementById("auth_lock_screen");
+                      lockscreen.onclick = function(){
+
+                       window.location.href = `auth-lock-screen.html`;
+      
+                                                }
+
+                    var lockscreen2 = document.getElementById("auth_lock_screen2");
+                      lockscreen2.onclick = function(){
+
+                       window.location.href = `auth-lock-screen.html`;
+      
+                                                }
+
+var adddpt = document.getElementById("adddpt");
+          adddpt.onclick = function(){
+
+  window.location.href = `add-Department.html?id=${paramValue}`;
+      
+                                                }
+
+
+    var addemploy = document.getElementById("addemploy");
+          addemploy.onclick = function(){
+
+  window.location.href = `add-employ.html?id=${paramValue}`;
+      
+                                                }
+
+  var list_dpt = document.getElementById("list_dpt");
+          list_dpt.onclick = function(){
+
+  window.location.href = `list-Department1.html?id=${paramValue}`;
+      
+                                                }
+
+   var list_employ = document.getElementById("list_employ");
+          list_employ.onclick = function(){
+
+  window.location.href = `list-employ.html?id=${paramValue}`;
+      
+                                                }
+
+   var Projects_dpt = document.getElementById("Projects-dpt");
+          Projects_dpt.onclick = function(){
+
+  window.location.href = `Projects-dpt.html?id=${paramValue}`;
+      
+                                                }
+
+
+/*
+                    //Password recovery
+                    var recoverpassword = document.getElementById("recoverpassword");
+                      recoverpassword.onclick = function(){
+
+                       window.location.href = `auth-recoverpw.html?id=${paramValue}`;
+      
+                                                }
+
+
+
+                    //Confirm Email
+var confirmemail = document.getElementById("confirmemail");
+                      confirmemail.onclick = function(){
+
+                       window.location.href = `auth-confirm-mail.html?id=${paramValue}`;
+      
+                                                }*/
+
+                    //Logout
+                    var logout = document.getElementById("logout");
+                      logout.onclick = function(){
+
+                        signOut(auth)
+      .then(() => {
+        console.log("User signed out.");
+      })
+      .catch((error) => {
+        console.error("Sign out error:", error);
+      })
+
+                       window.location.href = `auth-sign-in.html`;
+      
+                                                }
+                    //timeline
+                    var filesheet = document.getElementById("filesheet");
+                      filesheet.onclick = function(){
+
+                       window.location.href = `timeline-3.html?id=${paramValue}`;
+      
+                                                }
+                   
+
+                     //todo
+                     var todo = document.getElementById("todo");
+                      todo.onclick = function(){
+           console.log("clickeds");
+                       window.location.href = `todo.html?id=${paramValue}`;
+      
+                                                }
+                    var todo1 = document.getElementById("todo1");
+                      todo1.onclick = function(){
+           console.log("clickeds");
+                       window.location.href = `todo.html?id=${paramValue}`;
+      
+                                                }
+
+
+var todo2 = document.getElementById("todo2");
+                      todo2.onclick = function(){
+           console.log("clickeds");
+                       window.location.href = `todo.html?id=${paramValue}`;
+      
+                                                }                      //add task
+                    var addtask = document.getElementById("addtask");
+                      addtask.onclick = function(){
+
+                       window.location.href = `add-task.html?id=${paramValue}`;
+      
+                                                }
+
+
+
+
+
+
+
+
+// Fetch data from the 'task' node once
+onValue(taskRef, (tasksnapshot) => {
+  tasksnapshot.forEach((taskchildSnapshot) => {
+      const taskKey = taskchildSnapshot.key;
+      const taskdata = taskchildSnapshot.val();
+
+onAuthStateChanged(auth, (user) => {
+if (taskdata.Allocated == user.uid && taskdata.status == "Pending") {
+  document.getElementById("taskstodo").innerHTML +=`
+
+  <li class="d-flex align-items-center p-3" style="cursor: pointer;" id="detailedtodo">
+                          <div class="user-img img-fluid">
+                            <img
+                              src="../assets/images/user/01.jpg"
+                              alt="story-img"
+                              class="rounded avatar-40"
+                            />
+                          </div>
+  <a href="detailedtodo.html?id=${user.uid}&taskid=${taskKey}">
+                          <div class="media-support-info ml-3">
+                            <h6 class="d-inline-block">
+                              ${taskdata.task}
+                            </h6>
+                            <span class="badge badge-warning ml-3 text-white"
+                              >${taskdata.status}</span
+                            >
+                            <p class="mb-0">by ${taskdata.author}</p>
+                          </div>
+                          <div
+                            class="card-header-toolbar d-flex align-items-center"
+                          >
+                            <!--<div class="custom-control custom-checkbox">
+                              
+                              <label
+                                class="custom-control-label"
+                                for="check1"
+                              ></label>
+                            </div>-->
+                          </div>
+  </a>
+                        </li>
+`;
+}
+})
+    
+  }) 
+    onlyOnce: true // This option ensures the callback is executed only once
+  });
+
+
+
+
+
+
+
+// Fetch data from the 'service' node once
+onValue(serviceRef, (servicesnapshot) => {
+
+  servicesnapshot.forEach((servicechildSnapshot) => {
+      const serviceKey = servicechildSnapshot.key;
+      const servicedata = servicechildSnapshot.val();
+
+  document.getElementById("services").innerHTML +=`
+<li class="d-flex mb-4 align-items-center" style="cursor: pointer;">
+ <div class="user-img img-fluid">
+  <img src="../assets/images/user/01.jpg" alt="story-img" class="rounded avatar-40"/>
+     </div>
+      <div class="media-support-info ml-3">
+       <h6>${servicedata.derptname}</h6>
+        <!--<p class="mb-0">0</p>-->
+          </div>
+           <div class="card-header-toolbar d-flex align-items-center">
+            <div class="dropdown">
+             <span class="dropdown-toggle text-primary" id="dropdownMenuButton41" data-toggle="dropdown">
+                <i class="ri-more-2-line"></i>
+             </span>
+           <div class="dropdown-menu dropdown-menu-right" style="">
+            <!--<a class="dropdown-item" href="#" id="rafmatter">
+             <i class="ri-user-unfollow-line mr-2">
+              </i>Matters</a>-->
+               <a class="dropdown-item" href="Projects-dpt.html?id=${paramValue}&dpt=${servicedata.derptname}">
+               <i class="ri-lock-line mr-2">
+                </i>Active
+                 </a>
+                  <a class="dropdown-item" href="#">
+                   <i class="ri-close-circle-line mr-2"></i>Closed
+                  </a>
+          </div>
+           </div>
+            </div>
+             </li>
+  
+`;
+
+
+
+
+    
+  }) 
+    onlyOnce: true // This option ensures the callback is executed only once
+  });
+
+
+
+
+
+
+
+</script>
                   ©</span
                 >
-                <a href="#" class="">Downtown</a>.
+                <a class="">Downtown</a>.
               </div>
             </div>
           </div>

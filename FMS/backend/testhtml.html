@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload to Firebase</title>
+</head>
+<body>
+  <h2>Upload a Document to Firebase Storage</h2>
+  <input type="file" id="fileInput" />
+  <button onclick="uploadFile()">Upload</button>
+
+  <script type="module">
+    
+    // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"; 
+
+  //https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js
+  //https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+
+  import { getDatabase, push ,onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+  import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+//import { database } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  //import { firebase } from 'https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js';
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCwMAE5I9frXiRjGTLB7kZOS1yYaBSmf_M",
+    authDomain: "omsl-61c79.firebaseapp.com",
+    projectId: "omsl-61c79",
+    storageBucket: "omsl-61c79.firebasestorage.app",
+    messagingSenderId: "406069597322",
+    appId: "1:406069597322:web:6ab82f14010e6f3f004973",
+    measurementId: "G-4CJ3M03JE1"
+  };
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const storage = getStorage(app);
+
+// Upload function
+window.uploadFile = async function() {
+  const fileInput = document.getElementById("fileInput");
+  const file = fileInput.files[0];
+
+  if (!file) {
+    alert("Please select a file first.");
+    return;
+  }
+
+  // Create a storage reference
+  const storageRef = ref(storage, `uploads/${file.name}`);
+
+  try {
+    // Upload the file
+    const snapshot = await uploadBytes(storageRef, file);
+    console.log("Uploaded a file!", snapshot);
+
+    // Get and display download URL
+    const downloadURL = await getDownloadURL(storageRef);
+
+    var userData = {
+  doclink: task,
+  filedir: author,
+};
+    console.log("File available at", downloadURL);
+    alert("File uploaded successfully!\n" + downloadURL);
+  } catch (error) {
+    console.error("Upload failed", error);
+    alert("Upload failed. See console for details.");
+  }
+};
+
+  </script>
+
+
+</body>
+</html>

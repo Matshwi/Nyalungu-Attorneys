@@ -24,324 +24,6 @@
       rel="stylesheet"
       href="../assets/vendor/remixicon/fonts/remixicon.css"
     />
-
-    <style> 
-.carditems {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 20%;
-  border-radius: 15px;
-  list-style: none;
-}
-
-.carditems:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.container {
-  padding: 2px 16px;
-  border-radius: 15px;
-}
-
-
-
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  overflow: hidden;
-}
-
-body {
-  position: relative;
-  font-family: "Open Sans", sans-serif;
-  /*background: rgba(49, 49, 49, 0.4);*/
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /*background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#76d7c4),
-    to(#bb8fce)
-  );
-  background: -o-linear-gradient(#76d7c4, #bb8fce);
-  background: linear-gradient(#76d7c4, #bb8fce);*/
-  z-index: -1;
-}
-
-body small {
-  position: absolute;
-  bottom: 20px;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-body small a {
-  color: rgba(255, 255, 255, 0.4);
-}
-
-#container {
-  width: 500px;
-  height: 50px;
-  background-color: #fff;
-  padding: 10px;
-  margin: 0 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-#container .text {
-  border: none;
-  background: none;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-#container #menu-wrap {
-  position: relative;
-  height: 25px;
-  width: 25px;
-}
-
-#container #menu-wrap .dots {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  z-index: 1;
-}
-
-#container #menu-wrap .dots > div,
-#container #menu-wrap .dots > div:after,
-#container #menu-wrap .dots > div:before {
-  height: 6px;
-  width: 6px;
-  background-color: rgba(49, 49, 49, 0.8);
-  border-radius: 50%;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#container #menu-wrap .dots > div {
-  position: relative;
-}
-
-#container #menu-wrap .dots > div:after {
-  content: "";
-  position: absolute;
-  bottom: calc((25px / 2) - (6px / 2));
-  left: 0;
-}
-
-#container #menu-wrap .dots > div:before {
-  content: "";
-  position: absolute;
-  top: calc((25px / 2) - (6px / 2));
-  left: 0;
-}
-
-#container #menu-wrap .menu {
-  position: absolute;
-  right: -10px;
-  top: calc(-12px + 50px);
-  width: 0;
-  height: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px 15px;
-  -webkit-box-shadow: 2px 4px 6px rgba(49, 49, 49, 0.2);
-  box-shadow: 2px 4px 6px rgba(49, 49, 49, 0.2);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-}
-
-#container #menu-wrap .menu ul {
-  list-style: none;
-}
-
-#container #menu-wrap .menu ul li {
-  margin: 15px 0;
-}
-
-#container #menu-wrap .menu ul li .link {
-  text-decoration: none;
-  color: rgba(49, 49, 49, 0.85);
-  opacity: 0;
-  visibility: hidden;
-}
-
-#container #menu-wrap .toggler {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  z-index: 2;
-}
-
-#container #menu-wrap .toggler:hover + .dots > div,
-#container #menu-wrap .toggler:hover + .dots > div:after,
-#container #menu-wrap .toggler:hover + .dots > div:before {
-  background-color: rgba(49, 49, 49, 0.6);
-}
-
-#container #menu-wrap .toggler:checked + .dots > div {
-  -webkit-transform: translateX(calc(((25px / 2) - (6px / 2)) * -0.7071067812))
-    translateY(calc(((25px / 2) - (6px / 2)) * -0.7071067812));
-  -ms-transform: translateX(calc(((25px / 2) - (6px / 2)) * -0.7071067812))
-    translateY(calc(((25px / 2) - (6px / 2)) * -0.7071067812));
-  transform: translateX(calc(((25px / 2) - (6px / 2)) * -0.7071067812))
-    translateY(calc(((25px / 2) - (6px / 2)) * -0.7071067812));
-}
-
-#container #menu-wrap .toggler:checked + .dots > div:after {
-  -webkit-transform: translateX(calc(((25px / 2) - (6px / 2)) * 0.7071067812))
-    translateY(calc((2 * (25px / 2) - (6px / 2)) * 0.7071067812));
-  -ms-transform: translateX(calc(((25px / 2) - (6px / 2)) * 0.7071067812))
-    translateY(calc((2 * (25px / 2) - (6px / 2)) * 0.7071067812));
-  transform: translateX(calc(((25px / 2) - (6px / 2)) * 0.7071067812))
-    translateY(calc((2 * (25px / 2) - (6px / 2)) * 0.7071067812));
-}
-
-#container #menu-wrap .toggler:checked + .dots > div:before {
-  -webkit-transform: translateX(
-      calc(2 * (((25px / 2) - (6px / 2)) * 0.7071067812))
-    )
-    translateY(
-      calc(((25px / 2) - (6px / 2)) - (((25px / 2) - (6px / 2)) * 0.7071067812))
-    );
-  -ms-transform: translateX(calc(2 * (((25px / 2) - (6px / 2)) * 0.7071067812)))
-    translateY(
-      calc(((25px / 2) - (6px / 2)) - (((25px / 2) - (6px / 2)) * 0.7071067812))
-    );
-  transform: translateX(calc(2 * (((25px / 2) - (6px / 2)) * 0.7071067812)))
-    translateY(
-      calc(((25px / 2) - (6px / 2)) - (((25px / 2) - (6px / 2)) * 0.7071067812))
-    );
-}
-
-#container #menu-wrap .toggler:checked:hover + .dots > div,
-#container #menu-wrap .toggler:checked:hover + .dots > div:after,
-#container #menu-wrap .toggler:checked:hover + .dots > div:before {
-  background-color: rgba(49, 49, 49, 0.6);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#container #menu-wrap .toggler:checked ~ .menu {
-  opacity: 1;
-  visibility: visible;
-  width: 150px;
-  height: 130px;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#container #menu-wrap .toggler:checked ~ .menu ul .link {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition: 0.5s ease 0.3s;
-  -o-transition: 0.5s ease 0.3s;
-  transition: 0.5s ease 0.3s;
-}
-
-#container #menu-wrap .toggler:checked ~ .menu ul .link:hover {
-  color: #2980b9;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-}
-
-#container #menu-wrap .toggler:not(:checked) ~ .menu {
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#container #menu-wrap .toggler:not(:checked) ~ .menu ul .link {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
-  transition: 0.1s;
-}
-
-@media (max-width: 600px) {
-  #container {
-    position: absolute;
-    top: 50px;
-    width: calc(100% - 40px);
-    margin: 0;
-  }
-}
-</style>
   </head>
   <body class="  ">
     <!-- loader Start -->
@@ -777,7 +459,7 @@ body small a {
               class="iq-navbar-logo d-flex align-items-center justify-content-between"
             >
               <i class="ri-menu-line wrapper-menu"></i>
-              <a style="cursor: pointer;" id="dashboardmenu2" class="header-logo">
+              <a style="cursor: pointer ;" id="dashboardmenu2" class="header-logo">
                 <img
                   src="../assets/images/logo.png"
                   class="img-fluid rounded-normal"
@@ -800,18 +482,6 @@ body small a {
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto navbar-list align-items-center">
-                      <!-- class="btn border add-btn shadow-none mx-2 d-none d-md-block"-->
-                 
-                  <li>
-                    <a
-                      href="#"
-                      class="btn border add-btn shadow-none mx-2 d-none d-md-block"
-                      data-toggle="modal"
-                      data-target="#new-order"
-                      ><i class="las la-plus mr-2"></i>New File</a
-                    >
-                  </li>
-                  
                   <li class="nav-item nav-icon dropdown">
                     <a
                       href="#"
@@ -851,21 +521,13 @@ body small a {
                               class="d-flex align-items-center justify-content-between"
                             >
                               <h5 class="mb-0">Notifications</h5>
-                              <a class="badge badge-primary badge-card" id="num2" 
-                                >0</a
-                              >
+                              <a class="badge badge-primary badge-card" id="num2">0</a>
                             </div>
                           </div>
                           <div class="px-3 pt-0 pb-0 sub-card" id="notifications">
                             
                           </div>
-                          <!--<a
-                            class="right-ic btn btn-primary btn-block position-relative p-2"
-                            href="#"
-                            role="button"
-                          >
-                            View All
-                          </a>-->
+                          
                         </div>
                       </div>
                     </div>
@@ -879,11 +541,7 @@ body small a {
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <img
-                        src="../assets/images/user/1.png"
-                        class="img-fluid rounded"
-                        alt="user"
-                      />
+                      
                     </a>
                     <div
                       class="iq-sub-dropdown dropdown-menu"
@@ -912,7 +570,7 @@ body small a {
                               <a
                                 style="cursor: pointer;" id="auth_lock_screen2" class="btn border mr-2">Lock screen</a
                               >
-                              <a href="auth-sign-in.html" class="btn border" id="logout">Sign Out</a
+                              <a style="cursor: pointer;" class="btn border" id="logout">Sign Out</a
                               >
                             </div>
                           </div>
@@ -937,11 +595,14 @@ body small a {
           <div class="modal-content">
             <div class="modal-body">
               <div class="popup text-left">
-                <h4 class="mb-3">Add Document</h4>
+                <h4 class="mb-3">New Order</h4>
                 <div class="content create-workform bg-body">
                   <div class="pb-3">
-                    <label class="mb-2">Document name</label>
-                    <input type="file" id="fileInput" class="form-control" placeholder="Enter File Name or number"
+                    <label class="mb-2">Email</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Name or Email"
                     />
                   </div>
                   <div class="col-lg-12 mt-4">
@@ -951,7 +612,7 @@ body small a {
                       <div class="btn btn-primary mr-4" data-dismiss="modal">
                         Cancel
                       </div>
-                      <div class="btn btn-outline-primary" id="Add_Document" data-dismiss="modal">
+                      <div class="btn btn-outline-primary" data-dismiss="modal">
                         Create
                       </div>
                     </div>
@@ -965,27 +626,256 @@ body small a {
       <div class="content-page">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-lg-12">
-              <div
-                class="card card-transparent card-block card-stretch card-height border-none"
-              >
-                <div class="card-body p-0 mt-lg-2 mt-0">
-                  <h3 class="mb-3" id="filename"></h3>
-                  
+            <div class="col-xl-3 col-lg-4">
+              <div class="card">
+                <div class="card-header d-flex justify-content-between">
+                  <div class="header-title">
+                    <h4 class="card-title">Add New Employ</h4>
+                  </div>
                 </div>
-<br>
-
+                <div class="card-body">
+                  <form>
+                    <div class="form-group">
+                      <div class="crm-profile-img-edit position-relative">
+                        <img
+                          class="crm-profile-pic rounded avatar-100"
+                          id="currentimage"
+                          alt="profile-pic"
+                        />
+                        <div class="crm-p-image bg-primary">
+                          <i class="las la-pen upload-button"></i>
+                          <input class="file-upload" type="file"
+                            accept="image/*" id="pimg" 
+                          />
+                        </div>
+                      </div>
+                      <div class="img-extension mt-3">
+                        <div class="d-inline-block align-items-center">
+                          <span>Only</span>
+                          <a href="javascript:void();">.jpg</a>
+                          <a href="javascript:void();">.png</a>
+                          <a href="javascript:void();">.jpeg</a>
+                          <span>allowed</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>User Role:</label>
+                      <select
+                        name="type"
+                        class="selectpicker form-control"
+                        data-style="py-0"
+                        id="role"
+                      >
+                        <option id="firstoption" selected></option>
+                        <option>Director</option>
+                        <option>Admin </option>
+                        <option>Attorney</option>
+                        <option>Candidate attorney</option>
+                        <option>Paralegal</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="furl">Facebook Url:</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="furl"
+                        placeholder="Facebook Url"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="turl">Twitter Url:</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="turl"
+                        placeholder="Twitter Url"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="instaurl">Instagram Url:</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="instaurl"
+                        placeholder="Instagram Url"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="lurl">Linkedin Url:</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="lurl"
+                        placeholder="Linkedin Url"
+                      />
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
-        
+            <div class="col-xl-9 col-lg-8">
+              <div class="card">
+                <div class="card-header d-flex justify-content-between">
+                  <div class="header-title">
+                    <h4 class="card-title">New User Information</h4>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="new-user-info">
+                    <form>
+                      <div class="row">
+                        <div class="form-group col-md-6">
+                          <label for="fname">First Name:</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="fname"
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="lname">Last Name:</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="lname"
+                            placeholder="Last Name"
+                          />
+                        </div>
+                        <!--<div class="form-group col-md-6">
+                          <label for="add1">Street Address 1:</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="add1"
+                            placeholder="Street Address 1"
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="add2">Street Address 2:</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="add2"
+                            placeholder="Street Address 2"
+                          />
+                        </div>-->
+                        <div class="form-group col-md-12">
+                          <label for="cname">Occupation:</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cname"
+                            placeholder="Company Name"
+                          />
+                        </div>
+                        <!--<div class="form-group col-sm-12">
+                          <label>Country:</label>
+                          <select
+                            name="type"
+                            class="selectpicker form-control"
+                            data-style="py-0"
+                          >
+                            <option>Select Country</option>
+                            <option>Caneda</option>
+                            <option>Noida</option>
+                            <option>USA</option>
+                            <option>India</option>
+                            <option>Africa</option>
+                          </select>
+                        </div>-->
+                        <div class="form-group col-md-6">
+                          <label for="mobno">Mobile Number:</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="mobno"
+                            placeholder="Mobile Number"
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="altconno">Alternate Contact:</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="altconno"
+                            placeholder="Alternate Contact"
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="email">Email:</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            placeholder="Email"
+                          />
+                        </div>
+                        <!--<div class="form-group col-md-6">
+                          <label for="pno">Pin Code:</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="pno"
+                            placeholder="Pin Code"
+                          />
+                        </div>
+                        <div class="form-group col-md-12">
+                          <label for="city">Town/City:</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="city"
+                            placeholder="Town/City"
+                          />
+                        </div>-->
+                      </div>
+                      <hr />
+                      <h5 class="mb-3">Security</h5>
+                      <div class="row">
+                        <div class="form-group col-md-12">
+                          <label for="uname">User Name:</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="uname"
+                            placeholder="User Name"
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="pass">Password:</label>
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="pass"
+                            placeholder="Password"
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="rpass">Repeat Password:</label>
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="rpass"
+                            placeholder="Repeat Password "
+                          />
+                        </div>
+                      </div>
+                      <div class="checkbox">
+                        <label
+                          ><input class="mr-2" type="checkbox" id="notifyuser" />Send Notify Email To User</label
+                        >
+                      </div>
+                      <button type="submit" class="btn btn-primary" id="updateuser">
+                        Update Employ
+                      </button>
+                    </form>
+                  </div>
+                </div>
               </div>
-<div class="row" id="files">
-
-
-</div>
             </div>
           </div>
-          <!-- Page end  -->
         </div>
       </div>
     </div>
@@ -1007,21 +897,37 @@ body small a {
               </div>
               <div class="col-lg-6 text-right">
                 <span class="mr-1"
-                  >
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"; 
+                  ><script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  ©</span
+                >
+                <a href="#" class="">Downtown</a>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "XOQAYOjPzmVBRxkd8",
+            });
+        })();
+    </script>
 
-  //https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js
-  //https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-  import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
-  import { getStorage, ref as sRef, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
+import { getStorage, ref as sRef, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
+  import { getDatabase, ref, push, onValue, set, update } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+  import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, setPersistence, browserLocalPersistence, browserSessionPersistence, createUserWithEmailAndPassword, onAuthStateChanged  } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
-//import { database } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
-  //import { firebase } from 'https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js';
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -1037,65 +943,23 @@ import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailA
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  //console.log(defaultProject.name);
   const analytics = getAnalytics(app);
 
-//import { getDatabase } from "fhttps://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
-
-// Get a reference to the database and storage services
+  // Get a reference to the database service
 var database = getDatabase(app);
+console.log(database);
+// Reference to the root of your database
+
 const storage = getStorage(app);
 const auth = getAuth(app);
-// Reference to the root of your database
+var notificationRef = ref(database, 'Notification/');
 const urlParams = new URLSearchParams(document.location.search);
 var paramValue = urlParams.get('id');
-const projectiden = urlParams.get('fileref');
-const folder = urlParams.get('foldername');
-var notificationRef = ref(database, 'Notification/');
-var rootRef = ref(database, 'uploads/');
-
-
-
-
-    onAuthStateChanged(auth, (user) => {
+var userinforef = ref(database, 'users/' + paramValue);
+ onAuthStateChanged(auth, (user) => {
       if (user) {
-        
-        // User is signed in
-        console.log("User is signed in:", user.uid);
-        var userRef = ref(database, 'users/' + user.uid);
 
-// Fetch data from the 'users' node once
-onValue(userRef, (snapshot) => {
-   console.log(snapshot.val());
-   const childDataval = snapshot.val();
-   
-
-document.getElementById("dropdownMenuButton4").innerHTML = `<img
-                        src="${childDataval.imagelink}"
-                        class="img-fluid rounded"
-                        alt="user"
-                      />`;
-
-document.getElementById("userimage").innerHTML = `<img
-                        src="${childDataval.imagelink}"
-                        class="rounded profile-img img-fluid avatar-70"
-                        alt="user"
-                      />`;
-
-                      document.getElementById("useremail").innerHTML = `${childDataval.uname}`;
-
-                        document.getElementById("occupation").innerHTML = `${childDataval.occupation}`;
-
-                //greetings end
-    
-  }, {
-    onlyOnce: true // This option ensures the callback is executed only once
-  });
-
-
-
-
-        // Fetch data from the 'task' node once
+          // Fetch data from the 'task' node once
 onValue(notificationRef, (notificationsnapshot) => {
   if (notificationsnapshot.exists()) {
     let filteredCount = 0; // ✅ count after condition
@@ -1142,175 +1006,95 @@ onValue(notificationRef, (notificationsnapshot) => {
 
     console.log(`Filtered notifications: ${filteredCount}`);
   }
-}, { onlyOnce: true }); 
+}, { onlyOnce: true });
+        
+        //Dashboard
+const dashboardmenu = document.getElementById('dashboardmenu');
+
+ dashboardmenu.onclick = function(){
+
+   window.location.href = `index.html?id=${user.uid}`;
+      
+    }
 
 
-      } else {
-        // User is signed out
-        console.log("User is signed out.");
-        window.location.href = `auth-sign-in.html`;
+const dashboardmenu1 = document.getElementById('dashboardmenu1');
+
+  dashboardmenu1.onclick = function(){
+
+   window.location.href = `index.html?id=${user.uid}`;
+      
+    }
+
+  const dashboardmenu2 = document.getElementById('dashboardmenu2');
+
+     dashboardmenu2.onclick = function(){
+
+      window.location.href = `index.html?id=${user.uid}`;
+      
+         }
+
+
+ //Files
+   var filelist = document.getElementById("list_files");
+
+    filelist.onclick = function(){
+
+       window.location.href = `Projects-list.html?id=${user.uid}`;
+      
+        }
+
+  var addfile = document.getElementById("opennewfile");
+    addfile.onclick = function(){
+
+      window.location.href = `add-Projects.html?id=${user.uid}`;
+      
+     }
+
+  var opennewfile = document.getElementById("opennewfile");
+     opennewfile.onclick = function(){
+
+      window.location.href = `add-Projects.html?id=${user.uid}`;
+      
+     }
+
+    //Lock Screen
+ var lockscreen = document.getElementById("auth_lock_screen");
+    lockscreen.onclick = function(){
+
+     window.location.href = `auth-lock-screen.html`;
+      
+       }
+
+  var lockscreen2 = document.getElementById("auth_lock_screen2");
+   lockscreen2.onclick = function(){
+
+     window.location.href = `auth-lock-screen.html`;
+      
+     }
+
+
+
+    //Password recovery
+   var recoverpassword = document.getElementById("recoverpassword");
+    recoverpassword.onclick = function(){
+
+     window.location.href = `auth-recoverpw.html?id=${user.uid}`;
+      
+     }
+
+
+
+ //Confirm Email
+var confirmemail = document.getElementById("confirmemail");
+   confirmemail.onclick = function(){
+
+    window.location.href = `auth-confirm-mail.html?id=${user.uid}`;
+      
       }
-    });
 
 
-const adddocument = document.getElementById("Add_Document");
-adddocument.onclick = async function(){
-
-                      
-      
-
-
-    //file upload
-    const fileInput = document.getElementById("fileInput");
-  const file = fileInput.files[0];
-
-  if (!file) {
-    alert("Please select a file first.");
-    return;
-  }
-
-  // Create a storage reference
-  const storageRef = sRef(storage, `uploads/${file.name}`);
-
-    try {
-    // Upload the file
-    const snapshot = await uploadBytes(storageRef, file);
-    console.log("Uploaded a file!", snapshot);
-
-    // Get and display download URL
-    const downloadURL = await getDownloadURL(storageRef);
-    const urlParams = new URLSearchParams(document.location.search);
-    const paramValue = urlParams.get('id');
-    const projectiden = urlParams.get('fileref');
-    const folder = urlParams.get('foldername');
-
-
-console.log(projectiden);
-console.log(folder);
-
-const filedata = {
-  fileref: projectiden,
-  folder: folder,
-  doclink: downloadURL,
-  filename: file.name,
-};
-
-
-push(rootRef, filedata)
-    .then(() => {
-      console.log('Data has been written successfully!');
-      location.reload()
-    })
-    .catch((error) => {
-      console.error('Error writing data: ', error);
-    });
-    console.log("File available at", downloadURL);
-    //alert("File uploaded successfully!\n" + downloadURL);
-  } catch (error) {
-    console.error("Upload failed", error);
-    alert("Upload failed. See console for details.");
-  }
-
-   }
-
-//Menu links start
-
-document.write(new Date().getFullYear());
-
-                    function getval() {
-                      // body...
-                      var someval = document.getElementById("getval");
-
-                      console.log(someval.value);
-
-                      setTimeout(function(){ window.location.href = `Projects-list.html?id=${someval.value}`}, 3000);
-                    }
-                    //Dashboard
-
-                    const dashboardmenu = document.getElementById('dashboardmenu');
-
-                    dashboardmenu.onclick = function(){
-
-                       window.location.href = `index.html?id=${paramValue}`;
-      
-                                                }
-            const dashboardmenu1 = document.getElementById('dashboardmenu1');
-
-                    dashboardmenu1.onclick = function(){
-
-                       window.location.href = `index.html?id=${paramValue}`;
-      
-                                                }
-    const dashboardmenu2 = document.getElementById('dashboardmenu2');
-
-                    dashboardmenu2.onclick = function(){
-
-                       window.location.href = `index.html?id=${paramValue}`;
-      
-                                                }
-                    //Files
-                      var filelist = document.getElementById("list_files");
-
-                      filelist.onclick = function(){
-
-                       window.location.href = `Projects-list.html?id=${paramValue}`;
-      
-                                                }
-
-                      var addfile = document.getElementById("opennewfile");
-                      addfile.onclick = function(){
-
-                       window.location.href = `add-Projects.html?id=${paramValue}`;
-      
-                                                }
-
-                    //Lock Screen
-
-                      var addfile = document.getElementById("auth_lock_screen");
-                      addfile.onclick = function(){
-
-                       window.location.href = `auth-lock-screen.html?id=${paramValue}`;
-      
-                                                }
-
-       var lock_screen = document.getElementById("auth_lock_screen2");
-                      lock_screen.onclick = function(){
-
-                       window.location.href = `auth-lock-screen.html?id=${paramValue}`;
-      
-                                                }
-
-            //timeline
-                    var filesheet = document.getElementById("filesheet");
-                      filesheet.onclick = function(){
-
-                       window.location.href = `timeline-3.html?id=${paramValue}`;
-      
-                                                }
-
-     //todo
-                     var todo = document.getElementById("todo");
-                      todo.onclick = function(){
-           console.log("clickeds");
-                       window.location.href = `todo.html?id=${paramValue}`;
-      
-                                                }
-                    var todo1 = document.getElementById("todo1");
-                      todo1.onclick = function(){
-           console.log("clickeds");
-                       window.location.href = `todo.html?id=${paramValue}`;
-      
-                                                }
-                      //add task
-                    var addtask = document.getElementById("addtask");
-                      addtask.onclick = function(){
-
-                       window.location.href = `add-task.html?id=${paramValue}`;
-      
-                                                }
-
-
-        var adddpt = document.getElementById("adddpt");
+    var adddpt = document.getElementById("adddpt");
           adddpt.onclick = function(){
 
   window.location.href = `add-Department.html?id=${paramValue}`;
@@ -1346,103 +1130,446 @@ document.write(new Date().getFullYear());
       
                                                 }
 
+  //Logout
+   var logout = document.getElementById("logout");
+     logout.onclick = function(){
 
-
-                    //Employees
-                    //File activity life span
-                    //Todo
-                    //Chat
-                    
-
-                   
-
-//Menu links end
-
-
-
-
-
-// Fetch data from the 'uploads' node once
-onValue(rootRef, async (snapshot) => {
-  console.log(snapshot.val());
-  const childDataval = snapshot.val();
-
-  snapshot.forEach((childSnapshot) => {
-    const taskKey = childSnapshot.key;
-    const taskdata = childSnapshot.val();
-    console.log(`the value of one: ${taskdata.filename}`);
-
-    if (folder == taskdata.folder && projectiden == taskdata.fileref) {
-      document.getElementById("files").innerHTML += `
-        <div id="container_${taskKey}">
-          <img src="../assets/images/pdf.png" height="50px">
-          <p>${taskdata.filename}</p>
-          <div id="menu-wrap">
-            <input type="checkbox" class="toggler" />
-            <div class="dots"><div></div></div>
-            <div class="menu">
-              <div>
-                <ul>
-                  <li><a id="delete_${taskKey}" class="link">Delete</a></li>
-                  <li><a href="#" class="link">Share</a></li>
-                  <li><a id="printing_${taskKey}" class="link">Print</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>`;
-
-      // ✅ Attach handlers immediately after adding the element
-      document.getElementById(`printing_${taskKey}`).onclick = function() {
-        window.open(taskdata.doclink);
-      };
-
-      document.getElementById(`delete_${taskKey}`).onclick = function() {
-        remove(ref(database, 'uploads/' + taskKey))
-          .then(() => {
-            location.reload();
-            console.log('Data has been deleted successfully!');
-          })
-          .catch((error) => {
-            console.error('Error deleting data:', error);
-          });
-      };
-    }
-  });
-}, {
-  onlyOnce: true // ensures callback is executed only once
-});
-
-
-
-
-//Logout
-                    var logout = document.getElementById("logout");
-                      logout.onclick = function(){
-
-                        signOut(auth)
+       signOut(auth)
       .then(() => {
         console.log("User signed out.");
-                       window.location.href = `auth-sign-in.html`;
-
       })
       .catch((error) => {
         console.error("Sign out error:", error);
       })
 
+       window.location.href = `auth-sign-in.html`;
       
-                                                }
+          }
+    //timeline
+ var filesheet = document.getElementById("filesheet");
+    filesheet.onclick = function(){
+
+    window.location.href = `timeline-3.html?id=${user.uid}`;
+      
+     }
+                   
+//todo
+ var todo = document.getElementById("todo");
+   todo.onclick = function(){
+    window.location.href = `todo.html?id=${user.uid}`;
+      
+    }
+
+ var todo1 = document.getElementById("todo1");
+   todo1.onclick = function(){
+       
+    window.location.href = `todo.html?id=${user.uid}`;
+      
+    }
+  
+  //add task
+  var addtask = document.getElementById("addtask");
+    addtask.onclick = function(){
+
+    window.location.href = `add-task.html?id=${user.uid}`;
+      
+     }
+
+var rootRef = ref(database, 'users/' + user.uid);
+
+     // Fetch data from the 'users' node once
+onValue(rootRef, (snapshot) => {
+   console.log(snapshot.val());
+   const childDataval = snapshot.val();
+
+
+document.getElementById("dropdownMenuButton4").innerHTML = `<img
+                        src="${childDataval.imagelink}"
+                        class="img-fluid rounded"
+                        alt="user"
+                      />`;
+
+document.getElementById("userimage").innerHTML = `<img
+                        src="${childDataval.imagelink}"
+                        class="rounded profile-img img-fluid avatar-70"
+                        alt="user"
+                      />`;
+
+
+document.getElementById("occupation").innerHTML = `${childDataval.occupation}`;
+document.getElementById("useremail").innerHTML = `${childDataval.email}`;
+
+                //greetings end
+    
+  }, {
+    onlyOnce: true // This option ensures the callback is executed only once
+  });
+
+      } else {
+        // User is signed out
+        console.log("User is signed out.");
+        window.location.href = `auth-sign-in.html`;
+      }
+    });
+
+
+onValue(userinforef, (snapshot) => {
+   console.log(snapshot.val());
+   const childDataval = snapshot.val();
+   
+console.log(childDataval.imagelink);
+
+document.getElementById("currentimage").src =`${childDataval.imagelink}`;document.getElementById("fname").placeholder =`${childDataval.username}`;
+document.getElementById("lname").placeholder =`${childDataval.surname}`;
+document.getElementById('cname').placeholder =`${childDataval.occupation}`;
+document.getElementById('mobno').placeholder =`${childDataval.contactnumber}`;
+document.getElementById('altconno').placeholder =`${childDataval.alternative}`;
+document.getElementById('email').placeholder =`${childDataval.email}`;
+document.getElementById('pass').placeholder =`${childDataval.password}`;
+document.getElementById('rpass').placeholder =`${childDataval.repeatpassword}`;
+document.getElementById('uname').placeholder =`${childDataval.username}`;
+//document.getElementById('role').placeholder =`${childDataval.role}`;
+
+
+
+ var role = document.getElementById('role');
+const newOption = document.createElement('option');
+    
+    newOption.value = childDataval.role;   // The value associated with the option
+    newOption.innerHTML = childDataval.role;
+
+    role.appendChild(newOption);
+
+    
+  }, {
+    onlyOnce: true // This option ensures the callback is executed only once
+  });
+
+
+//Sign Up New Users (e.g., Email/Password):
+    /*import { createUserWithEmailAndPassword } from "firebase/auth";
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // User signed up and logged in
+        const user = userCredential.user;
+        console.log("User signed up:", user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error("Signup error:", errorCode, errorMessage);
+      });*/
+
+/*
+// Fetch data from the 'users' node once
+onValue(rootRef, (snapshot) => {
+    snapshot.forEach((childSnapshot) => {
+      const childKey = childSnapshot.key;
+      const childData = childSnapshot.val();
+      console.log("Key: " + childKey + ", Data: ", childData.email);
+      
+
+const button = document.getElementById('btnsubmit');
+
+// Add an onclick event handler to the button
+button.onclick = function(){
+
+
+
+
+      var email = document.getElementById('period').value;
+      var password = document.getElementById('password').value;
+
+
+
+      if (childData.email == email && childData.password == password) {
+
+         window.location.href = 'index.html';
+      }
+
+      }
+
+      
+    });
+  }, {
+    onlyOnce: true // This option ensures the callback is executed only once
+  });
+*/
+
+
+//Pushing data to the specified path
+var addprojects = document.getElementById('updateuser');
+addprojects.onclick = function(){
+
+
+let tableData = [
+document.getElementById('uname'),
+document.getElementById('fname'),
+document.getElementById('lname'),
+document.getElementById('cname'),
+document.getElementById('mobno'),
+document.getElementById('altconno'),
+document.getElementById('email'),
+document.getElementById('pass'),
+document.getElementById('rpass'),
+document.getElementById('role'),
+document.getElementById('pimg')
+
+];
+console.log(tableData);
+//const arr = ["My Project", "123", "IT", "Alice", "Test description"];
+const valuesArray = [];
+const obj = {};
+ tableData.forEach(input => {
+      if (input.value.trim() !== "") {   // only if not empty
+        valuesArray.push(input.value.trim());
+
+
+        valuesArray.forEach((key, i) => {
+  obj[key] = valuesArray[i];
+});
+
+
+
+var uname = document.getElementById('uname').value;
+var username = document.getElementById('fname').value;
+var surname = document.getElementById('lname').value;
+var occupation = document.getElementById('cname').value;
+var contactnumber = document.getElementById('mobno').value;
+var alternative = document.getElementById('altconno').value;
+var email = document.getElementById('email').value;
+var password = document.getElementById('pass').value;
+var repeatpassword = document.getElementById('rpass').value;
+var role = document.getElementById('role');
+var pimg = document.getElementById('pimg').files[0];
+
+
+const storageRef = sRef(storage, `profileimg/${pimg.name}`);
+
+
+// Upload the file
+    const imgsnapshot = uploadBytes(storageRef, pimg);
+    console.log("Uploaded a file!", imgsnapshot);
+
+    // Get and display download URL
+    const downloadURL = getDownloadURL(storageRef);
+console.log(downloadURL);
+
+var calternative = "alternative";
+var ccontactnumber = "contactnumber";
+var cemail = "email";
+var cimagelink = "imagelink";
+var coccupation = "occupation";
+var cpassword = "password";
+var crepeatpassword = "repeatpassword";
+var csurname = "surname";
+var cuname = "uname";
+var crole = "role";
+
+
+const originalname = obj[uname];
+const originalfn = obj[username];
+const originallnt = obj[surname];
+const originaloccupation = obj[occupation];
+const originalcontact = obj[contactnumber];
+const originalalt = obj[alternative];
+const originalemail = obj[email];
+const originalpassword = obj[password];
+const originalrepeatpassword = obj[repeatpassword];
+const originalpimg = obj[downloadURL];
+const originalrole = obj[role];
+
+
+obj[calternative] = originalalt;
+obj[ccontactnumber] = originalcontact;
+obj[cemail] = originalemail;
+obj[cimagelink] = originalpimg;
+obj[coccupation] = originaloccupation;
+obj[cpassword] = originalpassword;
+obj[crepeatpassword] = originalrepeatpassword;
+obj[csurname] = originallnt;
+obj[cuname] = originalname;
+obj[crole] = originalrole;
+
+
+
+
+delete obj[uname];
+delete obj[username];
+delete obj[surname];
+delete obj[occupation];
+delete obj[contactnumber];
+delete obj[alternative];
+delete obj[email];
+delete obj[password];
+delete obj[repeatpassword];
+delete obj[role]
+delete obj[pimg]
+
+
+const entries = Object.entries(obj);
+
+const undefinedkeys = entries.filter(([key, value]) => value === undefined).map(([key, value]) => key);
+
+console.log("no value", undefinedkeys);
+
+const keystoremove = Object.values(undefinedkeys);
+
+keystoremove.forEach(key => {
+
+
+  if (obj.hasOwnProperty(key)) {
+    delete obj[key];
+
+
+  }
+
+
+})
+update(userinforef, obj)
+    .then(() => {
+      console.log('Data has been written successfully!');
+      //window.location.href = `Projects-list.html?id=${paramValue}`;
+    })
+    .catch((error) => {
+      console.error('Error writing data: ', error);
+    });
+      }
+    });
+
+    console.log("✅ Final array:", valuesArray);
+
+
+
+}
+
+
+
+
+ //Pushing data to the specified path
+/*
+var addprojects = document.getElementById('adduser');
+addprojects.onclick = async function(e){
+  e.preventDefault();
+  
+
+  var uname = document.getElementById('uname').value;
+var username = document.getElementById('fname').value;
+var surname = document.getElementById('lname').value;
+var occupation = document.getElementById('cname').value;
+var contactnumber = document.getElementById('mobno').value;
+var alternative = document.getElementById('altconno').value;
+var email = document.getElementById('email').value;
+var password = document.getElementById('pass').value;
+var repeatpassword = document.getElementById('rpass').value;
+var notifyuser = document.getElementById('notifyuser');
+var pimg = document.getElementById('pimg').files[0];
+
+
+
+
+/*
+
+if(!name || Ipassword){
+  alert("all fields must be filled");\return;
+}
+
+
+
+
+if (!pimg) {
+    alert("Please select a file first.");
+    return;
+  }
+
+// Create a storage reference
+  const storageRef = sRef(storage, `profileimg/${pimg.name}`);
+
+
+    // Upload the file
+    const imgsnapshot = await uploadBytes(storageRef, pimg);
+    console.log("Uploaded a file!", imgsnapshot);
+
+    // Get and display download URL
+    const downloadURL = await getDownloadURL(storageRef);
+console.log(downloadURL);
+    
+
+
+            console.log('Checkbox is now checked!');
+            emailjs.send("service_6sr15jh", "template_9frb5ks", {
+              email: `${email}`,
+              name: `${username}`,
+              message: `Dear ${username}
+
+              Thank you for registering with our file management system! To ensure the security of your account and complete the setup process, we kindly ask that you verify your email address.
+
+               Please click the link below to verify your account:
+
+                [Verification Link]
+
+                If you did not create an account or have any questions, please contact us at [support email] for assistance.
+
+                  Thank you for choosing our service!
+
+                    Best regards,
+                    [Your Company Name]
+                    [Your Company Contact Information]
+                    [Website URL]`
+            }).then(()=> {
+              alert("email sent");
+            }, (error) => {
+              console.log("failed to send", error);
+            });
+            //emailjs.sendForm()
+        
+
+
+  var userData = {
+  uname: uname,
+  username: username,
+  surname : surname,
+  occupation: occupation,
+  contactnumber : contactnumber,
+  alternative: alternative,
+  email: email,
+  password : password,
+  repeatpassword: repeatpassword,
+  notifyuser : notifyuser,
+  imagelink: downloadURL
+};
+ createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Successfully created user
+      const user = userCredential.user;
+      console.log("User registered:", user.email);
+      //alert("Registration successful for: " + user.email);
+
+
+      push(ref(database, 'users/'+ user.uid), userData)
+    .then(() => {
+      console.log('Data has been written successfully!');
+      alert("we are in");
+      //window.location.href = 'list-employ.html';
+    })
+    .catch((error) => {
+      alert("we are not in");
+      console.error('Error writing data: ', error);
+      alert("we are not in");
+    })
+    })
+    .catch((error) => {
+      console.error("Error registering user:", error.code, error.message);
+      //alert("Error: " + error.message);
+    });
+
+  }*/
+  
+
+
 
 </script>
-                  ©</span
-                >
-                <a href="#" class="">Downtown</a>.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
     <!-- Backend Bundle JavaScript -->
     <script src="../assets/js/backend-bundle.min.js"></script>
 
@@ -1457,7 +1584,5 @@ onValue(rootRef, async (snapshot) => {
 
     <!-- app JavaScript -->
     <script src="../assets/js/app.js"></script>
-
-
   </body>
 </html>

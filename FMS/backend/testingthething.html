@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manager Dropdown</title>
+</head>
+<body>
+  <h3>Select Manager</h3>
+
+  <select id="manager">
+    <option value="">-- Select Manager --</option>
+  </select>
+
+  <script type="module">
+    // --- STEP 1: Import Firebase ---
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getDatabase, ref, onValue, set } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+ import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+    // --- STEP 2: Firebase Config (replace with yours) ---
+  const firebaseConfig = {
+    apiKey: "AIzaSyCwMAE5I9frXiRjGTLB7kZOS1yYaBSmf_M",
+    authDomain: "omsl-61c79.firebaseapp.com",
+    projectId: "omsl-61c79",
+    storageBucket: "omsl-61c79.firebasestorage.app",
+    messagingSenderId: "406069597322",
+    appId: "1:406069597322:web:6ab82f14010e6f3f004973",
+    measurementId: "G-4CJ3M03JE1"
+  };
+
+    // --- STEP 3: Init Firebase ---
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+const auth = getAuth(app);
+    // --- STEP 4: Reference to users ---
+    const userref = ref(database, 'users/');
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        
+        // User is signed in
+        console.log("User is signed in:", user);
+        //var rootRef = ref(database, 'users/' + paramValue);
+
+
+
+      } else {
+        // User is signed out
+        console.log("User is signed out.");
+        window.location.href = `auth-sign-in.html`;
+      }
+    });
+
+    // --- STEP 5: Listen for changes ---
+    onValue(userref, (snapshot) => {
+      const select = document.getElementById('manager');
+      select.innerHTML = '<option value="">-- Select Manager --</option>';  
+
+      if (!snapshot.exists()) {
+        console.log("⚠ No data found at 'users/'");
+        return;
+      }
+
+      snapshot.forEach((childSnapshot) => {
+        const childKey = childSnapshot.key;
+        const childData = childSnapshot.val();
+
+        console.log("Adding option:", childData);
+
+        const option = document.createElement("option");
+        option.value = childKey;
+        option.textContent = `${childData.username} ${childData.surname}`;
+        select.appendChild(option);
+      });
+    });
+
+    // --- OPTIONAL: Add dummy data if empty ---
+    // Uncomment once to insert test data
+    /*
+    set(ref(database, "users/user1"), { username: "John", surname: "Doe" });
+    set(ref(database, "users/user2"), { username: "Jane", surname: "Smith" });
+    */
+  </script>
+</body>
+</html>

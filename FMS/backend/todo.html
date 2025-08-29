@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>POS Dash | Responsive Bootstrap 4 Admin Dashboard Template</title>
+    <title>POS Dash | Responsive Bootstrap 4 Admin Dashboard</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="../assets/images/favicon.ico" />
@@ -33,403 +33,425 @@
     <!-- loader END -->
     <!-- Wrapper Start -->
     <div class="wrapper">
-        <div class="iq-sidebar sidebar-default">
-            <div
-              class="iq-sidebar-logo d-flex align-items-center justify-content-between"
-            >
-              <a href="../backend/index.html" class="header-logo">
-                <img
-                  src="../assets/images/logo.png"
-                  class="img-fluid rounded-normal light-logo"
-                  alt="logo"
-                />
-                <h5 class="logo-title light-logo ml-3">Downtown</h5>
-              </a>
-              <div class="iq-menu-bt-sidebar ml-0">
-                <i class="las la-bars wrapper-menu"></i>
-              </div>
-            </div>
-            <div class="data-scrollbar" data-scroll="1">
-              <nav class="iq-sidebar-menu">
-                <ul id="iq-sidebar-toggle" class="iq-menu">
+      <div class="iq-sidebar sidebar-default">
+        <div
+          class="iq-sidebar-logo d-flex align-items-center justify-content-between"
+        >
+          <a style="cursor: pointer;" id="dashboardmenu" class="header-logo">
+            <img
+              src="../assets/images/logo.png"
+              class="img-fluid rounded-normal light-logo"
+              alt="logo"
+            />
+            <h5 class="logo-title light-logo ml-3">Downtown</h5>
+          </a>
+          <div class="iq-menu-bt-sidebar ml-0">
+            <i class="las la-bars wrapper-menu"></i>
+          </div>
+        </div>
+        <div class="data-scrollbar" data-scroll="1">
+          <nav class="iq-sidebar-menu">
+            <ul id="iq-sidebar-toggle" class="iq-menu">
+              <li class="active">
+                <a style="cursor: pointer;" id="dashboardmenu1" class="svg-icon">
+                  <svg
+                    class="svg-icon"
+                    id="p-dash1"
+                    width="20"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                    ></path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                  </svg>
+                  <span class="ml-4 ">Dashboards</span>
+                </a>
+                <ul
+                  class="iq-submenu collapse"
+                  data-parent="#iq-sidebar-toggle"
+                >
                   <li class="">
-                    <a href="../backend/index.html" class="svg-icon">
-                      <svg
-                        class="svg-icon"
-                        id="p-dash1"
-                        width="20"
-                        height="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path
-                          d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
-                        ></path>
-                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                      </svg>
-                      <span class="ml-4 ">Dashboards</span>
+                    <a style="cursor: pointer;" id="todo1">
+                      <i class="las la-minus"></i><span>Todo List</span>
                     </a>
-                    <ul
-                      id="todo"
-                      class="iq-submenu collapse"
-                      data-parent="#iq-sidebar-toggle"
-                    >
-                      <li class="">
-                        <a href="./backend/todo.html">
-                          <i class="las la-minus"></i><span>Todo List</span>
-                        </a>
-                      </li>
-                      <li class="">
-                        <a href="./backend/chat.html">
-                          <i class="las la-minus"></i><span>Chat</span>
-                        </a>
-                      </li>
-                    </ul>
                   </li>
-                  <li class=" ">
-                    <a
-                      href="#Projects"
-                      class="collapsed"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        class="svg-icon"
-                        id="p-dash2"
-                        width="20"
-                        height="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <circle cx="9" cy="21" r="1"></circle>
-                        <circle cx="20" cy="21" r="1"></circle>
-                        <path
-                          d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
-                        ></path>
-                      </svg>
-                      <span class="ml-4">Projectss</span>
-                      <svg
-                        class="svg-icon iq-arrow-right arrow-active"
-                        width="20"
-                        height="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <polyline points="10 15 15 20 20 15"></polyline>
-                        <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
-                      </svg>
+                  <!--<li class="">
+                    <a href="./backend/chat.html">
+                      <i class="las la-minus"></i><span>Chat</span>
                     </a>
-                    <ul
-                      id="Projects"
-                      class="iq-submenu collapse"
-                      data-parent="#iq-sidebar-toggle"
-                    >
-                      <li class="">
-                        <a href="../backend/Projects-list.html">
-                          <i class="las la-minus"></i><span>List Projects</span>
-                        </a>
-                      </li>
-                      <li class="">
-                        <a href="../backend/add-Projects.html">
-                          <i class="las la-minus"></i><span>Add Projects</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class=" ">
-                    <a
-                      href="#Department"
-                      class="collapsed"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        class="svg-icon"
-                        id="p-dash3"
-                        width="20"
-                        height="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <rect
-                          x="9"
-                          y="9"
-                          width="13"
-                          height="13"
-                          rx="2"
-                          ry="2"
-                        ></rect>
-                        <path
-                          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
-                        ></path>
-                      </svg>
-                      <span class="ml-4">Departments</span>
-                      <svg
-                        class="svg-icon iq-arrow-right arrow-active"
-                        width="20"
-                        height="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <polyline points="10 15 15 20 20 15"></polyline>
-                        <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
-                      </svg>
-                    </a>
-                    <ul
-                      id="Department"
-                      class="iq-submenu collapse"
-                      data-parent="#iq-sidebar-toggle"
-                    >
-                      <li class="">
-                        <a href="../backend/list-Department.html">
-                          <i class="las la-minus"></i><span>List Department</span>
-                        </a>
-                      </li>
-                      <li class="">
-                        <a href="../backend/add-Department.html">
-                          <i class="las la-minus"></i><span>Add Department</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                
-        
-                  <li class=" ">
-                    <a
-                      href="#people"
-                      class="collapsed"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        class="svg-icon"
-                        id="p-dash8"
-                        width="20"
-                        height="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="9" cy="7" r="4"></circle>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                      </svg>
-                      <span class="ml-4">Employ</span>
-                      <svg
-                        class="svg-icon iq-arrow-right arrow-active"
-                        width="20"
-                        height="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <polyline points="10 15 15 20 20 15"></polyline>
-                        <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
-                      </svg>
-                    </a>
-                    <ul
-                      id="people"
-                      class="iq-submenu collapse"
-                      data-parent="#iq-sidebar-toggle"
-                    >
-                      <li class="">
-                        <a href="../backend/add-employ.html">
-                          <i class="las la-minus"></i><span>Add employs</span>
-                        </a>
-                      </li>
-                      <li class="">
-                        <a href="../backend/list-employ.html">
-                          <i class="las la-minus"></i><span>List Employ</span>
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                  <li class=" ">
-                    <a
-                    href="#auth"
-                    class="collapsed"
-                    data-toggle="collapse"
-                    aria-expanded="false"
+                  </li>-->
+                </ul>
+              </li>
+              <li class=" ">
+                <a
+                  href="#Projects"
+                  class="collapsed"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                >
+
+                <svg
+                    class="svg-icon"
+                    id="p-dash12"
+                    width="20"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                   >
-                      <svg
-                        class="svg-icon"
-                        id="p-dash12"
-                        width="20"
-                        height="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path
-                          d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-                        ></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <polyline points="10 9 9 9 8 9"></polyline>
-                      </svg>
-                      <span class="ml-4">Authentication</span>
-                      <svg
-                        class="svg-icon iq-arrow-right arrow-active"
-                        width="20"
-                        height="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <polyline points="10 15 15 20 20 15"></polyline>
-                        <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
-                      </svg>
-                    </a>
-                    <ul
-                      id="auth"
-                      class="iq-submenu collapse"
-                      data-parent="#iq-sidebar-toggle"
-                    >
-                      <li class="">
-                        <a href="../backend/auth-sign-in.html">
-                          <i class="las la-minus"></i><span>Login</span>
-                        </a>
-                      </li>
-        
-                      <li class="">
-                        <a href="../backend/auth-recoverpw.html">
-                          <i class="las la-minus"></i
-                          ><span>Recover Password</span>
-                        </a>
-                      </li>
-                      <li class="">
-                        <a href="../backend/auth-confirm-mail.html">
-                          <i class="las la-minus"></i><span>Confirm Mail</span>
-                        </a>
-                      </li>
-                      <li class="">
-                        <a href="../backend/auth-lock-screen.html">
-                          <i class="las la-minus"></i><span>Lock Screen</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="active">
-                    <a
-                    href="#uth-page"
-                    class="collapsed"
-                    data-toggle="collapse"
-                    aria-expanded="false"
+                    <path
+                      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                    ></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                  
+                  <span class="ml-4">File</span>
+                  <svg
+                    class="svg-icon iq-arrow-right arrow-active"
+                    width="20"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                   >
-                      <svg
-                        class="svg-icon"
-                        id="p-dash12"
-                        width="20"
-                        height="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path
-                          d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-                        ></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <polyline points="10 9 9 9 8 9"></polyline>
-                      </svg>
-                      <span class="ml-4">Other Pages</span>
-                      <svg
-                        class="svg-icon iq-arrow-right arrow-active"
-                        width="20"
-                        height="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <polyline points="10 15 15 20 20 15"></polyline>
-                        <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
-                      </svg>
+                    <polyline points="10 15 15 20 20 15"></polyline>
+                    <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
+                  </svg>
+                </a>
+                <ul
+                  id="Projects"
+                  class="iq-submenu collapse"
+                  data-parent="#iq-sidebar-toggle"
+                >
+                  <li class="">
+                    <a style="cursor: pointer;" id="list_files">
+                      <i class="las la-minus"></i><span>List Files</span>
                     </a>
-                    <ul
-                      id="uth-page"
-                      class="iq-submenu collapse"
-                      data-parent="#iq-sidebar-toggle"
-                    >
-                      <li class="">
-                        <a href="../backend/timeline-3.html">
-                          <i class="las la-minus"></i><span>Project Time line</span>
-                        </a>
-                      </li>
-        
-           
-                      <li class="">
-                        <a href="../backend/todo.html">
-                          <i class="las la-minus"></i><span>Todo</span>
-                        </a>
-                      </li>
+                  </li>
+                  <li class="">
+                    <a style="cursor: pointer;" id="list_dpt">
+                      <i class="las la-minus"></i><span>List Department</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a style="cursor: pointer;" id="list_employ">
+                      <i class="las la-minus"></i><span>List Employees</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a style="cursor: pointer;" id="Projects-dpt">
+                      <i class="las la-minus"></i><span>file by department </span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!--<li class=" ">
+                <a
+                  href="#Department"
+                  class="collapsed"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                >
+                  <svg
+                    class="svg-icon"
+                    id="p-dash3"
+                    width="20"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="9"
+                      y="9"
+                      width="13"
+                      height="13"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <path
+                      d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                    ></path>
+                  </svg>
+                  <span class="ml-4">Departments</span>
+                  <svg
+                    class="svg-icon iq-arrow-right arrow-active"
+                    width="20"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="10 15 15 20 20 15"></polyline>
+                    <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
+                  </svg>
+                </a>
+                <ul
+                  id="Department"
+                  class="iq-submenu collapse"
+                  data-parent="#iq-sidebar-toggle"
+                >
+                  <li class="">
+                    <a href="../backend/list-Department1.html">
+                      <i class="las la-minus"></i><span>List Department</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="../backend/add-Department.html">
+                      <i class="las la-minus"></i><span>Add Department</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>-->
             
-                      <li class="">
-                        <a href="../backend/chat.html">
-                          <i class="las la-minus"></i><span>Chat</span>
-                        </a>
-                      </li>
-                    </ul>
+    
+              <!--<li class=" ">
+                <a
+                  href="#people"
+                  class="collapsed"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                >
+                  <svg
+                    class="svg-icon"
+                    id="p-dash8"
+                    width="20"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  <span class="ml-4">Employ</span>
+                  <svg
+                    class="svg-icon iq-arrow-right arrow-active"
+                    width="20"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="10 15 15 20 20 15"></polyline>
+                    <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
+                  </svg>
+                </a>
+                <ul
+                  id="people"
+                  class="iq-submenu collapse"
+                  data-parent="#iq-sidebar-toggle"
+                >
+                  <li class="">
+                    <a href="../backend/add-employ.html">
+                      <i class="las la-minus"></i><span>Add employs</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="../backend/list-employ.html">
+                      <i class="las la-minus"></i><span>List Employ</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              </li>-->
+              
+              <li class=" ">
+                <a
+                href="#uth-page"
+                class="collapsed"
+                data-toggle="collapse"
+                aria-expanded="false"
+              >
+                  <svg
+                    class="svg-icon"
+                    id="p-dash3"
+                    width="20"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="9"
+                      y="9"
+                      width="13"
+                      height="13"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <path
+                      d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                    ></path>
+                  </svg>
+                  <span class="ml-4">Activities</span>
+                  <svg
+                    class="svg-icon iq-arrow-right arrow-active"
+                    width="20"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="10 15 15 20 20 15"></polyline>
+                    <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
+                  </svg>
+                </a>
+                <ul
+                  id="uth-page"
+                  class="iq-submenu collapse"
+                  data-parent="#iq-sidebar-toggle"
+                >
+                  <li class="">
+                    <a style="cursor: pointer;" id="filesheet">
+                      <i class="las la-minus"></i><span>File Time line</span>
+                    </a>
                   </li>
     
+       
+                  <li class="">
+                    <a style="cursor: pointer;" id="todo">
+                      <i class="las la-minus"></i><span>Todo</span>
+                    </a>
+                  </li>
+
+                  <li class="">
+                    <a style="cursor: pointer;" id="addtask">
+                      <i class="las la-minus"></i><span>Add Task</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a style="cursor: pointer;" id="adddpt">
+                      <i class="las la-minus"></i><span>Add Department</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a style="cursor: pointer;" id="addemploy">
+                      <i class="las la-minus"></i><span>Add Department</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a style="cursor: pointer;" id="opennewfile">
+                      <i class="las la-minus"></i><span>Add File</span>
+                    </a>
+                  </li>
+                  <!--<li class="">
+                    <a href="../backend/chat.html">
+                      <i class="las la-minus"></i><span>Chat</span>
+                    </a>
+                  </li>-->
                 </ul>
-              </nav>
-              <div class="p-3"></div>
-            </div>
-          </div>
+              </li>
+              <li class=" ">
+                <a
+                href="#auth"
+                class="collapsed"
+                data-toggle="collapse"
+                aria-expanded="false"
+              >
+                 <svg
+                    class="svg-icon"
+                    id="p-dash8"
+                    width="20"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  <span class="ml-4">Authentication</span>
+                  <svg
+                    class="svg-icon iq-arrow-right arrow-active"
+                    width="20"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="10 15 15 20 20 15"></polyline>
+                    <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
+                  </svg>
+                </a>
+                <ul
+                  id="auth"
+                  class="iq-submenu collapse"
+                  data-parent="#iq-sidebar-toggle"
+                >
+                  <!--<li class="">
+                    <a href="../backend/auth-sign-in.html">
+                      <i class="las la-minus"></i><span>Login</span>
+                    </a>
+                  </li>-->
+                  <li >
+                    <a style="cursor: pointer;" id="auth_lock_screen">
+                      <i class="las la-minus"></i><span>Lock Screen</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="p-3"></div>
+        </div>
+      </div>
           <div class="iq-top-navbar">
             <div class="iq-navbar-custom">
               <nav class="navbar navbar-expand-lg navbar-light p-0">
@@ -437,7 +459,7 @@
                   class="iq-navbar-logo d-flex align-items-center justify-content-between"
                 >
                   <i class="ri-menu-line wrapper-menu"></i>
-                  <a href="../backend/index.html" class="header-logo">
+                  <a style="cursor: pointer;" id="dashboardmenu" class="header-logo">
                     <img
                       src="../assets/images/logo.png"
                       class="img-fluid rounded-normal"
@@ -446,18 +468,7 @@
                     <h5 class="logo-title ml-3">Downtown</h5>
                   </a>
                 </div>
-                <div class="iq-search-bar device-search">
-                  <form action="#" class="searchbox">
-                    <a class="search-link" href="#"
-                      ><i class="ri-search-line"></i
-                    ></a>
-                    <input
-                      type="text"
-                      class="text search-input"
-                      placeholder="Search here..."
-                    />
-                  </form>
-                </div>
+                
                 <div class="d-flex align-items-center">
                   <button
                     class="navbar-toggler"
@@ -474,43 +485,13 @@
                    
                       <li>
                         <a
-                          href="#"
+                          style="cursor: pointer;" id="addtask1"
                           class="btn border add-btn shadow-none mx-2 d-none d-md-block"
-                          data-toggle="modal"
-                          data-target="#new-order"
-                          ><i class="las la-plus mr-2"></i>New Project</a
+                          ><i class="las la-plus mr-2"></i>New Task</a
                         >
                       </li>
-                      <li class="nav-item nav-icon search-content">
-                        <a
-                          href="#"
-                          class="search-toggle rounded"
-                          id="dropdownSearch"
-                          data-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          <i class="ri-search-line"></i>
-                        </a>
-                        <div
-                          class="iq-search-bar iq-sub-dropdown dropdown-menu"
-                          aria-labelledby="dropdownSearch"
-                        >
-                          <form action="#" class="searchbox p-2">
-                            <div class="form-group mb-0 position-relative">
-                              <input
-                                type="text"
-                                class="text search-input font-size-12"
-                                placeholder="type here to search..."
-                              />
-                              <a href="#" class="search-link"
-                                ><i class="las la-search"></i
-                              ></a>
-                            </div>
-                          </form>
-                        </div>
-                      </li>
-                      <li class="nav-item nav-icon dropdown">
+                      
+                      <!--<li class="nav-item nav-icon dropdown">
                         <a
                           href="#"
                           class="search-toggle dropdown-toggle"
@@ -644,195 +625,109 @@
                             </div>
                           </div>
                         </div>
-                      </li>
+                      </li>-->
                       <li class="nav-item nav-icon dropdown">
-                        <a
-                          href="#"
-                          class="search-toggle dropdown-toggle"
-                          id="dropdownMenuButton"
-                          data-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="feather feather-bell"
-                          >
-                            <path
-                              d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"
-                            ></path>
-                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-                          </svg>
-                          <span class="bg-primary"></span>
-                        </a>
-                        <div
-                          class="iq-sub-dropdown dropdown-menu"
-                          aria-labelledby="dropdownMenuButton"
-                        >
-                          <div class="card shadow-none m-0">
-                            <div class="card-body p-0">
-                              <div class="cust-title p-3">
-                                <div
-                                  class="d-flex align-items-center justify-content-between"
-                                >
-                                  <h5 class="mb-0">Notifications</h5>
-                                  <a class="badge badge-primary badge-card" href="#"
-                                    >3</a
-                                  >
-                                </div>
-                              </div>
-                              <div class="px-3 pt-0 pb-0 sub-card">
-                                <a href="#" class="iq-sub-card">
-                                  <div
-                                    class="media align-items-center cust-card py-3 border-bottom"
-                                  >
-                                    <div class="">
-                                      <img
-                                        class="avatar-50 rounded-small"
-                                        src="../assets/images/user/01.jpg"
-                                        alt="01"
-                                      />
-                                    </div>
-                                    <div class="media-body ml-3">
-                                      <div
-                                        class="d-flex align-items-center justify-content-between"
-                                      >
-                                        <h6 class="mb-0">Emma Watson</h6>
-                                        <small class="text-dark"
-                                          ><b>12 : 47 pm</b></small
-                                        >
-                                      </div>
-                                      <small class="mb-0"
-                                        >Lorem ipsum dolor sit amet</small
-                                      >
-                                    </div>
-                                  </div>
-                                </a>
-                                <a href="#" class="iq-sub-card">
-                                  <div
-                                    class="media align-items-center cust-card py-3 border-bottom"
-                                  >
-                                    <div class="">
-                                      <img
-                                        class="avatar-50 rounded-small"
-                                        src="../assets/images/user/02.jpg"
-                                        alt="02"
-                                      />
-                                    </div>
-                                    <div class="media-body ml-3">
-                                      <div
-                                        class="d-flex align-items-center justify-content-between"
-                                      >
-                                        <h6 class="mb-0">Ashlynn Franci</h6>
-                                        <small class="text-dark"
-                                          ><b>11 : 30 pm</b></small
-                                        >
-                                      </div>
-                                      <small class="mb-0"
-                                        >Lorem ipsum dolor sit amet</small
-                                      >
-                                    </div>
-                                  </div>
-                                </a>
-                                <a href="#" class="iq-sub-card">
-                                  <div
-                                    class="media align-items-center cust-card py-3"
-                                  >
-                                    <div class="">
-                                      <img
-                                        class="avatar-50 rounded-small"
-                                        src="../assets/images/user/03.jpg"
-                                        alt="03"
-                                      />
-                                    </div>
-                                    <div class="media-body ml-3">
-                                      <div
-                                        class="d-flex align-items-center justify-content-between"
-                                      >
-                                        <h6 class="mb-0">Kianna Carder</h6>
-                                        <small class="text-dark"
-                                          ><b>11 : 21 pm</b></small
-                                        >
-                                      </div>
-                                      <small class="mb-0"
-                                        >Lorem ipsum dolor sit amet</small
-                                      >
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                              <a
-                                class="right-ic btn btn-primary btn-block position-relative p-2"
-                                href="#"
-                                role="button"
+                    <a
+                      href="#"
+                      class="search-toggle dropdown-toggle"
+                      id="dropdownMenuButton"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-bell"
+                      >
+                        <path
+                          d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"
+                        ></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                      </svg>
+                      <span class="badge badge-primary badge-card" id="num1">0</span>
+                    </a>
+                    <div
+                      class="iq-sub-dropdown dropdown-menu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <div class="card shadow-none m-0">
+                        <div class="card-body p-0">
+                          <div class="cust-title p-3">
+                            <div
+                              class="d-flex align-items-center justify-content-between"
+                            >
+                              <h5 class="mb-0">Notifications</h5>
+                              <a class="badge badge-primary badge-card" id="num2" 
+                                >0</a
                               >
-                                View All
-                              </a>
+                            </div>
+                          </div>
+                          <div class="px-3 pt-0 pb-0 sub-card" id="notifications">
+                            
+                          </div>
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item nav-icon dropdown caption-content">
+                    <a
+                      href="#"
+                      class="search-toggle dropdown-toggle"
+                      id="dropdownMenuButton4"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <img
+                        src="../assets/images/user/1.png"
+                        class="img-fluid rounded"
+                        alt="user"
+                      />
+                    </a>
+                    <div
+                      class="iq-sub-dropdown dropdown-menu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <div class="card shadow-none m-0">
+                        <div class="card-body p-0 text-center">
+                          <div class="media-body profile-detail text-center" id="userimage">
+                            <img
+                              src="../assets/images/page-img/profile-bg.jpg"
+                              alt="profile-bg"
+                              class="rounded-top img-fluid mb-4"
+                            />
+                            <img
+                              src="../assets/images/user/1.png"
+                              alt="profile-img"
+                              class="rounded profile-img img-fluid avatar-70"
+                            />
+                          </div>
+                          <div class="p-3">
+                            <h5 class="mb-1" id="useremail"></h5>
+                            <p class="mb-0" id="occupation"></p>
+                            <div
+                              class="d-flex align-items-center justify-content-center mt-3"
+                            >
+                              <a
+                                style="cursor: pointer;" id="auth_lock_screen2" class="btn border mr-2">Lock screen</a
+                              >
+                              <a href="auth-sign-in.html" class="btn border" id="logout">Sign Out</a
+                              >
                             </div>
                           </div>
                         </div>
-                      </li>
-                      <li class="nav-item nav-icon dropdown caption-content">
-                        <a
-                          href="#"
-                          class="search-toggle dropdown-toggle"
-                          id="dropdownMenuButton4"
-                          data-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          <img
-                            src="../assets/images/user/1.png"
-                            class="img-fluid rounded"
-                            alt="user"
-                          />
-                        </a>
-                        <div
-                          class="iq-sub-dropdown dropdown-menu"
-                          aria-labelledby="dropdownMenuButton"
-                        >
-                          <div class="card shadow-none m-0">
-                            <div class="card-body p-0 text-center">
-                              <div class="media-body profile-detail text-center">
-                                <img
-                                  src="../assets/images/page-img/profile-bg.jpg"
-                                  alt="profile-bg"
-                                  class="rounded-top img-fluid mb-4"
-                                />
-                                <img
-                                  src="../assets/images/user/1.png"
-                                  alt="profile-img"
-                                  class="rounded profile-img img-fluid avatar-70"
-                                />
-                              </div>
-                              <div class="p-3">
-                                <h5 class="mb-1">JoanDuo@property.com</h5>
-                                <p class="mb-0">Since 10 march, 2020</p>
-                                <div
-                                  class="d-flex align-items-center justify-content-center mt-3"
-                                >
-                                  <a
-                                    href="../backend/auth-lock-screen.html"
-                                    class="btn border mr-2"
-                                    >Lock screen</a
-                                  >
-                                  <a href="auth-sign-in.html" class="btn border"
-                                    >Sign Out</a
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
+                      </div>
+                    </div>
+                  </li>
                     </ul>
                   </div>
                 </div>
@@ -881,7 +776,7 @@
       <div class="content-page">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-lg-3">
+            <!--<div class="col-lg-3">
               <div class="card">
                 <div class="card-body">
                   <div class="iq-todo-page">
@@ -1035,10 +930,10 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-9">
+            </div>-->
+            <div class="col-lg-12">
               <div class="row">
-                <div class="col-sm-12">
+                <!--<div class="col-sm-12">
                   <div class="card">
                     <div class="card-body">
                       <div
@@ -1068,12 +963,12 @@
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-md-8">
+                </div>-->
+                <div class="col-md-12">
                   <div class="card">
                     <div class="card-body p-0">
-                      <ul class="todo-task-lists m-0 p-0">
-                        <li class="d-flex align-items-center p-3">
+                      <ul class="todo-task-lists m-0 p-0" id="taskstodo">
+                        <!--<li class="d-flex align-items-center p-3">
                           <div class="user-img img-fluid">
                             <img
                               src="../assets/images/user/01.jpg"
@@ -1315,12 +1210,12 @@
                               ></label>
                             </div>
                           </div>
-                        </li>
+                        </li>-->
                       </ul>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <!--<div class="col-md-4">
                   <div class="card">
                     <div class="card-body">
                       <div class="iq-todo-right">
@@ -1645,7 +1540,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>-->
               </div>
             </div>
           </div>
@@ -1683,11 +1578,350 @@
       </div>
     </footer>
 
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
       
       Wholesaler = {identitydoc:"John", proofofres:31, permit:"New York", businessdocs:"John", trustdocs:31, complianceaffidavit:"John", compliancewithNPL};
 
-    </script>
+    </script>-->
+
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"; 
+
+  //https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js
+  //https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+  import { getDatabase, ref, push ,onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+//import { database } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  //import { firebase } from 'https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js';
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCwMAE5I9frXiRjGTLB7kZOS1yYaBSmf_M",
+    authDomain: "omsl-61c79.firebaseapp.com",
+    projectId: "omsl-61c79",
+    storageBucket: "omsl-61c79.firebasestorage.app",
+    messagingSenderId: "406069597322",
+    appId: "1:406069597322:web:6ab82f14010e6f3f004973",
+    measurementId: "G-4CJ3M03JE1"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  //console.log(defaultProject.name);
+  const analytics = getAnalytics(app);
+//import { getDatabase } from "fhttps://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  // Get a reference to the database service
+var database = getDatabase(app);
+const auth = getAuth(app);
+// Reference to the root of your database
+
+const urlParams = new URLSearchParams(document.location.search);
+var paramValue = urlParams.get('id');
+var taskRef = ref(database, 'Tasks/');
+
+var notificationRef = ref(database, 'Notification/');
+
+
+onAuthStateChanged(auth, (user) => {
+      if (user) {
+
+        // Fetch data from the 'task' node once
+onValue(notificationRef, (notificationsnapshot) => {
+  if (notificationsnapshot.exists()) {
+    let filteredCount = 0; // ✅ count after condition
+    
+    // Clear previous list before appending
+    document.getElementById("notifications").innerHTML = "";
+
+    notificationsnapshot.forEach((notificationchildSnapshot) => {
+      const notificationkKey = notificationchildSnapshot.key;
+      const notificationdata = notificationchildSnapshot.val();
+
+      console.log("Checking notification:", notificationkKey);
+
+      // ✅ check if status exists
+      const statusExists = notificationchildSnapshot.child("status").exists();
+
+      // ✅ condition: must be for this user AND have no status
+      if (notificationdata.to === user.uid && !statusExists) {
+        filteredCount++;
+
+        // render the item
+        document.getElementById("notifications").innerHTML += `
+          <a href="notification.html?id=${user.uid}&taskid=${notificationkKey}" class="iq-sub-card">
+            <div class="media align-items-center cust-card py-3 border-bottom">
+              <div>
+                <img class="avatar-50 rounded-small" src="../assets/images/user/01.jpg" alt="01" />
+              </div>
+              <div class="media-body ml-3">
+                <div class="d-flex align-items-center justify-content-between">
+                  <h6 class="mb-0">${notificationdata.title}</h6>
+                  <small class="text-dark"><b>${notificationdata.time}</b></small>
+                </div>
+                <small class="mb-0">${notificationdata.desc}</small>
+              </div>
+            </div>
+          </a>
+        `;
+      }
+    });
+
+    // ✅ update counts only for filtered data
+    document.getElementById("num1").innerHTML = filteredCount;
+    document.getElementById("num2").innerHTML = filteredCount;
+
+    console.log(`Filtered notifications: ${filteredCount}`);
+  }
+}, { onlyOnce: true });
+
+var rootRef = ref(database, 'users/' + user.uid);
+
+// Fetch data from the 'users' node once
+onValue(rootRef, (snapshot) => {
+   console.log(snapshot.val());
+   const childDataval = snapshot.val();
+   
+document.getElementById("dropdownMenuButton4").innerHTML = `<img
+                        src="${childDataval.imagelink}"
+                        class="img-fluid rounded"
+                        alt="user"
+                      />`;
+
+document.getElementById("userimage").innerHTML = `<img
+                        src="${childDataval.imagelink}"
+                        class="rounded profile-img img-fluid avatar-70"
+                        alt="user"
+                      />`;
+
+
+    document.getElementById("occupation").innerHTML = `${childDataval.occupation}`;
+    document.getElementById("useremail").innerHTML = `${childDataval.email}`;
+    
+
+                    //greetings end
+    
+  }, {
+    onlyOnce: true // This option ensures the callback is executed only once
+  });
+
+} else {
+        // User is signed out
+        console.log("User is signed out.");
+        window.location.href = `auth-sign-in.html`;
+      }
+    });
+
+
+//Menu links start
+
+document.write(new Date().getFullYear());
+
+                    function getval() {
+                      // body...
+                      var someval = document.getElementById("getval");
+
+                      console.log(someval.value);
+
+                      setTimeout(function(){ window.location.href = `Projects-list.html?id=${someval.value}`}, 3000);
+                    }
+                    //Dashboard
+
+                    const dashboardmenu = document.getElementById('dashboardmenu');
+
+                    dashboardmenu.onclick = function(){
+
+                       window.location.href = `index.html?id=${paramValue}`;
+      
+                                                }
+
+const dashboardmenu1 = document.getElementById('dashboardmenu1');
+
+                    dashboardmenu1.onclick = function(){
+
+                       window.location.href = `index.html?id=${paramValue}`;
+      
+                                                }
+
+
+
+    const dashboardmenu2 = document.getElementById('dashboardmenu2');
+
+                    dashboardmenu2.onclick = function(){
+
+                       window.location.href = `index.html?id=${paramValue}`;
+      
+                                                }
+                    //Files
+                      var filelist = document.getElementById("list_files");
+
+                      filelist.onclick = function(){
+
+                       window.location.href = `Projects-list.html?id=${paramValue}`;
+      
+                                                }
+
+                      var addfile = document.getElementById("opennewfile");
+                      addfile.onclick = function(){
+
+                       window.location.href = `add-Projects.html?id=${paramValue}`;
+      
+                                                }
+
+                    //Lock Screen
+
+                      var addfile = document.getElementById("auth_lock_screen");
+                      addfile.onclick = function(){
+
+                       window.location.href = `auth-lock-screen.html?id=${paramValue}`;
+      
+                                                }
+var auth_lock_screen2 = document.getElementById("auth_lock_screen2");
+ auth_lock_screen2.onclick = function(){
+
+   window.location.href = `auth-lock-screen.html?id=${paramValue}`;
+      }
+
+ //timeline
+                    var filesheet = document.getElementById("filesheet");
+                      filesheet.onclick = function(){
+
+                       window.location.href = `timeline-3.html?id=${paramValue}`;
+      
+                                                }
+
+                                                //todo
+                     var todo = document.getElementById("todo");
+                      todo.onclick = function(){
+           
+                       window.location.href = `todo.html?id=${paramValue}`;
+      
+                                                }
+                    var todo1 = document.getElementById("todo1");
+                      todo1.onclick = function(){
+           
+                       window.location.href = `todo.html?id=${paramValue}`;
+      
+                                                }
+                      //add task
+                    var addtask = document.getElementById("addtask");
+                      addtask.onclick = function(){
+
+                       window.location.href = `add-task.html?id=${paramValue}`;
+      
+                                                }
+         //add task
+                    var addtask1 = document.getElementById("addtask1");
+                      addtask1.onclick = function(){
+
+                       window.location.href = `add-task.html?id=${paramValue}`;
+      
+                                                }
+
+
+var adddpt = document.getElementById("adddpt");
+          adddpt.onclick = function(){
+
+  window.location.href = `add-Department.html?id=${paramValue}`;
+      
+                                                }
+
+
+    var addemploy = document.getElementById("addemploy");
+          addemploy.onclick = function(){
+
+  window.location.href = `add-employ.html?id=${paramValue}`;
+      
+                                                }
+
+  var list_dpt = document.getElementById("list_dpt");
+          list_dpt.onclick = function(){
+
+  window.location.href = `list-Department1.html?id=${paramValue}`;
+      
+                                                }
+
+   var list_employ = document.getElementById("list_employ");
+          list_employ.onclick = function(){
+
+  window.location.href = `list-employ.html?id=${paramValue}`;
+      
+                                                }
+
+   var Projects_dpt = document.getElementById("Projects-dpt");
+          Projects_dpt.onclick = function(){
+
+  window.location.href = `Projects-dpt.html?id=${paramValue}`;
+      
+                                                }
+
+                    //Employees
+                    //File activity life span
+                    //Todo
+                    //Chat
+                    
+
+                   
+
+//Menu links end
+
+// Fetch data from the 'task' node once
+onValue(taskRef, (snapshot) => {
+  snapshot.forEach((childSnapshot) => {
+      const taskKey = childSnapshot.key;
+      const taskdata = childSnapshot.val();
+
+onAuthStateChanged(auth, (user) => {
+
+
+if (taskdata.Allocated == user.uid && taskdata.status == "Pending") {
+  document.getElementById("taskstodo").innerHTML +=`
+
+  <li class="d-flex align-items-center p-3" style="cursor: pointer;" id="detailedtodo">
+                          <div class="user-img img-fluid">
+                            <img
+                              src="../assets/images/user/01.jpg"
+                              alt="story-img"
+                              class="rounded avatar-40"
+                            />
+                          </div>
+  <a href="detailedtodo.html?id=${user.uid}&taskid=${taskKey}">
+                          <div class="media-support-info ml-3">
+                            <h6 class="d-inline-block">
+                              ${taskdata.task}
+                            </h6>
+                            <span class="badge badge-warning ml-3 text-white"
+                              >${taskdata.status}</span
+                            >
+                            <p class="mb-0">by ${taskdata.author}</p>
+                          </div>
+                          <div
+                            class="card-header-toolbar d-flex align-items-center"
+                          >
+                            <!--<div class="custom-control custom-checkbox">
+                              
+                              <label
+                                class="custom-control-label"
+                                for="check1"
+                              ></label>
+                            </div>-->
+                          </div>
+  </a>
+                        </li>
+`;
+}
+})
+    
+  }) 
+    onlyOnce: true // This option ensures the callback is executed only once
+  });
+
+
+</script>
     <!-- Backend Bundle JavaScript -->
     <script src="../assets/js/backend-bundle.min.js"></script>
 

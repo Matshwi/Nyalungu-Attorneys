@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase DataTable Test</title>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+</head>
+<body>
+  <table id="myTable" class="display" style="width:100%">
+    <thead>
+      <tr>
+        <th>Project name</th>
+        <th>Holdername</th>
+        <th>Dept</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- jQuery + DataTables -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+
+  <!-- Firebase -->
+   <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+
+ import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+  import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCwMAE5I9frXiRjGTLB7kZOS1yYaBSmf_M",
+    authDomain: "omsl-61c79.firebaseapp.com",
+    projectId: "omsl-61c79",
+    storageBucket: "omsl-61c79.firebasestorage.app",
+    messagingSenderId: "406069597322",
+    appId: "1:406069597322:web:6ab82f14010e6f3f004973",
+    measurementId: "G-4CJ3M03JE1"
+  };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+const auth = getAuth(app);
+    const usersRef = ref(db, "Projects/");
+console.log(usersRef);
+
+onAuthStateChanged(auth, (user) => {
+      if (user) {
+        
+        // User is signed in
+        console.log("User is signed in:", user);
+        //var rootRef = ref(database, 'users/' + paramValue);
+
+
+
+      } else {
+        // User is signed out
+        console.log("User is signed out.");
+        window.location.href = `auth-sign-in.html`;
+      }
+    });
+
+    onValue(usersRef, (snapshot) => {
+      console.log(snapshot.val());
+      let tableData = [];
+
+      snapshot.forEach(child => {
+        const u = child.val();
+        console.log(u);
+        tableData.push([u.project_name, u.Holdername, u.Dept]);
+
+        
+      });
+
+      if ($.fn.DataTable.isDataTable("#myTable")) {
+        let table = $('#myTable').DataTable();
+        table.clear().rows.add(tableData).draw();
+      } else {
+        $('#myTable').DataTable({
+          data: tableData,
+          columns: [
+            { title: "Name" },
+            { title: "Surname" },
+            { title: "Email" }
+          ]
+        });
+      }
+    });
+  </script>
+</body>
+</html>
