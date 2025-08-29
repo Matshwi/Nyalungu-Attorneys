@@ -52,15 +52,15 @@
                         />
                         <h2 class="mt-3 mb-0">Success !</h2>
                         <p class="cnf-mail mb-1">
-                          A email has been send to youremail@domain.com. Please
-                          check for an email from company and click on the
-                          included link to reset your password.
+                          Your email has been verified. Please
+                          wait for us to redirect you to the next page or click on the
+                          included link if redirect takes time.
                         </p>
                         <div class="d-inline-block w-100">
                           <a
-                            href="../backend/index.html"
+                            href="https://matshwi.github.io/Nyalungu-Attorneys/FMS/backend/index.html"
                             class="btn btn-primary mt-3"
-                            >Back to Home</a
+                            >Home/login</a
                           >
                         </div>
                       </div>
@@ -80,6 +80,64 @@
         </div>
       </section>
     </div>
+
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"; 
+
+  //https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js
+  //https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+  import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+//import { database } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  //import { firebase } from 'https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js';
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCwMAE5I9frXiRjGTLB7kZOS1yYaBSmf_M",
+    authDomain: "omsl-61c79.firebaseapp.com",
+    projectId: "omsl-61c79",
+    storageBucket: "omsl-61c79.firebasestorage.app",
+    messagingSenderId: "406069597322",
+    appId: "1:406069597322:web:6ab82f14010e6f3f004973",
+    measurementId: "G-4CJ3M03JE1"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  //console.log(defaultProject.name);
+  const analytics = getAnalytics(app);
+  const auth = getAuth(app);
+//import { getDatabase } from "fhttps://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  // Get a reference to the database service
+var database = getDatabase(app);
+
+// Reference to the root of your database
+
+//const urlParams = new URLSearchParams(document.location.search);
+//var paramValue = urlParams.get('id');
+
+
+
+//Authentication State Observer: Use onAuthStateChanged to listen for changes in the user's sign-in state, allowing you to update your UI accordingly.
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        
+        // User is signed in
+        console.log("User is signed in:", user.uid);
+      } else {
+        // User is signed out
+        console.log("User is signed out.");
+        window.location.href = `auth-sign-in.html`;
+      }
+    });
+
+</script>
 
     <!-- Backend Bundle JavaScript -->
     <script src="../assets/js/backend-bundle.min.js"></script>
