@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PDF → Form (Google Gemini)</title>
+</head>
+<body>
+
+  <h2>Upload a PDF</h2>
+  <input type="file" id="pdfFile" accept="application/pdf"><br><br>
+
+  <h3>Auto-Filled Form</h3>
+  <form id="userForm">
+    <input type="text" id="name" placeholder="Name"><br><br>
+    <input type="text" id="email" placeholder="Email"><br><br>
+    <input type="text" id="phone" placeholder="Phone"><br><br>
+  </form>
+
+  <h3>Debug Log</h3>
+  <textarea id="debug" rows="15" cols="80" placeholder="Logs..."></textarea>
+
+  <!-- PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+  <script>
+  const PDFInput = document.getElementById('pdfFile');
+  const debug = document.getElementById('debug');
+  const GEMINI_API_KEY = "AIzaSyDLbzODlI0sv_RHtFUnwAzS3GmlDfvJ_x0"; // Paste your key here
+
+  // Step 1: Extract text from PDF
+  async function extractPDFText(file) {
+    const buffer = await file.arrayBuffer();
+    const pdf = await pdfjsLib.getDocument({ data: buffer }).promise;
+    let text = "";
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const content = await page.getTextContent();
+      text += content.items.map(t => t.str).join(" ") + "\\n";
+    }
+    return text;
+  }
+
+  // Step 2: Send text to Gemini API
+  async function askGemini(prompt) {
+    const res = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash/generateContent?key=AIzaSyDLbzODlI0sv_RHtFUnwAzS3GmlDfvJ_x0", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: prompt }] }]
+      })
+    });
+    const data = await res.json();
+    return data.candidates?.[0]?.content?.parts?.[0]?.text || "";
+  }
+
+  // Step 3: Handle file upload and AI response
+  PDFInput.addEventListener('change', async () => {
+    const file = PDFInput.files[0];
+    if (!file) return;
+    debug.value = "Extracting PDF text...\n";
+    const text = await extractPDFText(file);
+    debug.value += "Sending text to Gemini...\n";
+
+    const prompt = `
+    Extract key information from this PDF text and return JSON ONLY with these fields:
+    { "name": "", "email": "", "phone": "" }
+
+    PDF content:
+    ${text}
+    `;
+
+    const aiResponse = await askGemini(prompt);
+    debug.value += "AI response:\n" + aiResponse + "\n";
+
+    try {
+      const info = JSON.parse(aiResponse);
+      document.getElementById("name").value = info.name || "";
+      document.getElementById("email").value = info.email || "";
+      document.getElementById("phone").value = info.phone || "";
+    } catch (e) {
+      debug.value += "⚠️ Could not parse AI response as JSON.\n";
+    }
+  });
+  </script>
+
+</body>
+</html>
